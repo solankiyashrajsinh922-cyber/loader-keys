@@ -1,9 +1,16 @@
 {
-  "YUNXL-QOQSF-ULKO6-J2A86": {
-    "label": "No Label",
-    "created_at": "2026-03-17T07:04:23.055Z",
-    "expires_at": "2026-03-17T07:14:23.055Z",
+  "XBHM6-ID4KM-TEQVH-DPHWC": {
+    "label": "For test",
+    "created_at": "2026-03-17T16:53:50.145Z",
+    "expires_at": "2026-03-17T17:03:50.146Z",
     "duration": "10 minutes",
+    "device_id": null
+  },
+  "SSL3S-S0U0D-NL34L-P4KIB": {
+    "label": "1 day for test",
+    "created_at": "2026-03-17T17:03:39.454Z",
+    "expires_at": "2026-03-27T17:03:39.454Z",
+    "duration": "10 days",
     "device_id": null
   }
 }
