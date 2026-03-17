@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "zip_url": "https://github.com/solankiyashrajsinh922-cyber/loader-keys/releases/download/V1.0/payload.zip",
+  "zip_password": "8190iwiej82uduud",
+  "lib_name": "libil2cpp.so",
+  "keys_url": "https://raw.githubusercontent.com/solankiyashrajsinh922-cyber/loader-keys/main/keys.json",
+  "maintenance": false,
+  "maintenance_msg": "App abhi maintenance mein hai. Thodi der baad try karo.",
+  "force_update": false,
+  "min_version": "1.0"
+}
