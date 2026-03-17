@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Admin — Key Generator</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0c0c0e;--surface:#141418;--surface2:#1c1c22;--surface3:#242430;
+  --border:#2a2a35;--border2:#363645;
+  --green:#22c55e;--green-dim:#16a34a;--green-glow:rgba(34,197,94,0.15);
+  --red:#ef4444;--red-dim:#dc2626;
+  --yellow:#eab308;
+  --text:#e2e8f0;--text2:#94a3b8;--text3:#475569;
+  --accent:#7c3aed;
+}
+body{background:var(--bg);color:var(--text);font-family:'JetBrains Mono',monospace;min-height:100vh;padding:0 0 60px}
+
+/* Header */
+.header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 20px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:10}
+.header-dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 8px var(--green)}
+.header-title{font-size:14px;font-weight:700;color:var(--text);letter-spacing:1px}
+.header-sub{font-size:11px;color:var(--text3);margin-left:auto}
+
+/* Tabs */
+.tabs{display:flex;background:var(--surface);border-bottom:1px solid var(--border);padding:0 20px}
+.tab{padding:12px 16px;font-size:12px;font-weight:600;color:var(--text3);cursor:pointer;border-bottom:2px solid transparent;letter-spacing:.5px;transition:all .2s}
+.tab.active{color:var(--green);border-bottom-color:var(--green)}
+
+/* Content */
+.page{display:none;padding:20px}
+.page.active{display:block}
+
+/* Card */
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin-bottom:16px}
+.card-title{font-size:11px;font-weight:700;color:var(--text3);letter-spacing:2px;margin-bottom:16px}
+
+/* Form */
+.field{margin-bottom:14px}
+.field label{display:block;font-size:11px;color:var(--text3);margin-bottom:6px;letter-spacing:.5px}
+.field input,.field select,.field textarea{
+  width:100%;background:var(--surface2);border:1px solid var(--border2);border-radius:8px;
+  color:var(--text);font-family:'JetBrains Mono',monospace;font-size:13px;
+  padding:10px 12px;outline:none;transition:border .2s
+}
+.field input:focus,.field select:focus{border-color:var(--green)}
+.field select option{background:var(--surface2)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px}
+
+/* Buttons */
+.btn{width:100%;padding:13px;border:none;border-radius:8px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all .15s}
+.btn-primary{background:var(--green);color:#000}
+.btn-primary:active{background:var(--green-dim)}
+.btn-outline{background:transparent;border:1px solid var(--border2);color:var(--text2)}
+.btn-outline:active{background:var(--surface2)}
+.btn-danger{background:transparent;border:1px solid rgba(239,68,68,.3);color:var(--red)}
+.btn-danger:active{background:rgba(239,68,68,.1)}
+.btn-sm{padding:7px 14px;width:auto;font-size:11px;border-radius:6px}
+
+/* Result box */
+.result-box{background:var(--green-glow);border:1px solid rgba(34,197,94,.3);border-radius:10px;padding:16px;margin-top:14px;display:none;text-align:center}
+.result-key{font-size:15px;font-weight:700;color:var(--green);letter-spacing:2px;word-break:break-all;cursor:pointer}
+.result-meta{font-size:11px;color:var(--text3);margin-top:8px}
+.copy-hint{font-size:10px;color:rgba(34,197,94,.5);margin-top:6px}
+
+/* Status */
+.status-msg{padding:10px 14px;border-radius:8px;font-size:12px;margin-top:10px;display:none}
+.status-ok{background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);color:var(--green)}
+.status-err{background:rgba(239,68,68,.1);border:1px solid rgba(239,68,68,.2);color:var(--red)}
+
+/* Keys list */
+.key-card{background:var(--surface2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:10px;position:relative}
+.key-card.expired{opacity:.5}
+.key-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.key-value{font-size:13px;font-weight:700;color:var(--green);word-break:break-all;flex:1;cursor:pointer}
+.key-card.expired .key-value{color:var(--text3)}
+.key-meta{font-size:11px;color:var(--text3);margin-top:8px;line-height:1.8}
+.badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.5px}
+.badge-valid{background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.2)}
+.badge-expired{background:rgba(239,68,68,.1);color:var(--red);border:1px solid rgba(239,68,68,.2)}
+.badge-device{background:rgba(124,58,237,.1);color:#a78bfa;border:1px solid rgba(124,58,237,.2)}
+.del-btn{background:none;border:none;color:var(--text3);cursor:pointer;font-size:16px;padding:2px 6px;transition:color .2s;flex-shrink:0}
+.del-btn:hover{color:var(--red)}
+
+/* Stats */
+.stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:16px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px;text-align:center}
+.stat-num{font-size:22px;font-weight:700;color:var(--text)}
+.stat-label{font-size:10px;color:var(--text3);margin-top:4px;letter-spacing:.5px}
+
+/* Config */
+.config-note{font-size:11px;color:var(--text3);background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:12px;margin-top:10px;line-height:1.8}
+.config-note code{color:var(--green);background:rgba(34,197,94,.1);padding:2px 6px;border-radius:4px;font-size:11px}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px}
+
+/* Empty */
+.empty{text-align:center;padding:30px;color:var(--text3);font-size:12px;letter-spacing:1px}
+
+/* Toaster */
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--surface3);border:1px solid var(--border2);color:var(--text);font-size:12px;padding:10px 18px;border-radius:8px;opacity:0;transition:opacity .3s;pointer-events:none;white-space:nowrap;z-index:999}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-dot"></div>
+  <div class="header-title">KEY GENERATOR</div>
+  <div class="header-sub">ADMIN PANEL</div>
+</div>
+
+<div class="tabs">
+  <div class="tab active" onclick="switchTab('generate')">Generate</div>
+  <div class="tab" onclick="switchTab('keys')">All Keys</div>
+  <div class="tab" onclick="switchTab('validate')">Validate</div>
+  <div class="tab" onclick="switchTab('settings')">Settings</div>
+</div>
+
+<!-- GENERATE TAB -->
+<div class="page active" id="tab-generate">
+
+  <div class="card">
+    <div class="card-title">CREATE NEW KEY</div>
+
+    <div class="row">
+      <div class="field">
+        <label>DURATION</label>
+        <input type="number" id="durVal" value="10" min="1" placeholder="10"/>
+      </div>
+      <div class="field">
+        <label>UNIT</label>
+        <select id="durUnit">
+          <option value="minutes">Minutes</option>
+          <option value="hours">Hours</option>
+          <option value="days">Days</option>
+          <option value="months">Months</option>
+          <option value="lifetime">Lifetime</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>LABEL (Optional)</label>
+      <input type="text" id="keyLabel" placeholder="e.g. Customer Name"/>
+    </div>
+
+    <div class="field">
+      <label>HOW MANY KEYS?</label>
+      <input type="number" id="keyCount" value="1" min="1" max="50"/>
+    </div>
+
+    <button class="btn btn-primary" onclick="generateKeys()">GENERATE KEY</button>
+
+    <div class="result-box" id="resultBox">
+      <div class="result-key" id="resultKey" onclick="copyResult()"></div>
+      <div class="result-meta" id="resultMeta"></div>
+      <div class="copy-hint">tap to copy</div>
+    </div>
+
+    <div id="multiResult" style="margin-top:12px;display:none">
+      <div class="card-title" style="margin-bottom:10px">GENERATED KEYS</div>
+      <div id="multiList"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ALL KEYS TAB -->
+<div class="page" id="tab-keys">
+
+  <div class="stats" id="statsBox"></div>
+
+  <div class="card" style="padding:14px">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+      <div class="card-title" style="margin-bottom:0">ALL KEYS</div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-outline btn-sm" onclick="clearExpired()">Clear Expired</button>
+        <button class="btn btn-danger btn-sm" onclick="clearAll()">Clear All</button>
+      </div>
+    </div>
+    <div id="keysList"></div>
+  </div>
+
+</div>
+
+<!-- VALIDATE TAB -->
+<div class="page" id="tab-validate">
+  <div class="card">
+    <div class="card-title">CHECK / RESET KEY</div>
+    <div class="field">
+      <label>ENTER KEY</label>
+      <input type="text" id="checkInput" placeholder="XXXXX-XXXXX-XXXXX-XXXXX" style="text-transform:uppercase"/>
+    </div>
+    <div class="row">
+      <button class="btn btn-outline" onclick="checkKey()">CHECK</button>
+      <button class="btn btn-danger" onclick="resetDevice()">RESET DEVICE</button>
+    </div>
+    <div class="status-msg" id="checkStatus"></div>
+  </div>
+</div>
+
+<!-- SETTINGS TAB -->
+<div class="page" id="tab-settings">
+  <div class="card">
+    <div class="card-title">LOADER CONFIG URL</div>
+    <div class="field">
+      <label>GITHUB RAW URL (where keys.json is hosted)</label>
+      <input type="text" id="configUrl" placeholder="https://raw.githubusercontent.com/..."/>
+    </div>
+    <button class="btn btn-outline" onclick="saveConfig()">SAVE</button>
+    <div class="config-note">
+      1. GitHub pe ek repo banao<br>
+      2. <code>keys.json</code> file upload karo<br>
+      3. Raw URL copy karo aur yahan paste karo<br>
+      4. Loader app is URL se keys fetch karega
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">EXPORT / IMPORT</div>
+    <button class="btn btn-outline" style="margin-bottom:10px" onclick="exportKeys()">EXPORT KEYS (JSON)</button>
+    <div class="field">
+      <label>IMPORT KEYS</label>
+      <textarea id="importData" style="height:80px;resize:none" placeholder='{"KEY-XXX": {...}}'></textarea>
+    </div>
+    <button class="btn btn-outline" onclick="importKeys()">IMPORT</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── Storage ────────────────────────────────────
+const DB_KEY = 'admin_keys_v2';
+const CFG_KEY = 'admin_config';
+
+function loadKeys(){ try{return JSON.parse(localStorage.getItem(DB_KEY)||'{}')}catch(e){return{}} }
+function saveKeys(k){ localStorage.setItem(DB_KEY, JSON.stringify(k)) }
+function loadConfig(){ try{return JSON.parse(localStorage.getItem(CFG_KEY)||'{}')}catch(e){return{}} }
+function saveConfig_(c){ localStorage.setItem(CFG_KEY, JSON.stringify(c)) }
+
+// ── Key Gen ────────────────────────────────────
+function randPart(){ const c='ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'; let s=''; for(let i=0;i<5;i++) s+=c[Math.floor(Math.random()*c.length)]; return s; }
+function makeKey(){ return [randPart(),randPart(),randPart(),randPart()].join('-') }
+
+function calcExpiry(val, unit){
+  if(unit==='lifetime') return null;
+  const d = new Date();
+  if(unit==='minutes') d.setMinutes(d.getMinutes()+val);
+  else if(unit==='hours') d.setHours(d.getHours()+val);
+  else if(unit==='days') d.setDate(d.getDate()+val);
+  else if(unit==='months') d.setMonth(d.getMonth()+val);
+  return d.toISOString();
+}
+
+function generateKeys(){
+  const val   = parseInt(document.getElementById('durVal').value)||10;
+  const unit  = document.getElementById('durUnit').value;
+  const label = document.getElementById('keyLabel').value.trim()||'No Label';
+  const count = Math.min(parseInt(document.getElementById('keyCount').value)||1, 50);
+
+  if(val<=0 && unit!=='lifetime'){ toast('Duration sahi daalo!'); return; }
+
+  const keys = loadKeys();
+  const generated = [];
+
+  for(let i=0;i<count;i++){
+    const key = makeKey();
+    keys[key] = {
+      label,
+      created_at: new Date().toISOString(),
+      expires_at: calcExpiry(val, unit),
+      duration: unit==='lifetime' ? 'Lifetime' : `${val} ${unit}`,
+      device_id: null
+    };
+    generated.push(key);
+  }
+  saveKeys(keys);
+
+  if(count===1){
+    const k = generated[0];
+    const expStr = keys[k].expires_at ? fmtDate(new Date(keys[k].expires_at)) : 'Never';
+    document.getElementById('resultBox').style.display='block';
+    document.getElementById('resultKey').textContent = k;
+    document.getElementById('resultMeta').textContent = `Label: ${label}  |  Expires: ${expStr}`;
+    document.getElementById('multiResult').style.display='none';
+  } else {
+    document.getElementById('resultBox').style.display='none';
+    document.getElementById('multiResult').style.display='block';
+    document.getElementById('multiList').innerHTML = generated.map(k=>`
+      <div style="background:var(--surface2);border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;gap:8px">
+        <span style="font-size:12px;color:var(--green);font-weight:700">${k}</span>
+        <button class="btn btn-outline btn-sm" onclick="copyText('${k}')">COPY</button>
+      </div>`).join('');
+  }
+
+  document.getElementById('keyLabel').value='';
+  toast(`${count} key${count>1?'s':''} generated!`);
+}
+
+function copyResult(){ copyText(document.getElementById('resultKey').textContent) }
+
+// ── Keys List ──────────────────────────────────
+function refreshList(){
+  const keys = loadKeys();
+  const now  = new Date();
+  const entries = Object.entries(keys);
+
+  // Stats
+  const valid   = entries.filter(([,d])=>!d.expires_at||new Date(d.expires_at)>now).length;
+  const expired = entries.length - valid;
+  const locked  = entries.filter(([,d])=>d.device_id).length;
+  document.getElementById('statsBox').innerHTML = `
+    <div class="stat"><div class="stat-num">${entries.length}</div><div class="stat-label">TOTAL</div></div>
+    <div class="stat"><div class="stat-num" style="color:var(--green)">${valid}</div><div class="stat-label">VALID</div></div>
+    <div class="stat"><div class="stat-num" style="color:var(--red)">${expired}</div><div class="stat-label">EXPIRED</div></div>`;
+
+  if(!entries.length){
+    document.getElementById('keysList').innerHTML='<div class="empty">NO KEYS YET</div>';
+    return;
+  }
+
+  entries.sort((a,b)=>{
+    const ea=a[1].expires_at?new Date(a[1].expires_at):new Date('9999');
+    const eb=b[1].expires_at?new Date(b[1].expires_at):new Date('9999');
+    const va=!a[1].expires_at||ea>now, vb=!b[1].expires_at||eb>now;
+    if(va&&!vb) return -1; if(!va&&vb) return 1; return eb-ea;
+  });
+
+  document.getElementById('keysList').innerHTML = entries.map(([key,data])=>{
+    const exp    = data.expires_at ? new Date(data.expires_at) : null;
+    const valid  = !exp || now<exp;
+    const diff   = exp ? exp-now : null;
+    const left   = valid&&diff ? fmtRemain(diff) : 'Expired';
+    const locked = data.device_id ? 'Device Locked' : 'No Device';
+    return `
+    <div class="key-card ${valid?'':'expired'}">
+      <div class="key-top">
+        <div class="key-value" onclick="copyText('${key}')">${key}</div>
+        <button class="del-btn" onclick="deleteKey('${key}')">×</button>
+      </div>
+      <div class="key-meta">
+        Label: ${data.label}<br>
+        Created: ${fmtDate(new Date(data.created_at))}<br>
+        ${exp ? `Expires: ${fmtDate(exp)}` : 'Expires: Never'}
+        ${valid&&diff ? ` · ${left} left` : ''}
+      </div>
+      <div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap">
+        <span class="badge ${valid?'badge-valid':'badge-expired'}">${valid?'VALID':'EXPIRED'}</span>
+        <span class="badge badge-device">${locked}</span>
+      </div>
+    </div>`}).join('');
+}
+
+function deleteKey(key){
+  if(!confirm('Delete this key?')) return;
+  const keys=loadKeys(); delete keys[key]; saveKeys(keys); refreshList(); toast('Key deleted');
+}
+function clearExpired(){
+  if(!confirm('Delete all expired keys?')) return;
+  const keys=loadKeys(); const now=new Date();
+  Object.keys(keys).forEach(k=>{ if(keys[k].expires_at&&new Date(keys[k].expires_at)<now) delete keys[k]; });
+  saveKeys(keys); refreshList(); toast('Expired keys cleared');
+}
+function clearAll(){
+  if(!confirm('Delete ALL keys? This cannot be undone.')) return;
+  saveKeys({}); refreshList(); toast('All keys cleared');
+}
+
+// ── Validate ───────────────────────────────────
+function checkKey(){
+  const key = document.getElementById('checkInput').value.trim().toUpperCase();
+  const el  = document.getElementById('checkStatus');
+  if(!key){ showStatus(el,'Key enter karo','err'); return; }
+  const keys = loadKeys();
+  if(!keys[key]){ showStatus(el,'Key nahi mili.','err'); return; }
+  const d   = keys[key];
+  const exp = d.expires_at ? new Date(d.expires_at) : null;
+  const now = new Date();
+  if(exp&&now>exp){ showStatus(el,`Expired: ${fmtDate(exp)}`,'err'); return; }
+  const diff = exp ? fmtRemain(exp-now) : 'Lifetime';
+  const dev  = d.device_id ? `Locked to device: ${d.device_id.slice(0,16)}...` : 'No device locked';
+  showStatus(el,`VALID  |  ${diff} left  |  ${dev}  |  Label: ${d.label}`,'ok');
+}
+
+function resetDevice(){
+  const key = document.getElementById('checkInput').value.trim().toUpperCase();
+  const el  = document.getElementById('checkStatus');
+  if(!key){ showStatus(el,'Key enter karo','err'); return; }
+  const keys = loadKeys();
+  if(!keys[key]){ showStatus(el,'Key nahi mili.','err'); return; }
+  if(!confirm('Reset device lock? User kisi bhi device se use kar sakta hai.')) return;
+  keys[key].device_id = null;
+  saveKeys(keys);
+  showStatus(el,'Device reset ho gaya. Ab koi bhi device use kar sakta hai.','ok');
+  toast('Device reset!');
+}
+
+// ── Config ─────────────────────────────────────
+function saveConfig(){
+  const url = document.getElementById('configUrl').value.trim();
+  saveConfig_({url});
+  toast('Config saved!');
+}
+
+function exportKeys(){
+  const keys = loadKeys();
+  const blob = new Blob([JSON.stringify(keys, null, 2)], {type:'application/json'});
+  const a = document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='keys.json'; a.click();
+  toast('Exported!');
+}
+
+function importKeys(){
+  try{
+    const data = JSON.parse(document.getElementById('importData').value);
+    const keys = loadKeys();
+    Object.assign(keys, data);
+    saveKeys(keys);
+    document.getElementById('importData').value='';
+    refreshList();
+    toast('Imported!');
+  }catch(e){ toast('Invalid JSON!'); }
+}
+
+// ── Tabs ───────────────────────────────────────
+function switchTab(name){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  event.target.classList.add('active');
+  if(name==='keys') refreshList();
+  if(name==='settings'){ const c=loadConfig(); document.getElementById('configUrl').value=c.url||''; }
+}
+
+// ── Helpers ────────────────────────────────────
+function fmtDate(d){ return d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}); }
+function fmtRemain(ms){ const s=Math.floor(ms/1000),m=Math.floor(s/60),h=Math.floor(m/60),d=Math.floor(h/24); if(d>0)return `${d}d ${h%24}h`; if(h>0)return `${h}h ${m%60}m`; if(m>0)return `${m}m ${s%60}s`; return `${s}s`; }
+function showStatus(el,msg,type){ el.textContent=msg; el.className='status-msg status-'+type; el.style.display='block'; }
+function copyText(t){ navigator.clipboard?.writeText(t).catch(()=>fallbackCopy(t)).then(()=>toast('Copied!')); }
+function fallbackCopy(t){ const ta=document.createElement('textarea');ta.value=t;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);toast('Copied!'); }
+function toast(msg){ const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),2000); }
+</script>
+</body>
+</html>
