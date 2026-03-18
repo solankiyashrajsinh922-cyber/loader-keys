@@ -475,9 +475,6 @@ function renderKeys(keys){
     const exp     = d.expires_at ? new Date(d.expires_at) : null;
     const isValid = !exp || now<exp;
     const diff    = exp ? exp-now : null;
-    const exp     = d.expires_at ? new Date(d.expires_at) : null;
-    const isValid = !exp || now<exp;
-    const diff    = exp ? exp-now : null;
     const left    = isValid&&diff ? fmtRemain(diff) : '';
 
     const deviceSection = d.device_id ? `
