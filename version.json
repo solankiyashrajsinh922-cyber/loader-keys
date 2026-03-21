@@ -5,7 +5,7 @@
   "lib_name": "libil2cpp.so",
   "keys_url": "https://raw.githubusercontent.com/solankiyashrajsinh922-cyber/loader-keys/main/keys.json",
   "maintenance": true,
-  "maintenance_msg": "App abhi maintenance mein hai. Thodi der baad try karo.",
+  "maintenance_msg": "Injection is currently under maintenance.\nPlease try again later.",
   "force_update": false,
   "min_version": "1.0"
 }
