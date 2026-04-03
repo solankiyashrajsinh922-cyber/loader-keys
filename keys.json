@@ -245,8 +245,8 @@
     "created_at": "2026-04-03T12:35:20.518Z",
     "expires_at": null,
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-1E60C67E7DAD",
+    "locked_at": "2026-04-03T12:37:54.275Z",
     "active": true
   }
 }
