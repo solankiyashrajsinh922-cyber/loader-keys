@@ -275,5 +275,14 @@
     "device_id": "WDX-8ED7E16CF2FC",
     "locked_at": "2026-04-03T13:02:54.427Z",
     "active": true
+  },
+  "FKH3D-VJPSC-LRHNR-JUGHJ": {
+    "label": "7xsoam",
+    "created_at": "2026-04-03T13:06:21.248Z",
+    "expires_at": "2026-04-09T13:06:20.590Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true
   }
 }
