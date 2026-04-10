@@ -329,5 +329,14 @@
     "device_id": "WDX-DA87313887F2",
     "locked_at": "2026-04-10T12:53:26.830Z",
     "active": true
+  },
+  "L7DB6-HG8V4-EFZ2F-LFNX4": {
+    "label": "7x buyer",
+    "created_at": "2026-04-10T15:30:02.447Z",
+    "expires_at": "2026-04-16T15:30:01.430Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true
   }
 }
