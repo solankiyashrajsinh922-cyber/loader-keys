@@ -353,8 +353,8 @@
     "created_at": "2026-04-10T17:12:42.818Z",
     "expires_at": "2026-04-20T17:12:41.892Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-1BDA95FFE904",
+    "locked_at": "2026-04-10T18:22:26.444Z",
     "active": true
   }
 }
