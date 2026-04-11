@@ -365,5 +365,14 @@
     "device_id": "WDX-7315E509574E",
     "locked_at": "2026-04-11T11:02:02.368Z",
     "active": true
+  },
+  "2DK93-C369M-C5D2B-3B2GT": {
+    "label": "Susovan",
+    "created_at": "2026-04-11T12:12:20.732Z",
+    "expires_at": "2026-04-17T12:12:19.811Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true
   }
 }
