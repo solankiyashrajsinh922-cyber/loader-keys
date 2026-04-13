@@ -374,5 +374,14 @@
     "device_id": "WDX-7E20B8B68631",
     "locked_at": "2026-04-11T12:40:19.209Z",
     "active": true
+  },
+  "RXGH5-7X9AJ-8GG98-3AMBR": {
+    "label": "New Customwr soam",
+    "created_at": "2026-04-13T15:38:27.902Z",
+    "expires_at": "2026-04-17T15:38:27.025Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true
   }
 }
