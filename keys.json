@@ -383,5 +383,14 @@
     "device_id": "WDX-6270D809950D",
     "locked_at": "2026-04-17T11:53:11.468Z",
     "active": true
+  },
+  "9HGB2-M6HSE-ANJB7-326WF": {
+    "label": "Fab",
+    "created_at": "2026-04-17T16:55:59.072Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true
   }
 }
