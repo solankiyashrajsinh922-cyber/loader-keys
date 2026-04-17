@@ -4,7 +4,7 @@
   "zip_password": "8190iwiej82uduud",
   "lib_name": "libil2cpp.so",
   "keys_url": "https://raw.githubusercontent.com/solankiyashrajsinh922-cyber/loader-keys/main/keys.json",
-  "maintenance": false,
+  "maintenance": true,
   "maintenance_msg": "Injection is currently under maintenance.\nPlease try again later.",
   "force_update": false,
   "min_version": "1.0"
