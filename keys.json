@@ -392,5 +392,14 @@
     "device_id": "WDX-7315E509574E",
     "locked_at": "2026-04-18T03:36:40.258Z",
     "active": true
+  },
+  "CBZ6T-YQL3X-2D67P-RT38B": {
+    "label": "No Label",
+    "created_at": "2026-04-18T10:59:41.548Z",
+    "expires_at": "2026-04-28T10:59:40.593Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true
   }
 }
