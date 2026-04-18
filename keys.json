@@ -398,8 +398,8 @@
     "created_at": "2026-04-18T10:59:41.548Z",
     "expires_at": "2026-04-28T10:59:40.593Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-EDAA3D2A384C",
+    "locked_at": "2026-04-18T10:59:48.345Z",
     "active": true
   }
 }
