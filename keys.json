@@ -411,15 +411,6 @@
     "locked_at": null,
     "active": true
   },
-  "2G4PP-ZEB4R-HF64D-U4EER": {
-    "label": "Shadow id",
-    "created_at": "2026-04-19T07:10:00.098Z",
-    "expires_at": "2026-04-24T07:09:57.322Z",
-    "duration": "",
-    "device_id": "WDX-92C941409EB0",
-    "locked_at": "2026-04-19T09:22:03.092Z",
-    "active": true
-  },
   "MX3VM-KWGNH-YRPEL-FHK77": {
     "label": "Soam buyers",
     "created_at": "2026-04-19T16:55:32.326Z",
