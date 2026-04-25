@@ -479,8 +479,8 @@
     "created_at": "2026-04-25T03:29:47.696Z",
     "expires_at": "2026-04-30T03:29:48.027Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-92C941409EB0",
+    "locked_at": "2026-04-25T03:30:34.493Z",
     "active": true
   }
 }
