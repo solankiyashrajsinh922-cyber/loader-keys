@@ -509,5 +509,14 @@
     "device_id": "WDX-EC7D763D0BC4",
     "locked_at": "2026-04-27T07:20:45.880Z",
     "active": true
+  },
+  "WHQP6-UZ9UU-6JWPQ-UK4AR": {
+    "label": "Sdk",
+    "created_at": "2026-04-29T02:52:05.137Z",
+    "expires_at": "2026-04-29T12:52:04.582Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true
   }
 }
