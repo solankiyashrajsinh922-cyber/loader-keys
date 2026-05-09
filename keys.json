@@ -545,5 +545,14 @@
     "device_id": "WDX-19B5D5E418F8",
     "locked_at": "2026-05-08T14:27:23.687Z",
     "active": true
+  },
+  "9Q78D-23TEY-WKNMM-ZELMK": {
+    "label": "Soam 1",
+    "created_at": "2026-05-09T11:09:45.535Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true
   }
 }
