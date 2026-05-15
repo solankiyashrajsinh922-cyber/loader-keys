@@ -536,5 +536,14 @@
     "device_id": "WDX-0A815556EB74",
     "locked_at": "2026-05-15T06:55:58.723Z",
     "active": true
+  },
+  "G7A2N-NWBFY-BAUCX-GW76E": {
+    "label": "Salman",
+    "created_at": "2026-05-15T10:15:09.491Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true
   }
 }
