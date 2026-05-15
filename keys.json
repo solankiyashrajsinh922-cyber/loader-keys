@@ -554,5 +554,14 @@
     "device_id": "WDX-0A815556EB74",
     "locked_at": "2026-05-15T13:07:14.327Z",
     "active": true
+  },
+  "ZUFGU-KYWUS-HF7RN-HUX26": {
+    "label": "Dake 2 7day",
+    "created_at": "2026-05-15T17:13:01.149Z",
+    "expires_at": "2026-05-21T17:12:59.146Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true
   }
 }
