@@ -506,8 +506,8 @@
     "created_at": "2026-04-30T16:49:18.643Z",
     "expires_at": null,
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-5638A710C319",
+    "locked_at": "2026-05-16T05:17:24.135Z",
     "active": true
   },
   "MBBUS-K3K78-7TJ9Y-7VLHN": {
