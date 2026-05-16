@@ -524,8 +524,8 @@
     "created_at": "2026-05-09T11:09:45.535Z",
     "expires_at": null,
     "duration": "",
-    "device_id": "WDX-8ED7E16CF2FC",
-    "locked_at": "2026-05-09T11:10:37.239Z",
+    "device_id": null,
+    "locked_at": null,
     "active": true
   },
   "67574-QFKJV-DDSA4-KQMUH": {
