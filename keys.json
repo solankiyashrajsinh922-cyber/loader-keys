@@ -572,5 +572,14 @@
     "device_id": "WDX-0A815556EB74",
     "locked_at": "2026-05-15T17:48:26.224Z",
     "active": true
+  },
+  "M8YS2-ZMSJQ-8H6CL-34WEF": {
+    "label": "Test",
+    "created_at": "2026-05-16T04:36:18.699Z",
+    "expires_at": "2026-05-26T04:36:17.745Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true
   }
 }
