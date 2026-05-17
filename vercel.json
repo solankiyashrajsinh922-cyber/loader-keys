@@ -12,7 +12,11 @@
       "dest": "api/index.js"
     },
     {
-      "src": "/reseller/(.*)",
+      "src": "/reseller",
+      "dest": "/reseller.html"
+    },
+    {
+      "src": "/reseller.html",
       "dest": "/reseller.html"
     },
     {
