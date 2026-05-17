@@ -1,0 +1,876 @@
+{
+  "G5IA4-7W2K9-9654Y-6NN1E": {
+    "label": "Test",
+    "created_at": "2026-03-17T17:23:29.549Z",
+    "expires_at": "2026-03-18T03:23:29.552Z",
+    "duration": "10 hours",
+    "device_id": null,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "JQEZW-ZZWWJ-67C43-VZJHF": {
+    "label": "Tst",
+    "created_at": "2026-03-18T05:49:40.979Z",
+    "expires_at": "2026-03-18T05:59:39.985Z",
+    "duration": "",
+    "device_id": "WDX-24E143ED4F2F",
+    "locked_at": "2026-03-18T05:49:57.946Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-24E143ED4F2F"
+    ]
+  },
+  "DSH2U-XVR7H-LBATE-MVHRS": {
+    "label": "No Label",
+    "created_at": "2026-03-18T06:05:08.945Z",
+    "expires_at": "2026-03-18T06:15:07.987Z",
+    "duration": "",
+    "device_id": "WDX-24E143ED4F2F",
+    "locked_at": "2026-03-18T06:05:36.576Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-24E143ED4F2F"
+    ]
+  },
+  "4T3RJ-XX7AL-7EVWQ-BW597": {
+    "label": "No Label",
+    "created_at": "2026-03-18T06:15:42.346Z",
+    "expires_at": "2026-03-18T07:15:41.063Z",
+    "duration": "",
+    "device_id": "WDX-24E143ED4F2F",
+    "locked_at": "2026-03-18T06:15:49.198Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-24E143ED4F2F"
+    ]
+  },
+  "5Z27C-4WSHD-377FB-LGCAB": {
+    "label": "A1 mods",
+    "created_at": "2026-03-20T14:54:32.630Z",
+    "expires_at": "2026-03-26T14:54:30.906Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "9HUNE-8HZQF-EKVLT-3VWJQ": {
+    "label": "No Label",
+    "created_at": "2026-03-20T14:55:06.302Z",
+    "expires_at": "2026-03-20T15:05:04.694Z",
+    "duration": "",
+    "device_id": "WDX-BD44150E8368",
+    "locked_at": "2026-03-20T14:56:48.057Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-BD44150E8368"
+    ]
+  },
+  "P6BAB-4BX3P-37GL5-GN63M": {
+    "label": "Ansh",
+    "created_at": "2026-03-23T04:17:21.223Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": "WDX-E72F25AF221D",
+    "locked_at": "2026-03-23T07:19:09.445Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-E72F25AF221D"
+    ]
+  },
+  "ZA2QU-6VLB5-8S52E-36673": {
+    "label": "Motiyo",
+    "created_at": "2026-03-25T08:25:34.263Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": "WDX-71C416C9B7A0",
+    "locked_at": "2026-03-25T08:31:30.811Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-71C416C9B7A0"
+    ]
+  },
+  "5QHY9-UAC42-HT33B-BGQJY": {
+    "label": "No Label",
+    "created_at": "2026-03-25T15:58:29.334Z",
+    "expires_at": "2026-03-26T01:58:29.022Z",
+    "duration": "",
+    "device_id": "WDX-E72F25AF221D",
+    "locked_at": "2026-03-25T15:59:56.449Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-E72F25AF221D"
+    ]
+  },
+  "2LUPR-42YED-8QCX5-RQ6E9": {
+    "label": "Bunny",
+    "created_at": "2026-03-27T08:55:58.548Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": "WDX-A78F4FD0C45A",
+    "locked_at": "2026-03-27T10:56:49.129Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-A78F4FD0C45A"
+    ]
+  },
+  "LNRRX-VDVHD-4A5JA-2RD4E": {
+    "label": "No Label",
+    "created_at": "2026-03-27T12:42:33.138Z",
+    "expires_at": "2026-03-27T22:42:32.718Z",
+    "duration": "",
+    "device_id": "WDX-BF642A612E23",
+    "locked_at": "2026-03-27T12:54:17.857Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-BF642A612E23"
+    ]
+  },
+  "RVBPQ-TS4JF-6A67F-LYR4B": {
+    "label": "7xsoam",
+    "created_at": "2026-03-27T13:05:26.433Z",
+    "expires_at": "2026-04-06T13:05:26.193Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "NRCAF-PHA3H-RBQKP-FND2X": {
+    "label": "7xsoam",
+    "created_at": "2026-03-27T13:05:27.329Z",
+    "expires_at": "2026-04-06T13:05:27.088Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "MMKY2-SB8AC-CAAAE-CLW3X": {
+    "label": "7xsoam",
+    "created_at": "2026-03-27T13:05:28.302Z",
+    "expires_at": "2026-04-06T13:05:28.056Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "WN8RN-KMMT2-KLGWF-F2SBT": {
+    "label": "7xsoam",
+    "created_at": "2026-03-27T13:05:29.300Z",
+    "expires_at": "2026-04-06T13:05:29.013Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "6R5FP-HZNCC-Q2LGF-NR8YV": {
+    "label": "7xsoam",
+    "created_at": "2026-03-27T13:05:30.200Z",
+    "expires_at": "2026-04-06T13:05:29.971Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "PGV5F-H79JU-6ZP7R-Q7ANE": {
+    "label": "No Label",
+    "created_at": "2026-03-27T13:05:58.948Z",
+    "expires_at": "2026-04-01T13:05:58.503Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "7SESF-WD3C4-C4T7X-QCZ8Y": {
+    "label": "No Label",
+    "created_at": "2026-03-27T13:05:59.870Z",
+    "expires_at": "2026-04-01T13:05:59.634Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "JVJ7Z-MCUAZ-RBVAY-3MME2": {
+    "label": "No Label",
+    "created_at": "2026-03-27T13:06:00.987Z",
+    "expires_at": "2026-04-01T13:06:00.533Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "UY3DE-YF4RS-CGUY8-P2NAW": {
+    "label": "No Label",
+    "created_at": "2026-03-27T13:06:02.513Z",
+    "expires_at": "2026-04-01T13:06:02.295Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "M4YDX-JF4QD-S4WKS-SXR94": {
+    "label": "No Label",
+    "created_at": "2026-03-27T13:06:08.072Z",
+    "expires_at": "2026-04-01T13:06:07.579Z",
+    "duration": "",
+    "device_id": "WDX-19B5D5E418F8",
+    "locked_at": "2026-03-28T08:39:59.209Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-19B5D5E418F8"
+    ]
+  },
+  "6YBFS-8DW4G-4DYQV-8PJFL": {
+    "label": "Chainese",
+    "created_at": "2026-03-27T13:53:58.401Z",
+    "expires_at": "2026-04-01T13:53:57.750Z",
+    "duration": "",
+    "device_id": "WDX-4B3CF37E5ED5",
+    "locked_at": "2026-03-27T16:25:43.238Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-4B3CF37E5ED5"
+    ]
+  },
+  "Z6K2X-HVNC5-AU8YQ-PNNQN": {
+    "label": "No Label",
+    "created_at": "2026-03-27T16:04:59.845Z",
+    "expires_at": "2026-04-01T16:04:59.652Z",
+    "duration": "",
+    "device_id": "WDX-1BDA95FFE904",
+    "locked_at": "2026-03-27T17:43:28.722Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-1BDA95FFE904"
+    ]
+  },
+  "DESH4-HY6JR-RE8AG-LRCR4": {
+    "label": "No Label",
+    "created_at": "2026-03-27T16:32:52.880Z",
+    "expires_at": "2026-04-01T16:32:52.655Z",
+    "duration": "",
+    "device_id": "WDX-1E60C67E7DAD",
+    "locked_at": "2026-03-27T16:33:04.008Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-1E60C67E7DAD"
+    ]
+  },
+  "2ZNV6-G2LUC-D2NYK-NCNG4": {
+    "label": "No Label",
+    "created_at": "2026-03-28T11:40:56.836Z",
+    "expires_at": "2026-03-28T21:40:56.659Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "SQ2WQ-7CN94-U9J86-L3WRE": {
+    "label": "7xsoam foreigner",
+    "created_at": "2026-04-02T07:45:08.122Z",
+    "expires_at": "2026-04-02T17:45:07.866Z",
+    "duration": "",
+    "device_id": "WDX-8ED7E16CF2FC",
+    "locked_at": "2026-04-02T07:47:33.815Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-8ED7E16CF2FC"
+    ]
+  },
+  "2RSF7-XMSKJ-5AABV-7KEN8": {
+    "label": "Rahul test week 2",
+    "created_at": "2026-04-03T12:50:37.437Z",
+    "expires_at": "2026-04-09T12:50:37.150Z",
+    "duration": "",
+    "device_id": "WDX-8ED7E16CF2FC",
+    "locked_at": "2026-04-03T12:52:59.686Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-8ED7E16CF2FC"
+    ]
+  },
+  "KXV97-SBXSK-77QXS-Z828B": {
+    "label": "Rahul test week 2",
+    "created_at": "2026-04-03T12:50:38.682Z",
+    "expires_at": "2026-04-09T12:50:38.496Z",
+    "duration": "",
+    "device_id": "WDX-8ED7E16CF2FC",
+    "locked_at": "2026-04-03T13:00:51.276Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-8ED7E16CF2FC"
+    ]
+  },
+  "GRFVT-WLJBE-FJR72-8JK6E": {
+    "label": "7 day 7xsoam",
+    "created_at": "2026-04-03T13:02:00.883Z",
+    "expires_at": "2026-04-09T13:02:00.310Z",
+    "duration": "",
+    "device_id": "WDX-8ED7E16CF2FC",
+    "locked_at": "2026-04-03T13:02:54.427Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-8ED7E16CF2FC"
+    ]
+  },
+  "FKH3D-VJPSC-LRHNR-JUGHJ": {
+    "label": "7xsoam",
+    "created_at": "2026-04-03T13:06:21.248Z",
+    "expires_at": "2026-04-09T13:06:20.590Z",
+    "duration": "",
+    "device_id": "WDX-648092089FAE",
+    "locked_at": "2026-04-03T13:06:52.926Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-648092089FAE"
+    ]
+  },
+  "2C7MY-H2MRH-ZDGXE-78TPB": {
+    "label": "Sann sab. Vphone",
+    "created_at": "2026-04-04T12:45:39.072Z",
+    "expires_at": "2026-04-09T12:45:38.890Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "THLBJ-78FGR-DSC85-PVD22": {
+    "label": "Sakham",
+    "created_at": "2026-04-05T16:26:42.474Z",
+    "expires_at": "2026-04-09T16:26:41.248Z",
+    "duration": "",
+    "device_id": "WDX-EA982C4AB81B",
+    "locked_at": "2026-04-05T16:50:03.869Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-EA982C4AB81B"
+    ]
+  },
+  "4Y425-MEHNN-5ME22-9CYCR": {
+    "label": "1 day",
+    "created_at": "2026-04-08T16:53:35.770Z",
+    "expires_at": "2026-04-09T16:53:34.809Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "TWULB-6L6FM-YXVCJ-54GNC": {
+    "label": "1 day",
+    "created_at": "2026-04-09T02:01:42.566Z",
+    "expires_at": "2026-04-10T02:01:41.639Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "YZMUX-D4H64-Q98CD-JHGCC": {
+    "label": "Saksham",
+    "created_at": "2026-04-10T07:47:39.330Z",
+    "expires_at": "2026-04-15T07:47:37.723Z",
+    "duration": "",
+    "device_id": "WDX-EA982C4AB81B",
+    "locked_at": "2026-04-10T11:03:06.082Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-EA982C4AB81B"
+    ]
+  },
+  "WX8FU-H33VS-DC5RD-RRDHM": {
+    "label": "Omg",
+    "created_at": "2026-04-10T12:38:29.098Z",
+    "expires_at": "2026-04-15T12:38:27.900Z",
+    "duration": "",
+    "device_id": "WDX-2C38E5E02D68",
+    "locked_at": "2026-04-11T09:10:15.654Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-2C38E5E02D68"
+    ]
+  },
+  "987MK-WENLS-VLTYN-D3WH5": {
+    "label": "Itachi",
+    "created_at": "2026-04-10T12:51:59.926Z",
+    "expires_at": "2026-04-15T12:51:58.902Z",
+    "duration": "",
+    "device_id": "WDX-DA87313887F2",
+    "locked_at": "2026-04-10T12:53:26.830Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-DA87313887F2"
+    ]
+  },
+  "L7DB6-HG8V4-EFZ2F-LFNX4": {
+    "label": "7x buyer",
+    "created_at": "2026-04-10T15:30:02.447Z",
+    "expires_at": "2026-04-16T15:30:01.430Z",
+    "duration": "",
+    "device_id": "WDX-F88FE3280C76",
+    "locked_at": "2026-04-10T15:31:03.586Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-F88FE3280C76"
+    ]
+  },
+  "ZFRZD-SGWEV-YCAU5-MUA9Q": {
+    "label": "No Label",
+    "created_at": "2026-04-10T15:30:12.617Z",
+    "expires_at": "2026-04-16T15:30:11.602Z",
+    "duration": "",
+    "device_id": "WDX-8ED7E16CF2FC",
+    "locked_at": "2026-04-10T15:31:28.370Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-8ED7E16CF2FC"
+    ]
+  },
+  "VMDN6-E7QY2-XQLCH-VET5C": {
+    "label": "Account not deleted",
+    "created_at": "2026-04-10T17:12:42.818Z",
+    "expires_at": "2026-04-20T17:12:41.892Z",
+    "duration": "",
+    "device_id": "WDX-1BDA95FFE904",
+    "locked_at": "2026-04-10T18:22:26.444Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-1BDA95FFE904"
+    ]
+  },
+  "PBZC5-YJW98-TXN73-S55X5": {
+    "label": "Free tryel",
+    "created_at": "2026-04-16T12:12:50.422Z",
+    "expires_at": "2026-04-16T22:12:49.533Z",
+    "duration": "",
+    "device_id": "WDX-12DC2674B234",
+    "locked_at": "2026-04-16T12:32:41.088Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-12DC2674B234"
+    ]
+  },
+  "MHNUK-LQZUG-R2Q3F-PHRVF": {
+    "label": "Free teyele",
+    "created_at": "2026-04-16T12:32:12.354Z",
+    "expires_at": "2026-04-16T22:32:11.405Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "GQHV7-AD3S7-CZSKP-78BLS": {
+    "label": "No Label",
+    "created_at": "2026-04-17T09:11:17.388Z",
+    "expires_at": "2026-04-20T09:11:15.152Z",
+    "duration": "",
+    "device_id": "WDX-6270D809950D",
+    "locked_at": "2026-04-17T11:53:11.468Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-6270D809950D"
+    ]
+  },
+  "9HGB2-M6HSE-ANJB7-326WF": {
+    "label": "Fab",
+    "created_at": "2026-04-17T16:55:59.072Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": "WDX-7315E509574E",
+    "locked_at": "2026-04-18T03:36:40.258Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-7315E509574E"
+    ]
+  },
+  "CBZ6T-YQL3X-2D67P-RT38B": {
+    "label": "No Label",
+    "created_at": "2026-04-18T10:59:41.548Z",
+    "expires_at": "2026-04-28T10:59:40.593Z",
+    "duration": "",
+    "device_id": "WDX-EDAA3D2A384C",
+    "locked_at": "2026-04-18T10:59:48.345Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-EDAA3D2A384C"
+    ]
+  },
+  "YYGLT-XS4YK-2AQQX-VEKS3": {
+    "label": "Lewis",
+    "created_at": "2026-04-18T14:09:32.245Z",
+    "expires_at": "2026-04-28T14:09:31.332Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": []
+  },
+  "MX3VM-KWGNH-YRPEL-FHK77": {
+    "label": "Soam buyers",
+    "created_at": "2026-04-19T16:55:32.326Z",
+    "expires_at": "2026-04-24T16:55:31.261Z",
+    "duration": "",
+    "device_id": "WDX-2F75EAD7FB96",
+    "locked_at": "2026-04-19T17:04:45.776Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-2F75EAD7FB96"
+    ]
+  },
+  "EMK8S-RNCRE-ZFT4M-E8MSG": {
+    "label": "Soam buyers",
+    "created_at": "2026-04-19T16:55:37.775Z",
+    "expires_at": "2026-04-24T16:55:36.737Z",
+    "duration": "",
+    "device_id": "WDX-1E97EA5F197B",
+    "locked_at": "2026-04-22T16:23:12.064Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-1E97EA5F197B"
+    ]
+  },
+  "HUTC9-4R56E-PXZYR-WGSK3": {
+    "label": "No Label",
+    "created_at": "2026-04-21T07:05:51.604Z",
+    "expires_at": "2026-05-01T07:05:51.965Z",
+    "duration": "",
+    "device_id": "WDX-9029C7BBE778",
+    "locked_at": "2026-04-21T07:06:02.312Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-9029C7BBE778"
+    ]
+  },
+  "MSC65-8EZAK-CCUJR-QZ6CC": {
+    "label": "No Label",
+    "created_at": "2026-04-24T10:42:52.475Z",
+    "expires_at": "2026-04-24T10:52:52.847Z",
+    "duration": "",
+    "device_id": "WDX-1E60C67E7DAD",
+    "locked_at": "2026-04-24T10:43:07.480Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-1E60C67E7DAD"
+    ]
+  },
+  "AEGVS-CPWVE-53W9L-D4LN4": {
+    "label": "9344712528",
+    "created_at": "2026-04-24T11:23:42.515Z",
+    "expires_at": "2026-04-30T11:23:42.898Z",
+    "duration": "",
+    "device_id": "WDX-3018A5153DD1",
+    "locked_at": "2026-04-27T07:17:35.566Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-3018A5153DD1"
+    ]
+  },
+  "MWKF6-P56VH-22AD8-Q726D": {
+    "label": "Shadow",
+    "created_at": "2026-04-25T03:29:47.696Z",
+    "expires_at": "2026-04-30T03:29:48.027Z",
+    "duration": "",
+    "device_id": "WDX-92C941409EB0",
+    "locked_at": "2026-04-25T03:30:34.493Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-92C941409EB0"
+    ]
+  },
+  "4N3NW-G78J8-CW3EX-27453": {
+    "label": "Soam 2o",
+    "created_at": "2026-04-27T07:18:14.249Z",
+    "expires_at": "2026-04-30T07:18:13.533Z",
+    "duration": "",
+    "device_id": "WDX-EC7D763D0BC4",
+    "locked_at": "2026-04-27T07:20:45.880Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-EC7D763D0BC4"
+    ]
+  },
+  "WHQP6-UZ9UU-6JWPQ-UK4AR": {
+    "label": "Sdk",
+    "created_at": "2026-04-29T02:52:05.137Z",
+    "expires_at": "2026-04-29T12:52:04.582Z",
+    "duration": "",
+    "device_id": "WDX-896011F09211",
+    "locked_at": "2026-04-29T03:11:40.792Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-896011F09211"
+    ]
+  },
+  "L47S2-47UNE-AUJ8M-RY8GH": {
+    "label": "Nyell",
+    "created_at": "2026-04-30T01:49:24.841Z",
+    "expires_at": "2026-05-01T01:49:24.288Z",
+    "duration": "",
+    "device_id": "WDX-E10EE2D83703",
+    "locked_at": "2026-04-30T01:52:09.011Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-E10EE2D83703"
+    ]
+  },
+  "FM57E-AJ3E9-8U5VM-WHLNZ": {
+    "label": "Daku",
+    "created_at": "2026-04-30T16:49:13.677Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": "WDX-77C1AAD0A768",
+    "locked_at": "2026-05-15T17:07:36.148Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-77C1AAD0A768"
+    ]
+  },
+  "S6BW7-9ZQH7-G3SFM-8N2MV": {
+    "label": "Mangal",
+    "created_at": "2026-04-30T16:49:18.643Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": "WDX-5638A710C319",
+    "locked_at": "2026-05-16T05:17:24.135Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-5638A710C319"
+    ]
+  },
+  "MBBUS-K3K78-7TJ9Y-7VLHN": {
+    "label": "No Label",
+    "created_at": "2026-05-08T14:12:16.873Z",
+    "expires_at": "2026-05-09T14:12:16.200Z",
+    "duration": "",
+    "device_id": "WDX-19B5D5E418F8",
+    "locked_at": "2026-05-08T14:27:23.687Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-19B5D5E418F8"
+    ]
+  },
+  "9Q78D-23TEY-WKNMM-ZELMK": {
+    "label": "Soam 1",
+    "created_at": "2026-05-09T11:09:45.535Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": "WDX-79935623F546",
+    "locked_at": "2026-05-16T07:13:59.980Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-79935623F546"
+    ]
+  },
+  "67574-QFKJV-DDSA4-KQMUH": {
+    "label": "Modnmenu",
+    "created_at": "2026-05-15T06:55:54.387Z",
+    "expires_at": "2026-05-25T06:55:53.408Z",
+    "duration": "",
+    "device_id": "WDX-0A815556EB74",
+    "locked_at": "2026-05-15T06:55:58.723Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-0A815556EB74"
+    ]
+  },
+  "G7A2N-NWBFY-BAUCX-GW76E": {
+    "label": "Salman",
+    "created_at": "2026-05-15T10:15:09.491Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": "WDX-746D046090E3",
+    "locked_at": "2026-05-15T10:15:43.961Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-746D046090E3"
+    ]
+  },
+  "N5UDJ-QUMWG-NCKHP-RJNQN": {
+    "label": "No Label",
+    "created_at": "2026-05-15T13:06:40.442Z",
+    "expires_at": "2026-05-25T13:06:39.406Z",
+    "duration": "",
+    "device_id": "WDX-0A815556EB74",
+    "locked_at": "2026-05-15T13:07:14.327Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-0A815556EB74"
+    ]
+  },
+  "ZUFGU-KYWUS-HF7RN-HUX26": {
+    "label": "Dake 2 7day",
+    "created_at": "2026-05-15T17:13:01.149Z",
+    "expires_at": "2026-05-21T17:12:59.146Z",
+    "duration": "",
+    "device_id": "WDX-244A4D970640",
+    "locked_at": "2026-05-15T17:22:32.345Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-244A4D970640"
+    ]
+  },
+  "EQ4BB-X3NEQ-BMQCT-KQHCS": {
+    "label": "No Label",
+    "created_at": "2026-05-15T17:48:22.228Z",
+    "expires_at": "2026-05-15T17:58:21.266Z",
+    "duration": "",
+    "device_id": "WDX-0A815556EB74",
+    "locked_at": "2026-05-15T17:48:26.224Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-0A815556EB74"
+    ]
+  },
+  "M8YS2-ZMSJQ-8H6CL-34WEF": {
+    "label": "Test",
+    "created_at": "2026-05-16T04:36:18.699Z",
+    "expires_at": "2026-05-26T04:36:17.745Z",
+    "duration": "",
+    "device_id": "WDX-0A815556EB74",
+    "locked_at": "2026-05-16T04:36:23.382Z",
+    "active": true,
+    "reseller": null,
+    "max_devices": 1,
+    "connected_devices": [
+      "WDX-0A815556EB74"
+    ]
+  }
+}
