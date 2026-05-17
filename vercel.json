@@ -4,24 +4,32 @@
     {
       "src": "api/index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "reseller.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "api/index.js"
+      "dest": "/api/index.js"
     },
     {
-      "src": "/reseller",
-      "dest": "/reseller.html"
-    },
-    {
-      "src": "/reseller.html",
-      "dest": "/reseller.html"
-    },
-    {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/index.html"
+    },
+    {
+      "src": "/([a-zA-Z0-9_-]+)/login",
+      "dest": "/reseller.html"
+    },
+    {
+      "src": "/([a-zA-Z0-9_-]+)",
+      "dest": "/reseller.html"
     }
   ]
 }
