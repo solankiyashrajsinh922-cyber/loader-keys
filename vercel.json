@@ -4,20 +4,28 @@
     {
       "src": "api/index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "reseller.html",
+      "use": "@vercel/static"
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "api/index.js"
+      "source": "/api/:path*",
+      "destination": "/api/index.js"
     },
     {
-      "src": "/reseller",
-      "dest": "/reseller.html"
+      "source": "/:slug/login",
+      "destination": "/reseller.html"
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "source": "/:slug",
+      "destination": "/reseller.html"
     }
   ]
 }
