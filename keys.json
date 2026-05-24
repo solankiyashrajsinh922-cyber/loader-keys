@@ -817,10 +817,12 @@
     "created_at": "2026-05-24T12:14:48.592Z",
     "expires_at": "2026-05-24T22:14:47.621Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-0A815556EB74",
+    "locked_at": "2026-05-24T12:14:53.223Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": []
+    "connected_devices": [
+      "WDX-0A815556EB74"
+    ]
   }
 }
