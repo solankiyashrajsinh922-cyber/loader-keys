@@ -31,8 +31,8 @@ async function getResellers() {
   }
 }
 
-function rp(){ const c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; let s=''; for(let i=0;i<5;i++) s+=c[Math.floor(Math.random()*c.length)]; return s; }
-function makeKey(){ return [rp(),rp(),rp(),rp()].join('-'); }
+function rp(){ const c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; let s=''; for(let i=0;i<4;i++) s+=c[Math.floor(Math.random()*c.length)]; return s; }
+function makeKey(){ return 'Yash_X_Prime_' + rp() + '_' + rp(); }
 
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin','*');
@@ -50,6 +50,11 @@ module.exports = async (req, res) => {
     if(action==='validate'){
       const { key, device_id } = req.body||{};
       if(!key){res.json({success:false,message:"Key required!"});return;}
+      
+    if(!key.startsWith('Yash_X_Prime_')){
+        res.json({success:false,message:"Invalid key format! Use new branded key."});
+        return;
+     }
 
       const { data: v } = await getFile('version.json');
       if(v.maintenance){
