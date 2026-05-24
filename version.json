@@ -1,12 +1,26 @@
 {
   "version": "3.0",
-  "zip_url": "https://github.com/solankiyashrajsinh922-cyber/loader-keys/releases/download/V1.0/payload.zip",
+  "mods": {
+    "normal": {
+      "label": "Normal Mod",
+      "zip_url": "https://github.com/solankiyashrajsinh922-cyber/loader-keys/releases/download/V1.0/payload.zip"
+    },
+    "tree": {
+      "label": "Normal Mod + Tree Remove",
+      "zip_url": "https://github.com/solankiyashrajsinh922-cyber/loader-keys/releases/download/V1.0/payload_tree.zip"
+    },
+    "full": {
+      "label": "Normal Mod + Tree Remove + Under Water Walk + Building Remove (Airport, Bio, Building etc.)",
+      "zip_url": "https://github.com/solankiyashrajsinh922-cyber/loader-keys/releases/download/V1.0/payload_full.zip",
+      "warning": true
+    }
+  },
+  "locked_mods": [],
   "zip_password": "8190iwiduud",
   "lib_name": "libil2cpp.so",
   "keys_url": "https://raw.githubusercontent.com/solankiyashrajsinh922-cyber/loader-keys/main/keys.json",
   "maintenance": false,
-  "maintenance_msg": "Injection is currently under maintenance.
-Please try again later.",
+  "maintenance_msg": "Injection is currently under maintenance.\nPlease try again later.",
   "force_update": false,
   "min_version": "1.0",
   "credit_rates": {
