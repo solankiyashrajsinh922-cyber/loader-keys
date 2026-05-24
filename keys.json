@@ -886,5 +886,16 @@
     "active": true,
     "max_devices": 1,
     "connected_devices": []
+  },
+  "JK8QA-DRHYQ-56ZG5-6YBWN": {
+    "label": "No Label",
+    "created_at": "2026-05-24T16:33:28.898Z",
+    "expires_at": "2026-05-25T02:33:27.927Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": []
   }
 }
