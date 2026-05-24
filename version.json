@@ -16,7 +16,8 @@
     }
   },
   "locked_mods": [
-    "full"
+    "full",
+    "tree"
   ],
   "zip_password": "8190iwiduud",
   "lib_name": "libil2cpp.so",
