@@ -864,5 +864,16 @@
     "connected_devices": [
       "WDX-C952A24E4C31"
     ]
+  },
+  "5CZLY-GCY63-KQRPK-KNT7A": {
+    "label": "No Label",
+    "created_at": "2026-05-24T16:16:00.961Z",
+    "expires_at": "2026-05-24T16:26:00.001Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": []
   }
 }
