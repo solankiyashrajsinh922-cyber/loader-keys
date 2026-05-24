@@ -375,7 +375,7 @@ function handleMaxDevChange(){
 
 // ── Generate ───────────────────────────────
 function rp(){ const c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; let s=''; for(let i=0;i<5;i++) s+=c[Math.floor(Math.random()*c.length)]; return s; }
-function makeKey(){ return [rp(),rp(),rp(),rp()].join('-'); }
+function makeKey(){ return 'Yash_X_Prime_'+rp()+'_'+rp(); }
 function calcExpiry(v,u){
   if(u==='lifetime') return null;
   const d=new Date();
