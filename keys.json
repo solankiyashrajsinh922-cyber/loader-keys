@@ -851,5 +851,16 @@
     "active": true,
     "max_devices": 1,
     "connected_devices": []
+  },
+  "3FRH4-FCEYR-D7HX2-LKXPH": {
+    "label": "No Label",
+    "created_at": "2026-05-24T14:03:55.198Z",
+    "expires_at": "2026-05-25T00:03:53.991Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": []
   }
 }
