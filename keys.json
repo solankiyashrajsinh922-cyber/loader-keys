@@ -921,11 +921,13 @@
     "created_at": "2026-05-24T17:50:56.216Z",
     "expires_at": null,
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-0A815556EB74",
+    "locked_at": "2026-05-25T07:42:57.973Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": []
+    "connected_devices": [
+      "WDX-0A815556EB74"
+    ]
   },
   "Yash_X_Prime_QZ237_AP5CW": {
     "label": "Soam1",
