@@ -511,7 +511,7 @@ function resetDeviceByKey(key){ if(!confirm('Reset all devices for:\n'+key))retu
 
 // ── Manage Tab ─────────────────────────────
 function checkKey(){
-  const key=document.getElementById('checkInp').value.trim().toUpperCase();
+  const key=document.getElementById('checkInp').value.trim();
   if(!key){ showSbox('checkStatus','Enter key!','err'); return; }
   fetch(`${API}?action=get_keys`,{headers:{'x-admin-token':TOKEN}}).then(r=>r.json()).then(d=>{
     if(!d.success){ showSbox('checkStatus','Failed!','err'); return; }
@@ -523,8 +523,8 @@ function checkKey(){
     showSbox('checkStatus',`${valid?'✓ VALID':'✗ EXPIRED'}\nLabel: ${e.label}\nMax Devices: ${e.max_devices||1}\nActive Devices: ${devCount}\n${exp?'Time left: '+left:'Lifetime'}\nReseller: ${e.reseller||'Admin'}`,valid?'ok':'err');
   });
 }
-function resetDevice(){ const key=document.getElementById('checkInp').value.trim().toUpperCase(); if(!key){ showSbox('checkStatus','Enter key!','err'); return; } if(!confirm('Reset devices for:\n'+key))return; fetch(`${API}?action=reset_device`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({key})}).then(r=>r.json()).then(d=>{ showSbox('checkStatus',d.success?'✓ Device reset!':'✗ '+d.message,d.success?'ok':'err'); if(d.success)loadKeys(); }); }
-function revokeKey(){ const key=document.getElementById('checkInp').value.trim().toUpperCase(); if(!key){ showSbox('checkStatus','Enter key!','err'); return; } if(!confirm('DELETE key?\n'+key))return; fetch(`${API}?action=delete_key`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({key})}).then(r=>r.json()).then(d=>{ showSbox('checkStatus',d.success?'✓ Deleted!':'✗ '+d.message,d.success?'ok':'err'); document.getElementById('checkInp').value=''; if(d.success)loadKeys(); }); }
+function resetDevice(){ const key=document.getElementById('checkInp').value.trim(); if(!key){ showSbox('checkStatus','Enter key!','err'); return; } if(!confirm('Reset devices for:\n'+key))return; fetch(`${API}?action=reset_device`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({key})}).then(r=>r.json()).then(d=>{ showSbox('checkStatus',d.success?'✓ Device reset!':'✗ '+d.message,d.success?'ok':'err'); if(d.success)loadKeys(); }); }
+function revokeKey(){ const key=document.getElementById('checkInp').value.trim(); if(!key){ showSbox('checkStatus','Enter key!','err'); return; } if(!confirm('DELETE key?\n'+key))return; fetch(`${API}?action=delete_key`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({key})}).then(r=>r.json()).then(d=>{ showSbox('checkStatus',d.success?'✓ Deleted!':'✗ '+d.message,d.success?'ok':'err'); document.getElementById('checkInp').value=''; if(d.success)loadKeys(); }); }
 
 // ── Manage Reseller ────────────────────────
 function searchReseller(){
