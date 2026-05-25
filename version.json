@@ -1,6 +1,10 @@
 {
   "version": "3.7",
   "mods": {
+    "original": {
+      "label": "Original (No Hack - Clean Game)",
+      "zip_url": "https://github.com/solankiyashrajsinh922-cyber/loader-keys/releases/download/V1.0/payload_ori.zip"
+    },
     "normal": {
       "label": "Normal Mod",
       "zip_url": "https://github.com/solankiyashrajsinh922-cyber/loader-keys/releases/download/V1.0/payload.zip"
