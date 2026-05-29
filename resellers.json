@@ -1,1 +1,10 @@
-{}
+{
+  "soam": {
+    "name": "soam",
+    "password": "9898",
+    "credits": 10,
+    "created_at": "2026-05-29T10:45:39.124Z",
+    "total_keys_generated": 0,
+    "active": true
+  }
+}
