@@ -999,5 +999,16 @@
     "connected_devices": [
       "WDX-8066651C23A4"
     ]
+  },
+  "Yash_X_Prime_BN4KC_QRHP9": {
+    "label": "Bunny",
+    "created_at": "2026-05-30T03:41:58.811Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": []
   }
 }
