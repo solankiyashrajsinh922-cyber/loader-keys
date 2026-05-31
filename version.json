@@ -30,5 +30,11 @@
   "credit_rates": {
     "time_based": 1,
     "lifetime": 2
+  },
+  "mod_features": {
+    "original": "Ueuwue",
+    "normal": "",
+    "tree": "",
+    "full": ""
   }
 }
