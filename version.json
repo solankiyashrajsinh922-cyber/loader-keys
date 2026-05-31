@@ -19,9 +19,7 @@
       "warning": true
     }
   },
-  "locked_mods": [
-    "tree"
-  ],
+  "locked_mods": [],
   "zip_password": "8190iwiduud",
   "lib_name": "libil2cpp.so",
   "keys_url": "https://raw.githubusercontent.com/solankiyashrajsinh922-cyber/loader-keys/main/keys.json",
