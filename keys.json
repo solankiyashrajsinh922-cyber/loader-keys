@@ -952,19 +952,6 @@
       "WDX-5638A710C319"
     ]
   },
-  "Yash_X_Prime_ZXJWZ_KNQ45": {
-    "label": "Yash x Prime",
-    "created_at": "2026-05-25T13:56:10.156Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-0A815556EB74",
-    "locked_at": "2026-05-25T13:56:15.662Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-0A815556EB74"
-    ]
-  },
   "Yash_X_Prime_8AUJA_HPXJX": {
     "label": "Harendra",
     "created_at": "2026-05-25T14:13:36.744Z",
