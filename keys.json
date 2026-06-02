@@ -1003,8 +1003,8 @@
     "created_at": "2026-05-30T13:11:15.001Z",
     "expires_at": "2026-06-06T13:11:14.654Z",
     "duration": "",
-    "device_id": "WDX-4E990E1D33FC",
-    "locked_at": "2026-06-02T17:39:08.099Z",
+    "device_id": "WDX-621EBD23DBDC",
+    "locked_at": "2026-06-02T19:21:51.248Z",
     "active": true,
     "max_devices": 100,
     "connected_devices": [
@@ -1028,7 +1028,8 @@
       "WDX-08BDDCD24FAA",
       "WDX-D669D5DEC9A4",
       "WDX-69866797111A",
-      "WDX-4E990E1D33FC"
+      "WDX-4E990E1D33FC",
+      "WDX-621EBD23DBDC"
     ]
   }
 }
