@@ -1003,8 +1003,8 @@
     "created_at": "2026-05-30T13:11:15.001Z",
     "expires_at": "2026-06-06T13:11:14.654Z",
     "duration": "",
-    "device_id": "WDX-F81B8C0A1165",
-    "locked_at": "2026-06-03T15:07:50.167Z",
+    "device_id": "WDX-EC159EA10FA0",
+    "locked_at": "2026-06-04T18:58:08.567Z",
     "active": true,
     "max_devices": 100,
     "connected_devices": [
@@ -1041,7 +1041,8 @@
       "WDX-305E3A1733E6",
       "WDX-CE4C43F2F3EE",
       "WDX-B5A7F6F199FC",
-      "WDX-F81B8C0A1165"
+      "WDX-F81B8C0A1165",
+      "WDX-EC159EA10FA0"
     ]
   },
   "Yash_X_Prime_ZJQ2U_7SVH2": {
