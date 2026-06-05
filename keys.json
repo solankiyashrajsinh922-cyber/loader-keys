@@ -1042,10 +1042,12 @@
     "created_at": "2026-06-05T17:31:45.847Z",
     "expires_at": null,
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-6F371D62E83C",
+    "locked_at": "2026-06-05T18:01:13.623Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": []
+    "connected_devices": [
+      "WDX-6F371D62E83C"
+    ]
   }
 }
