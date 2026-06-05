@@ -1036,5 +1036,16 @@
     "connected_devices": [
       "WDX-607A3EA7A8B5"
     ]
+  },
+  "Yash_X_Prime_PXUZG_LUB2H": {
+    "label": "Account not deleted",
+    "created_at": "2026-06-05T17:31:45.847Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": []
   }
 }
