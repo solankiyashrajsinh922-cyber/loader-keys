@@ -89,15 +89,40 @@ module.exports = async (req, res) => {
         await updateFile('keys.json', keys, sha, "Device locked: "+device_id);
       }
 
-      // ✅ Response with key_type, mods, features
+      // ✅ FILTER MODS & FEATURES BASED ON KEY TYPE
+      const keyType = e.key_type || 'normal';
+      let allowedMods = {};
+      let allowedFeatures = {};
+      let allowedLocked = [];
+
+      if (keyType === 'mod_menu') {
+        // Mod Menu key: only original and mod_menu
+        if (v.mods && v.mods.original) allowedMods.original = v.mods.original;
+        if (v.mods && v.mods.mod_menu) allowedMods.mod_menu = v.mods.mod_menu;
+        if (v.mod_features && v.mod_features.original) allowedFeatures.original = v.mod_features.original;
+        if (v.mod_features && v.mod_features.mod_menu) allowedFeatures.mod_menu = v.mod_features.mod_menu;
+        allowedLocked = []; // no locks for mod menu keys
+      } else {
+        // Normal key: original, normal, tree, full
+        if (v.mods && v.mods.original) allowedMods.original = v.mods.original;
+        if (v.mods && v.mods.normal) allowedMods.normal = v.mods.normal;
+        if (v.mods && v.mods.tree) allowedMods.tree = v.mods.tree;
+        if (v.mods && v.mods.full) allowedMods.full = v.mods.full;
+        if (v.mod_features && v.mod_features.original) allowedFeatures.original = v.mod_features.original;
+        if (v.mod_features && v.mod_features.normal) allowedFeatures.normal = v.mod_features.normal;
+        if (v.mod_features && v.mod_features.tree) allowedFeatures.tree = v.mod_features.tree;
+        if (v.mod_features && v.mod_features.full) allowedFeatures.full = v.mod_features.full;
+        allowedLocked = v.locked_mods || [];
+      }
+
       res.json({
         success: true,
         label: e.label||"User",
         expires_at: e.expires_at,
-        mods: v.mods || {},
-        locked_mods: v.locked_mods || [],
-        mod_features: v.mod_features || {},
-        key_type: e.key_type || 'normal'   // 🔥 new field
+        mods: allowedMods,
+        locked_mods: allowedLocked,
+        mod_features: allowedFeatures,
+        key_type: keyType
       });
       return;
     }
@@ -118,7 +143,7 @@ module.exports = async (req, res) => {
           username:slug,
           name:resellers[slug].name||slug,
           credits:resellers[slug].credits||0,
-          allow_mod_menu: resellers[slug].allow_mod_menu || false   // ✅
+          allow_mod_menu: resellers[slug].allow_mod_menu || false
         }
       });
       return;
@@ -190,9 +215,8 @@ module.exports = async (req, res) => {
     }
 
     // ═══════════════════════════════════════════
-    // RESELLER RESET DEVICE (DISABLED NOW – no action)
+    // RESELLER RESET DEVICE (DISABLED)
     // ═══════════════════════════════════════════
-    // (We can keep the endpoint but return error always)
     if(action==='reseller_reset_device'){
       res.json({success:false,message:"Device reset has been disabled."});
       return;
@@ -326,7 +350,7 @@ module.exports = async (req, res) => {
         created_at: new Date().toISOString(),
         total_keys_generated: 0,
         active: true,
-        allow_mod_menu: false   // 🔥 default off
+        allow_mod_menu: false
       };
       await updateFile('resellers.json',resellers,sha,"Reseller created: "+slug);
       res.json({success:true,message:"Reseller created!",slug});return;
@@ -451,7 +475,6 @@ module.exports = async (req, res) => {
       const { data: keys } = await getFile('keys.json');
       const { data: resellers } = await getResellers();
       const stats = {};
-      // initialise each reseller
       for(const slug in resellers){
         stats[slug] = {
           name: resellers[slug].name || slug,
