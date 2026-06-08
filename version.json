@@ -17,6 +17,11 @@
       "label": "Normal Mod + Tree Remove + Under Water Walk + Building Remove (Airport, Bio, Building etc.)",
       "zip_url": "https://github.com/solankiyashrajsinh922-cyber/loader-keys/releases/download/V1.0/payload_full.zip",
       "warning": true
+    },
+    "mod_menu": {
+      "label": "Yash X Prime Mod Menu",
+      "zip_url": "https://github.com/solankiyashrajsinh922-cyber/loader-keys/releases/download/V1.0/payload_modmenu.zip",
+      "warning": false
     }
   },
   "locked_mods": [
@@ -38,6 +43,7 @@
     "original": "╔══════════════════════════╗\n║  REMOVE ALL HACKS       ║\n║  Play the original      ║\n║  game without any mods. ║\n╚══════════════════════════╝",
     "normal": "━━━━━━━━━━━━━━━━━━━━━━\n🔥 EXCLUSIVE VIP FEATURES 🔥\n◈ 📍 Player Location\n◈ 🏗 Forced Build (Fixed)\n◈ 🛡 Advanced Bypass\n◈ 👾 Stop Monster Attack\n◈ 🚀 Stop Tank/Heli Fire\n◈ ⛅ Always Day\n━━━━━━━━━━━━━━━━━━━━━━",
     "tree": "━━━━━━━━━━━━━━━━━━━━━━\n🔥 EXCLUSIVE VIP FEATURES 🔥\n◈ 📍 Player Location\n◈ 🏗 Forced Build (Fixed)\n◈ 🛡 Advanced Bypass\n◈ 👾 Stop Monster Attack\n◈ 🚀 Stop Tank/Heli Fire\n◈ ⛅ Always Day\n\n            ➕\n\n◈ 🌳 Tree Hide\n━━━━━━━━━━━━━━━━━━━━━━",
-    "full": "━━━━━━━━━━━━━━━━━━━━━━\n🔥 EXCLUSIVE VIP FEATURES 🔥\n◈ 📍 Player Location\n◈ 🏗 Forced Build (Fixed)\n◈ 🛡 Advanced Bypass\n◈ 👾 Stop Monster Attack\n◈ 🚀 Stop Tank/Heli Fire\n◈ ⛅ Always Day\n\n            ➕\n\n◈ 🌳 Tree Hide\n◈ 🪨 Stone Hide\n◈ 📦 Container Hide\n◈ 🚫 Full Texture Remove\n━━━━━━━━━━━━━━━━━━━━━━"
+    "full": "━━━━━━━━━━━━━━━━━━━━━━\n🔥 EXCLUSIVE VIP FEATURES 🔥\n◈ 📍 Player Location\n◈ 🏗 Forced Build (Fixed)\n◈ 🛡 Advanced Bypass\n◈ 👾 Stop Monster Attack\n◈ 🚀 Stop Tank/Heli Fire\n◈ ⛅ Always Day\n\n            ➕\n\n◈ 🌳 Tree Hide\n◈ 🪨 Stone Hide\n◈ 📦 Container Hide\n◈ 🚫 Full Texture Remove\n━━━━━━━━━━━━━━━━━━━━━━",
+    "mod_menu": "╔══════════════════════════╗\n║  YASH X PRIME MOD MENU  ║\n╠══════════════════════════╣\n║ ◈ Aimbot\n║ ◈ ESP\n║ ◈ Unlimited Health\n║ ◈ No Recoil\n║ ◈ ...\n╚══════════════════════════╝"
   }
 }
