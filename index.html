@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Yash X Prime — Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07070a;--s1:#0f0f14;--s2:#16161e;--s3:#1e1e28;
+  --br:#252532;--br2:#32324a;
+  --g:#00e87a;--g2:#00b85f;
+  --red:#ff4757;--yellow:#ffa502;--blue:#4f8ef7;--purple:#a855f7;
+  --t1:#f0f0ff;--t2:#8888aa;--t3:#444466;
+}
+body{background:var(--bg);color:var(--t1);font-family:'JetBrains Mono',monospace;min-height:100vh;padding-bottom:60px}
+.topbar{background:var(--s1);border-bottom:1px solid var(--br);padding:12px 16px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100}
+.tb-dot{width:8px;height:8px;border-radius:50%;background:var(--g);animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(0,232,122,.4)}50%{box-shadow:0 0 0 5px rgba(0,232,122,0)}}
+.tb-title{font-size:14px;font-weight:700;letter-spacing:1px}
+.maintenance-bar{display:flex;align-items:center;justify-content:space-between;background:#1a0a0a;border-bottom:1px solid #3a1515;padding:10px 16px;}
+.maintenance-bar.online{background:#0a1a0a;border-bottom-color:#153a15}
+.m-label{font-size:11px;font-weight:700;letter-spacing:1px}
+.m-label.off{color:var(--red)}
+.m-label.on{color:var(--g)}
+.toggle-wrap{display:flex;align-items:center;gap:10px}
+.toggle{position:relative;width:44px;height:24px;cursor:pointer}
+.toggle input{opacity:0;width:0;height:0}
+.toggle-slider{position:absolute;inset:0;background:#2a1515;border-radius:24px;transition:.3s;border:1px solid #3a1515}
+.toggle-slider:before{content:'';position:absolute;width:18px;height:18px;left:2px;top:2px;background:#ff4757;border-radius:50%;transition:.3s}
+.toggle input:checked + .toggle-slider{background:#0a2a0a;border-color:#1a3a1a}
+.toggle input:checked + .toggle-slider:before{transform:translateX(20px);background:var(--g)}
+.m-status{font-size:10px;color:var(--t3)}
+.login-wrap{display:flex;align-items:center;justify-content:center;min-height:85vh;padding:20px}
+.login-card{background:var(--s1);border:1px solid var(--br);border-radius:14px;padding:28px;width:100%;max-width:340px}
+.login-title{font-size:20px;font-weight:700;color:var(--g);margin-bottom:4px}
+.login-sub{font-size:10px;color:var(--t3);margin-bottom:24px}
+.tabs{display:flex;background:var(--s1);border-bottom:1px solid var(--br);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:12px 16px;font-size:11px;font-weight:700;color:var(--t3);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;letter-spacing:1px;transition:all .2s;flex-shrink:0}
+.tab.active{color:var(--g);border-bottom-color:var(--g)}
+.page{display:none;padding:14px}
+.page.active{display:block}
+.card{background:var(--s1);border:1px solid var(--br);border-radius:12px;padding:16px;margin-bottom:12px}
+.card-head{font-size:9px;font-weight:700;color:var(--t3);letter-spacing:3px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between}
+.lbl{font-size:10px;color:var(--t3);letter-spacing:.5px;margin-bottom:4px;margin-top:10px;display:block}
+.lbl:first-child{margin-top:0}
+.inp{width:100%;background:var(--s2);border:1px solid var(--br2);border-radius:8px;color:var(--t1);font-family:'JetBrains Mono',monospace;font-size:13px;padding:10px 12px;outline:none;transition:border .2s}
+.inp:focus{border-color:rgba(0,232,122,.4)}
+.inp::placeholder{color:var(--t3)}
+select.inp option{background:var(--s2)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.row3{display:grid;grid-template-columns:2fr 1fr 1fr;gap:8px}
+.btn{width:100%;margin-top:12px;padding:13px;border:none;border-radius:10px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all .15s}
+.btn-g{background:var(--g);color:#000}
+.btn-g:active{background:var(--g2);transform:scale(.98)}
+.btn-s{background:var(--s2);border:1px solid var(--br2);color:var(--t2)}
+.btn-r{background:rgba(255,71,87,.08);border:1px solid rgba(255,71,87,.2);color:var(--red)}
+.btn-b{background:rgba(79,142,247,.1);border:1px solid rgba(79,142,247,.3);color:#a0c4ff}
+.btn-y{background:rgba(255,165,2,.08);border:1px solid rgba(255,165,2,.2);color:var(--yellow)}
+.btn-p{background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.3);color:#c084fc}
+.btn-sm{padding:6px 12px;font-size:10px;border-radius:6px;margin-top:0;width:auto}
+.result-box{background:rgba(0,232,122,.06);border:1px solid rgba(0,232,122,.15);border-radius:10px;padding:14px;margin-top:12px;display:none;text-align:center}
+.result-key{font-size:14px;font-weight:700;color:var(--g);letter-spacing:2px;word-break:break-all;cursor:pointer}
+.result-meta{font-size:10px;color:var(--t3);margin-top:6px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.stat{background:var(--s1);border:1px solid var(--br);border-radius:10px;padding:12px 8px;text-align:center}
+.stat-n{font-size:20px;font-weight:700;line-height:1}
+.stat-l{font-size:8px;color:var(--t3);letter-spacing:1px;margin-top:4px}
+.key-item{background:var(--s2);border:1px solid var(--br);border-radius:10px;padding:12px;margin-bottom:8px}
+.key-item.expired{opacity:.4}
+.ki-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.ki-key{font-size:12px;font-weight:700;color:var(--g);word-break:break-all;cursor:pointer;flex:1}
+.key-item.expired .ki-key{color:var(--t3)}
+.ki-actions{display:flex;gap:6px;flex-shrink:0}
+.ki-btn{background:none;border:none;cursor:pointer;padding:2px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.5px}
+.ki-btn-reset{color:var(--blue);border:1px solid rgba(79,142,247,.3);background:rgba(79,142,247,.08)}
+.ki-btn-del{color:var(--red);border:1px solid rgba(255,71,87,.3);background:rgba(255,71,87,.08)}
+.ki-info{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:8px}
+.ki-field{font-size:9px;color:var(--t3);line-height:1.6}
+.ki-field span{color:var(--t2)}
+.device-section{background:rgba(79,142,247,.06);border:1px solid rgba(79,142,247,.15);border-radius:6px;padding:8px 10px;margin-top:6px}
+.device-label{font-size:8px;color:var(--blue);letter-spacing:1px;font-weight:700;margin-bottom:3px}
+.device-id{font-size:10px;color:#a0c4ff;word-break:break-all}
+.device-time{font-size:9px;color:var(--t3);margin-top:2px}
+.badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:20px;font-size:8px;font-weight:700;letter-spacing:.5px}
+.b-valid{background:rgba(0,232,122,.1);color:var(--g);border:1px solid rgba(0,232,122,.2)}
+.b-expired{background:rgba(255,71,87,.08);color:var(--red);border:1px solid rgba(255,71,87,.15)}
+.b-locked{background:rgba(79,142,247,.1);color:#a0c4ff;border:1px solid rgba(79,142,247,.2)}
+.b-free{background:rgba(255,165,2,.08);color:var(--yellow);border:1px solid rgba(255,165,2,.15)}
+.b-lifetime{background:rgba(0,232,122,.05);color:var(--g);border:1px solid rgba(0,232,122,.1)}
+.b-reseller{background:rgba(168,85,247,.1);color:#c084fc;border:1px solid rgba(168,85,247,.2)}
+.sbox{padding:10px 12px;border-radius:8px;font-size:11px;margin-top:10px;display:none;line-height:1.7;white-space:pre-line}
+.s-ok{background:rgba(0,232,122,.08);border:1px solid rgba(0,232,122,.2);color:var(--g)}
+.s-err{background:rgba(255,71,87,.08);border:1px solid rgba(255,71,87,.2);color:var(--red)}
+.empty{text-align:center;padding:28px;font-size:11px;color:var(--t3);letter-spacing:1px}
+.loading-txt{text-align:center;padding:20px;color:var(--t3);font-size:11px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--s3);border:1px solid var(--br2);color:var(--t1);font-size:11px;padding:9px 16px;border-radius:8px;opacity:0;transition:opacity .25s;pointer-events:none;white-space:nowrap;z-index:999;font-family:'JetBrains Mono',monospace}
+.toast.show{opacity:1}
+.multi-item{background:var(--s2);border:1px solid var(--br);border-radius:8px;padding:10px 12px;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.multi-key{font-size:11px;font-weight:700;color:var(--g);word-break:break-all;flex:1}
+
+/* Reseller styles */
+.reseller-item{background:var(--s2);border:1px solid var(--br);border-radius:10px;padding:14px;margin-bottom:10px}
+.ri-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.ri-name{font-size:14px;font-weight:700;color:var(--t1)}
+.ri-credits{font-size:13px;font-weight:700;color:var(--g)}
+.ri-info{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:10px}
+.ri-field{font-size:9px;color:var(--t3);line-height:1.6}
+.ri-field span{color:var(--t2)}
+.ri-actions{display:flex;gap:6px;flex-wrap:wrap}
+.ri-link{font-size:9px;color:var(--blue);word-break:break-all;background:rgba(79,142,247,.05);border:1px solid rgba(79,142,247,.15);border-radius:6px;padding:6px 10px;margin-top:6px;cursor:pointer}
+
+.r-result{background:var(--s2);border:1px solid rgba(168,85,247,.25);border-radius:10px;padding:14px;margin-top:12px;display:none}
+.r-result-name{font-size:16px;font-weight:700;color:var(--purple);margin-bottom:8px}
+.r-credits-big{font-size:24px;font-weight:700;color:var(--g)}
+
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.75);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.modal-overlay.show{display:flex}
+.modal-card{background:var(--s1);border:1px solid var(--br);border-radius:14px;padding:24px;width:100%;max-width:320px}
+.modal-title{font-size:15px;font-weight:700;color:var(--g);margin-bottom:16px}
+.modal-btns{display:flex;gap:8px;margin-top:12px}
+.modal-btns .btn{margin-top:0}
+
+/* Mod lock section */
+.mod-lock-item{display:flex;align-items:center;justify-content:space-between;background:var(--s2);border:1px solid var(--br);border-radius:8px;padding:10px 12px;margin-bottom:6px}
+.mod-lock-label{font-size:10px;color:var(--t2);flex:1}
+.mod-lock-status{font-size:9px;font-weight:700;margin-left:10px}
+.mod-lock-status.locked{color:var(--red)}
+.mod-lock-status.unlocked{color:var(--g)}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="tb-dot"></div>
+  <div class="tb-title">YASH X PRIME — ADMIN</div>
+</div>
+
+<!-- LOGIN -->
+<div id="loginPage">
+  <div class="login-wrap">
+    <div class="login-card">
+      <div class="login-title">Admin Panel</div>
+      <div class="login-sub">Enter your admin token to continue</div>
+      <span class="lbl">ADMIN TOKEN</span>
+      <input class="inp" id="tokenInput" type="password" placeholder="Enter token..."/>
+      <button class="btn btn-g" onclick="doLogin()">LOGIN →</button>
+      <div class="sbox" id="loginStatus"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="mainApp" style="display:none">
+  <div class="maintenance-bar" id="maintBar">
+    <div>
+      <div class="m-label off" id="maintLabel">⚠ MAINTENANCE MODE: ON</div>
+      <div class="m-status" id="maintSub">App is currently offline for users</div>
+    </div>
+    <div class="toggle-wrap">
+      <label class="toggle">
+        <input type="checkbox" id="maintToggle" onchange="toggleMaintenance(this.checked)"/>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="generate" onclick="switchTab(this)">Generate</div>
+    <div class="tab" data-tab="keys" onclick="switchTab(this)">All Keys</div>
+    <div class="tab" data-tab="modlocks" onclick="switchTab(this)">Mod Locks</div>
+    <div class="tab" data-tab="validate" onclick="switchTab(this)">Manage</div>
+    <div class="tab" data-tab="resellers" onclick="switchTab(this)">Resellers</div>
+    <div class="tab" data-tab="resellerinfo" onclick="switchTab(this)">Reseller Info</div>
+    <div class="tab" data-tab="modfeatures" onclick="switchTab(this)">Features</div>
+  </div>
+  
+  <!-- GENERATE TAB -->
+<div class="page active" id="page-generate">
+  <div class="card">
+    <div class="card-head">CREATE NEW KEY</div>
+    <span class="lbl">KEY TYPE</span>
+    <select class="inp" id="keyTypeSelect">
+      <option value="normal" selected>🔹 Normal Key</option>
+      <option value="mod_menu">🔸 Mod Menu Key</option>
+    </select>
+    <span class="lbl">DURATION & QUANTITY</span>
+    <div class="row3">
+      <input class="inp" id="durVal" type="number" value="10" min="1"/>
+      <select class="inp" id="durUnit">
+        <option value="minutes">Minutes</option>
+        <option value="hours">Hours</option>
+        <option value="days">Days</option>
+        <option value="months">Months</option>
+        <option value="lifetime">Lifetime</option>
+      </select>
+      <input class="inp" id="keyQty" type="number" value="1" min="1" max="50" placeholder="Qty"/>
+    </div>
+    <span class="lbl">MAX DEVICES</span>
+    <div class="row2">
+      <select class="inp" id="maxDevSelect" onchange="handleMaxDevChange()">
+        <option value="1">1 Device</option>
+        <option value="2">2 Devices</option>
+        <option value="3">3 Devices</option>
+        <option value="5">5 Devices</option>
+        <option value="10">10 Devices</option>
+        <option value="custom">Custom</option>
+      </select>
+      <input class="inp" id="maxDevCustom" type="number" value="1" min="1" max="1000" style="display:none" placeholder="Custom"/>
+    </div>
+    <span class="lbl">LABEL (optional)</span>
+    <input class="inp" id="keyLabel" type="text" placeholder="e.g. Customer Name"/>
+    <button class="btn btn-g" id="genBtn" onclick="generateKey()">⚡ GENERATE KEY</button>
+    <div class="result-box" id="resultBox">
+      <div class="result-key" id="resultKey" onclick="copyText(this.textContent)"></div>
+      <div class="result-meta" id="resultMeta"></div>
+      <div style="font-size:9px;color:rgba(0,232,122,.4);margin-top:6px">tap to copy</div>
+    </div>
+    <div id="multiWrap" style="display:none;margin-top:12px">
+      <div class="card-head">GENERATED</div>
+      <div id="multiList"></div>
+    </div>
+    <div class="sbox" id="genStatus"></div>
+  </div>
+</div>
+
+<!-- MOD LOCKS TAB -->
+<div class="page" id="page-modlocks">
+  <div class="card">
+    <div class="card-head">MOD LOCK CONTROL</div>
+    <div id="modLocksList"><div class="loading-txt">Loading...</div></div>
+    <div class="sbox" id="modLockStatus"></div>
+  </div>
+</div>
+
+<!-- ALL KEYS TAB -->
+<div class="page" id="page-keys">
+  <div class="stats">
+    <div class="stat"><div class="stat-n" id="sTotal">—</div><div class="stat-l">TOTAL</div></div>
+    <div class="stat"><div class="stat-n" style="color:var(--g)" id="sValid">—</div><div class="stat-l">VALID</div></div>
+    <div class="stat"><div class="stat-n" style="color:var(--red)" id="sExpired">—</div><div class="stat-l">EXPIRED</div></div>
+    <div class="stat"><div class="stat-n" style="color:var(--blue)" id="sLocked">—</div><div class="stat-l">LOCKED</div></div>
+  </div>
+  <div class="card" style="padding:14px">
+    <div class="card-head">ALL KEYS<button class="btn btn-s btn-sm" onclick="loadKeys()">↻ Refresh</button></div>
+    <div id="keysList"><div class="loading-txt">Loading...</div></div>
+  </div>
+</div>
+
+<!-- MANAGE TAB -->
+<div class="page" id="page-validate">
+  <div class="card">
+    <div class="card-head">MANAGE KEY</div>
+    <span class="lbl">ENTER KEY</span>
+    <input class="inp" id="checkInp" type="text" placeholder="Yash_X_Prime_XXXXX_XXXXX" style="text-transform:uppercase"/>
+    <div class="row2" style="margin-top:12px">
+      <button class="btn btn-s" style="margin-top:0" onclick="checkKey()">CHECK</button>
+      <button class="btn btn-b" style="margin-top:0" onclick="resetDevice()">RESET DEVICE</button>
+    </div>
+    <button class="btn btn-r" onclick="revokeKey()">DELETE KEY</button>
+    <div class="sbox" id="checkStatus"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-head">MANAGE RESELLER</div>
+    <span class="lbl">SEARCH USERNAME</span>
+    <div class="row2">
+      <input class="inp" id="rSearchInp" type="text" placeholder="e.g. nova"/>
+      <button class="btn btn-s" style="margin-top:0" onclick="searchReseller()">SEARCH</button>
+    </div>
+    <div class="r-result" id="rResult">
+      <div class="r-result-name" id="rResultName">—</div>
+      <div class="ki-info" style="margin-bottom:10px">
+        <div class="ki-field">Username <span id="rResUser">—</span></div>
+        <div class="ki-field">Created <span id="rResCreated">—</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;background:rgba(0,232,122,.05);border:1px solid rgba(0,232,122,.15);border-radius:8px;padding:10px 12px;margin-bottom:12px">
+        <div><div class="r-credits-big" id="rResCredits">—</div><div style="font-size:8px;color:var(--t3);letter-spacing:1px">CREDITS</div></div>
+        <div style="flex:1;text-align:right;font-size:9px;color:var(--t3)">1 credit = 1 key</div>
+      </div>
+      <!-- Mod Menu Permission Toggle -->
+      <div style="font-size:9px;color:var(--t3);letter-spacing:2px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--br)">MOD MENU KEY PERMISSION</div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <span style="font-size:10px;color:var(--t2)" id="rModMenuLabel">Mod Menu: OFF</span>
+        <button class="btn btn-sm btn-y" style="margin:0" onclick="toggleManageModMenu()">TOGGLE</button>
+      </div>
+
+      <div style="font-size:9px;color:var(--t3);letter-spacing:2px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--br)">CREDIT MANAGEMENT</div>
+      <span class="lbl">AMOUNT</span>
+      <input class="inp" id="rCreditAmt" type="number" value="10" min="1"/>
+      <div class="row2">
+        <button class="btn btn-g" style="margin-top:8px;font-size:11px" onclick="doCredits('add')">+ ADD</button>
+        <button class="btn btn-r" style="margin-top:8px;font-size:11px" onclick="doCredits('remove')">- REMOVE</button>
+      </div>
+      <div style="font-size:9px;color:var(--t3);letter-spacing:2px;margin:12px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--br)">CHANGE PASSWORD</div>
+      <input class="inp" id="rNewPass" type="text" placeholder="New password"/>
+      <button class="btn btn-y" onclick="changeResellerPass()">🔑 CHANGE PASSWORD</button>
+      <div style="font-size:9px;color:var(--t3);letter-spacing:2px;margin:12px 0 8px;padding-bottom:6px;border-bottom:1px solid var(--br)">DANGER</div>
+      <button class="btn btn-r" onclick="deleteResellerFromManage()">🗑 DELETE RESELLER</button>
+      <div class="sbox" id="rManageStatus"></div>
+    </div>
+  </div>
+</div>
+
+<!-- RESELLERS TAB -->
+<div class="page" id="page-resellers">
+  <div class="card">
+    <div class="card-head">CREATE RESELLER</div>
+    <span class="lbl">USERNAME (becomes URL)</span>
+    <input class="inp" id="newRUser" type="text" placeholder="e.g. nova"/>
+    <span class="lbl">PASSWORD</span>
+    <input class="inp" id="newRPass" type="text" placeholder="Set password"/>
+    <span class="lbl">INITIAL CREDITS</span>
+    <input class="inp" id="newRCredits" type="number" value="10" min="0"/>
+    <button class="btn btn-g" onclick="createReseller()">+ CREATE RESELLER</button>
+    <div class="sbox" id="createRStatus"></div>
+  </div>
+  <div class="card" style="padding:14px">
+    <div class="card-head">ALL RESELLERS<button class="btn btn-s btn-sm" onclick="loadResellers()">↻ Refresh</button></div>
+    <div id="resellersList"><div class="loading-txt">Loading...</div></div>
+  </div>
+</div>
+
+<!-- RESELLER INFO TAB -->
+<div class="page" id="page-resellerinfo">
+  <div class="card">
+    <div class="card-head">RESELLER STATS<button class="btn btn-s btn-sm" onclick="loadResellerStats()">↻ Refresh</button></div>
+    <div id="resellerStatsList"><div class="loading-txt">Loading...</div></div>
+  </div>
+</div>
+
+<!-- 🔥 MOD FEATURES TAB -->
+<div class="page" id="page-modfeatures">
+  <div class="card">
+    <div class="card-head">MOD FEATURE DESCRIPTIONS</div>
+    <div style="margin-bottom:12px;font-size:10px;color:var(--t3)">
+      These appear in the app when user selects a mod option.
+    </div>
+
+    <span class="lbl">Original (No Hack)</span>
+    <textarea class="inp" id="featOriginal" rows="3" placeholder="e.g. Clean game, no modifications."></textarea>
+
+    <span class="lbl">Normal Mod</span>
+    <textarea class="inp" id="featNormal" rows="3" placeholder="Features list for Normal Mod..."></textarea>
+
+    <span class="lbl">Normal + Tree Remove</span>
+    <textarea class="inp" id="featTree" rows="3" placeholder="Features list for Tree Remove..."></textarea>
+
+    <span class="lbl">Full Mod</span>
+    <textarea class="inp" id="featFull" rows="4" placeholder="Full Mod features..."></textarea>
+
+    <span class="lbl">Mod Menu</span>
+    <textarea class="inp" id="featModMenu" rows="4" placeholder="Mod Menu features..."></textarea>
+
+    <button class="btn btn-g" style="margin-top:14px" onclick="saveModFeatures()">💾 SAVE FEATURES</button>
+    <div class="sbox" id="featStatus"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="creditModal">
+  <div class="modal-card">
+    <div class="modal-title">Manage Credits</div>
+    <div style="font-size:11px;color:var(--t3);margin-bottom:16px" id="modalSub">Reseller: —</div>
+    <span class="lbl">AMOUNT</span>
+    <input class="inp" id="modalAmt" type="number" value="10" min="1"/>
+    <div class="modal-btns">
+      <button class="btn btn-g" style="font-size:11px" onclick="doModalCredits('add')">+ ADD</button>
+      <button class="btn btn-r" style="font-size:11px" onclick="doModalCredits('remove')">- REMOVE</button>
+      <button class="btn btn-s" style="font-size:11px" onclick="closeModal()">CANCEL</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const API = 'https://loader-keys.vercel.app/api';
+let TOKEN = '';
+let currentResellerSlug = '';
+let modalTarget = '';
+let currentResellerModMenu = false;
+
+// ── Login ──────────────────────────────────
+function doLogin(){
+    const t = document.getElementById('tokenInput').value.trim();
+  if(!t){ showSbox('loginStatus','Enter token!','err'); return; }
+  showSbox('loginStatus','Connecting...','ok');
+  fetch(`${API}?action=get_keys`,{headers:{'x-admin-token':t}})
+  .then(r=>r.json())
+  .then(d=>{
+    if(d.success){
+      TOKEN=t;
+      document.getElementById('loginPage').style.display='none';
+      document.getElementById('mainApp').style.display='block';
+      loadMaintenance(); loadKeys();
+    } else { showSbox('loginStatus','Invalid token!','err'); }
+  })
+  .catch(()=>showSbox('loginStatus','Connection failed!','err'));
+}
+
+// ── Maintenance ────────────────────────────
+function loadMaintenance(){
+  fetch(`${API}?action=get_maintenance`,{headers:{'x-admin-token':TOKEN}})
+  .then(r=>r.json()).then(d=>{ if(d.success!==undefined){ setMaintenanceUI(d.maintenance); document.getElementById('maintToggle').checked=!d.maintenance; }}).catch(()=>{});
+}
+function toggleMaintenance(isOnline){
+  const maintenance=!isOnline;
+  fetch(`${API}?action=set_maintenance`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({maintenance})})
+  .then(r=>r.json()).then(d=>{ if(d.success){ setMaintenanceUI(maintenance); toast(maintenance?'Maintenance ON':'App ONLINE'); } else { toast('Failed!'); document.getElementById('maintToggle').checked=isOnline?false:true; }}).catch(()=>toast('Error!'));
+}
+function setMaintenanceUI(isMaintenance){
+  const bar=document.getElementById('maintBar'),label=document.getElementById('maintLabel'),sub=document.getElementById('maintSub'),tog=document.getElementById('maintToggle');
+  if(isMaintenance){ bar.className='maintenance-bar'; label.className='m-label off'; label.textContent='⚠ MAINTENANCE MODE: ON'; sub.textContent='App is currently offline for users'; tog.checked=false; }
+  else { bar.className='maintenance-bar online'; label.className='m-label on'; label.textContent='✓ APP ONLINE'; sub.textContent='App is live — users can access'; tog.checked=true; }
+}
+
+// ── Max Devices Handler ────────────────────
+function handleMaxDevChange(){
+  const sel = document.getElementById('maxDevSelect').value;
+  document.getElementById('maxDevCustom').style.display = sel==='custom'?'block':'none';
+}
+
+// ── Generate ───────────────────────────────
+function rp(){ const c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; let s=''; for(let i=0;i<5;i++) s+=c[Math.floor(Math.random()*c.length)]; return s; }
+function makeKey(){ return 'Yash_X_Prime_'+rp()+'_'+rp(); }
+function calcExpiry(v,u){
+  if(u==='lifetime') return null;
+  const d=new Date();
+  if(u==='minutes') d.setMinutes(d.getMinutes()+v);
+  else if(u==='hours') d.setHours(d.getHours()+v);
+  else if(u==='days') d.setDate(d.getDate()+v);
+  else if(u==='months') d.setMonth(d.getMonth()+v);
+  return d.toISOString();
+}
+async function generateKey(){
+  const val=parseInt(document.getElementById('durVal').value)||10;
+  const unit=document.getElementById('durUnit').value;
+  const label=document.getElementById('keyLabel').value.trim()||'No Label';
+  const qty=Math.min(parseInt(document.getElementById('keyQty').value)||1,50);
+  const maxDevSelect = document.getElementById('maxDevSelect').value;
+  const maxDev = maxDevSelect==='custom' ? (parseInt(document.getElementById('maxDevCustom').value)||1) : parseInt(maxDevSelect);
+  const keyType = document.getElementById('keyTypeSelect').value;
+  const btn=document.getElementById('genBtn');
+  btn.disabled=true; btn.textContent='Generating...';
+  document.getElementById('resultBox').style.display='none';
+  document.getElementById('multiWrap').style.display='none';
+  showSbox('genStatus','Please wait...','ok');
+  const generated=[];
+  for(let i=0;i<qty;i++){
+    const key=makeKey(), exp=calcExpiry(val,unit);
+    try{
+      const r=await fetch(`${API}?action=add_key`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({key,label,expires_at:exp,max_devices:maxDev, key_type: keyType})});
+      const d=await r.json();
+      if(d.success) generated.push({key,exp});
+    }catch(e){}
+  }
+  btn.disabled=false; btn.textContent='⚡ GENERATE KEY';
+  if(!generated.length){ showSbox('genStatus','Failed!','err'); return; }
+  document.getElementById('genStatus').style.display='none';
+  document.getElementById('keyLabel').value='';
+  if(qty===1){
+    const {key,exp}=generated[0];
+    document.getElementById('resultBox').style.display='block';
+    document.getElementById('resultKey').textContent=key;
+    document.getElementById('resultMeta').textContent=`Label: ${label}  |  Max Devices: ${maxDev}  |  ${exp?'Expires: '+fmtDate(new Date(exp)):'Lifetime'}`;
+  } else {
+    document.getElementById('multiWrap').style.display='block';
+    document.getElementById('multiList').innerHTML=generated.map(({key})=>`<div class="multi-item"><span class="multi-key">${key}</span><button class="btn btn-s btn-sm" onclick="copyText('${key}')">COPY</button></div>`).join('');
+  }
+  toast(`${generated.length} key${generated.length>1?'s':''} created!`);
+  if(document.getElementById('page-keys').classList.contains('active')) loadKeys();
+}
+
+// ── Mod Locks ──────────────────────────────
+function loadModLocks(){
+  document.getElementById('modLocksList').innerHTML='<div class="loading-txt">Loading...</div>';
+  fetch(`${API}?action=get_mod_locks`,{headers:{'x-admin-token':TOKEN}})
+  .then(r=>r.json()).then(d=>{
+    if(!d.success){ document.getElementById('modLocksList').innerHTML='<div class="empty">Failed!</div>'; return; }
+    renderModLocks(d.locked_mods||[]);
+  }).catch(()=>{ document.getElementById('modLocksList').innerHTML='<div class="empty">Error!</div>'; });
+}
+function renderModLocks(locked){
+  const mods = [
+    {key:'normal', label:'Normal Mod'},
+    {key:'tree', label:'Normal + Tree Remove'},
+    {key:'full', label:'Full Mod (Tree + Water + Building)'}
+  ];
+  document.getElementById('modLocksList').innerHTML = mods.map(m=>{
+    const isLocked = locked.includes(m.key);
+    return `<div class="mod-lock-item">
+      <div class="mod-lock-label">${m.label}</div>
+      <span class="mod-lock-status ${isLocked?'locked':'unlocked'}">${isLocked?'🔒 LOCKED':'🔓 UNLOCKED'}</span>
+      <button class="btn btn-sm ${isLocked?'btn-g':'btn-r'}" style="margin-left:10px" onclick="toggleModLock('${m.key}',${!isLocked})">${isLocked?'UNLOCK':'LOCK'}</button>
+    </div>`;
+  }).join('');
+}
+function toggleModLock(modKey, locked){
+  fetch(`${API}?action=set_mod_lock`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({mod_key:modKey,locked})})
+  .then(r=>r.json()).then(d=>{
+    if(d.success){ toast((locked?'Locked':'Unlocked')+' '+modKey+'!'); loadModLocks(); }
+    else toast('Failed!');
+  }).catch(()=>toast('Error!'));
+}
+
+// ── Keys ───────────────────────────────────
+function loadKeys(){
+  document.getElementById('keysList').innerHTML='<div class="loading-txt">Loading keys...</div>';
+  fetch(`${API}?action=get_keys`,{headers:{'x-admin-token':TOKEN}})
+  .then(r=>r.json()).then(d=>{ if(!d.success){ document.getElementById('keysList').innerHTML='<div class="empty">Failed!</div>'; return; } renderKeys(d.keys); })
+  .catch(()=>{ document.getElementById('keysList').innerHTML='<div class="empty">Error!</div>'; });
+}
+function renderKeys(keys){
+  const now=new Date(), entries=Object.entries(keys);
+  let valid=0,expired=0,locked=0;
+  entries.forEach(([,d])=>{ const exp=d.expires_at?new Date(d.expires_at):null; const isValid=!exp||now<exp; if(isValid)valid++;else expired++; if((d.connected_devices&&d.connected_devices.length>0)||d.device_id)locked++; });
+  document.getElementById('sTotal').textContent=entries.length;
+  document.getElementById('sValid').textContent=valid;
+  document.getElementById('sExpired').textContent=expired;
+  document.getElementById('sLocked').textContent=locked;
+  if(!entries.length){ document.getElementById('keysList').innerHTML='<div class="empty">NO KEYS YET</div>'; return; }
+  entries.sort((a,b)=>{ const ea=a[1].expires_at?new Date(a[1].expires_at):new Date('9999'); const eb=b[1].expires_at?new Date(b[1].expires_at):new Date('9999'); const va=!a[1].expires_at||ea>now; const vb=!b[1].expires_at||eb>now; if(va&&!vb)return -1; if(!va&&vb)return 1; return eb-ea; });
+  document.getElementById('keysList').innerHTML=entries.map(([key,d])=>{
+    const exp=d.expires_at?new Date(d.expires_at):null, isValid=!exp||now<exp;
+    const diff=exp?exp-now:null, left=isValid&&diff?fmtRemain(diff):'';
+    const devCount = (d.connected_devices&&d.connected_devices.length)||(d.device_id?1:0);
+    const maxDev = d.max_devices||1;
+    const devSection = devCount>0 
+      ? `<div class="device-section"><div class="device-label">📱 DEVICES (${devCount}/${maxDev})</div><div class="device-id">${(d.connected_devices||[d.device_id]).join(', ')}</div>${d.locked_at?`<div class="device-time">Last: ${fmtDate(new Date(d.locked_at))}</div>`:''}</div>`
+      : `<div style="font-size:9px;color:var(--t3);margin-top:6px;padding:6px 8px;background:var(--s1);border-radius:4px;">📵 No device yet (Max: ${maxDev})</div>`;
+    return `<div class="key-item ${isValid?'':'expired'}">
+      <div class="ki-header">
+        <div class="ki-key" onclick="copyText('${key}')">${key}</div>
+        <div class="ki-actions">
+          ${devCount>0?`<button class="ki-btn ki-btn-reset" onclick="resetDeviceByKey('${key}')">RESET</button>`:''}
+          <button class="ki-btn ki-btn-del" onclick="deleteKey('${key}')">DEL</button>
+        </div>
+      </div>
+      <div class="ki-info">
+        <div class="ki-field">Label: <span>${d.label||'—'}</span></div>
+        <div class="ki-field">Reseller: <span>${d.reseller||'Admin'}</span></div>
+        <div class="ki-field">Created: <span>${d.created_at?fmtDate(new Date(d.created_at)):'—'}</span></div>
+        <div class="ki-field">Expires: <span>${exp?fmtDate(exp):'Never'}</span></div>
+        <div class="ki-field">Type: <span>${d.key_type || 'normal'}</span></div>
+      </div>
+      ${devSection}
+      <div class="badges">
+        <span class="badge ${isValid?'b-valid':'b-expired'}">${isValid?'✓ VALID':'✗ EXPIRED'}</span>
+        ${left?`<span class="badge b-lifetime">⏱ ${left}</span>`:''}
+        ${devCount>0?`<span class="badge b-locked">🔒 ${devCount}/${maxDev}</span>`:`<span class="badge b-free">🔓 0/${maxDev}</span>`}
+        ${!exp?`<span class="badge b-lifetime">♾ LIFETIME</span>`:''}
+        ${d.reseller?`<span class="badge b-reseller">${d.reseller}</span>`:''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function deleteKey(key){ if(!confirm('Delete key?\n'+key))return; fetch(`${API}?action=delete_key`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({key})}).then(r=>r.json()).then(d=>{ if(d.success){ toast('Deleted!'); loadKeys(); } else toast('Failed!'); }).catch(()=>toast('Error!')); }
+function resetDeviceByKey(key){ if(!confirm('Reset all devices for:\n'+key))return; fetch(`${API}?action=reset_device`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({key})}).then(r=>r.json()).then(d=>{ if(d.success){ toast('Device reset!'); loadKeys(); } else toast('Failed!'); }).catch(()=>toast('Error!')); }
+
+// ── Manage Tab ─────────────────────────────
+function checkKey(){
+  const key=document.getElementById('checkInp').value.trim();
+  if(!key){ showSbox('checkStatus','Enter key!','err'); return; }
+  fetch(`${API}?action=get_keys`,{headers:{'x-admin-token':TOKEN}}).then(r=>r.json()).then(d=>{
+    if(!d.success){ showSbox('checkStatus','Failed!','err'); return; }
+    const e=d.keys[key];
+    if(!e){ showSbox('checkStatus','Key not found!','err'); return; }
+    const exp=e.expires_at?new Date(e.expires_at):null, now=new Date(), valid=!exp||now<exp;
+    const devCount = (e.connected_devices&&e.connected_devices.length)||(e.device_id?1:0);
+    const left=valid&&exp?fmtRemain(exp-now):'Expired';
+    showSbox('checkStatus',`${valid?'✓ VALID':'✗ EXPIRED'}\nLabel: ${e.label}\nMax Devices: ${e.max_devices||1}\nActive Devices: ${devCount}\n${exp?'Time left: '+left:'Lifetime'}\nReseller: ${e.reseller||'Admin'}\nType: ${e.key_type||'normal'}`,valid?'ok':'err');
+  });
+}
+function resetDevice(){ const key=document.getElementById('checkInp').value.trim(); if(!key){ showSbox('checkStatus','Enter key!','err'); return; } if(!confirm('Reset devices for:\n'+key))return; fetch(`${API}?action=reset_device`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({key})}).then(r=>r.json()).then(d=>{ showSbox('checkStatus',d.success?'✓ Device reset!':'✗ '+d.message,d.success?'ok':'err'); if(d.success)loadKeys(); }); }
+function revokeKey(){ const key=document.getElementById('checkInp').value.trim(); if(!key){ showSbox('checkStatus','Enter key!','err'); return; } if(!confirm('DELETE key?\n'+key))return; fetch(`${API}?action=delete_key`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({key})}).then(r=>r.json()).then(d=>{ showSbox('checkStatus',d.success?'✓ Deleted!':'✗ '+d.message,d.success?'ok':'err'); document.getElementById('checkInp').value=''; if(d.success)loadKeys(); }); }
+
+// ── Manage Reseller ────────────────────────
+function searchReseller(){
+  const slug=document.getElementById('rSearchInp').value.trim().toLowerCase();
+  if(!slug){ showSbox('rManageStatus','Enter username!','err'); return; }
+  fetch(`${API}?action=get_resellers`,{headers:{'x-admin-token':TOKEN}}).then(r=>r.json()).then(d=>{
+    if(!d.success){ showSbox('rManageStatus','Failed!','err'); return; }
+    const r=d.resellers[slug];
+    if(!r){ document.getElementById('rResult').style.display='none'; showSbox('rManageStatus','Not found!','err'); return; }
+    currentResellerSlug=slug;
+    currentResellerModMenu = r.allow_mod_menu || false;
+    document.getElementById('rResult').style.display='block';
+    document.getElementById('rResultName').textContent='👤 '+(r.name||slug);
+    document.getElementById('rResUser').textContent=slug;
+    document.getElementById('rResCreated').textContent=fmtDate(new Date(r.created_at));
+    document.getElementById('rResCredits').textContent=r.credits||0;
+    document.getElementById('rModMenuLabel').textContent = 'Mod Menu: '+(currentResellerModMenu?'ON':'OFF');
+    document.getElementById('rManageStatus').style.display='none';
+  }).catch(()=>showSbox('rManageStatus','Error!','err'));
+}
+function doCredits(type){
+  if(!currentResellerSlug){ showSbox('rManageStatus','Search reseller first!','err'); return; }
+  const amt=parseInt(document.getElementById('rCreditAmt').value)||0;
+  if(!amt){ showSbox('rManageStatus','Enter amount!','err'); return; }
+  const action=type==='add'?'add_credits':'remove_credits';
+  fetch(`${API}?action=${action}`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({username:currentResellerSlug,credits:amt})})
+  .then(r=>r.json()).then(d=>{ showSbox('rManageStatus',d.message,d.success?'ok':'err'); if(d.success){ document.getElementById('rResCredits').textContent=d.credits; toast('Credits updated!'); } }).catch(()=>showSbox('rManageStatus','Error!','err'));
+}
+function toggleManageModMenu(){
+  if(!currentResellerSlug) return;
+  fetch(`${API}?action=toggle_reseller_mod_menu`,{
+    method:'POST',
+    headers:{'Content-Type':'application/json','x-admin-token':TOKEN},
+    body:JSON.stringify({username:currentResellerSlug, allow: !currentResellerModMenu})
+  })
+  .then(r=>r.json()).then(d=>{
+    if(d.success){
+      currentResellerModMenu = d.allow_mod_menu;
+      document.getElementById('rModMenuLabel').textContent = 'Mod Menu: '+(currentResellerModMenu?'ON':'OFF');
+      toast('Updated!');
+    } else toast('Failed!');
+  }).catch(()=>toast('Error!'));
+}
+function changeResellerPass(){
+  if(!currentResellerSlug){ showSbox('rManageStatus','Search reseller first!','err'); return; }
+  const np=document.getElementById('rNewPass').value.trim();
+  if(!np){ showSbox('rManageStatus','Enter new password!','err'); return; }
+  fetch(`${API}?action=change_reseller_password`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({username:currentResellerSlug,new_password:np})})
+  .then(r=>r.json()).then(d=>{ showSbox('rManageStatus',d.message,d.success?'ok':'err'); if(d.success){ document.getElementById('rNewPass').value=''; toast('Password changed!'); } }).catch(()=>showSbox('rManageStatus','Error!','err'));
+}
+function deleteResellerFromManage(){
+  if(!currentResellerSlug){ showSbox('rManageStatus','Search reseller first!','err'); return; }
+  if(!confirm('Delete reseller: '+currentResellerSlug+'?'))return;
+  fetch(`${API}?action=delete_reseller`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({username:currentResellerSlug})})
+  .then(r=>r.json()).then(d=>{
+    if(d.success){ document.getElementById('rResult').style.display='none'; document.getElementById('rSearchInp').value=''; currentResellerSlug=''; toast('Deleted!'); loadResellers(); }
+    else showSbox('rManageStatus',d.message,'err');
+  }).catch(()=>showSbox('rManageStatus','Error!','err'));
+}
+
+// ── Resellers Tab ──────────────────────────
+function loadResellers(){
+  document.getElementById('resellersList').innerHTML='<div class="loading-txt">Loading...</div>';
+  fetch(`${API}?action=get_resellers`,{headers:{'x-admin-token':TOKEN}}).then(r=>r.json()).then(d=>{
+    if(!d.success){ document.getElementById('resellersList').innerHTML='<div class="empty">Failed!</div>'; return; }
+    window._allResellers = d.resellers;
+    renderResellers(d.resellers);
+  }).catch(()=>{ document.getElementById('resellersList').innerHTML='<div class="empty">Error!</div>'; });
+}
+function renderResellers(resellers){
+  const entries=Object.entries(resellers);
+  if(!entries.length){ document.getElementById('resellersList').innerHTML='<div class="empty">NO RESELLERS YET</div>'; return; }
+  const base=window.location.origin;
+  document.getElementById('resellersList').innerHTML=entries.map(([slug,r])=>{
+    const modMenuAllowed = r.allow_mod_menu || false;
+    return `
+    <div class="reseller-item">
+      <div class="ri-header">
+        <div class="ri-name">👤 ${r.name||slug}</div>
+        <div class="ri-credits">${r.credits||0} CR</div>
+      </div>
+      <div class="ri-info">
+        <div class="ri-field">Username <span>${slug}</span></div>
+        <div class="ri-field">Keys <span>${r.total_keys_generated||0}</span></div>
+        <div class="ri-field">Created <span>${fmtDate(new Date(r.created_at))}</span></div>
+        <div class="ri-field">Mod Menu <span>${modMenuAllowed?'ON':'OFF'}</span></div>
+      </div>
+      <div class="ri-actions">
+        <button class="btn btn-g btn-sm" onclick="openCreditModal('${slug}')">CREDITS</button>
+        <button class="btn btn-sm ${modMenuAllowed?'btn-y':'btn-s'}" onclick="toggleModMenuReseller('${slug}', ${modMenuAllowed})">${modMenuAllowed?'🔸 MOD':'🔹 MOD'}</button>
+        <button class="btn btn-r btn-sm" onclick="quickDelReseller('${slug}')">DEL</button>
+      </div>
+      <div class="ri-link" onclick="copyText('${base}/${slug}/login')" title="Tap to copy">🔗 ${base}/${slug}/login</div>
+    </div>`;
+  }).join('');
+}
+function toggleModMenuReseller(slug, currentState){   // ✅ parameter add kiya
+  fetch(`${API}?action=toggle_reseller_mod_menu`,{
+    method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},
+    body:JSON.stringify({username:slug, allow: !currentState})   // ✅ yahan badla
+  })
+  .then(r=>r.json()).then(d=>{
+    if(d.success){
+      toast('Mod Menu '+(d.allow_mod_menu?'enabled':'disabled')+' for '+slug);
+      loadResellers();
+    } else toast('Failed!');
+  }).catch(()=>toast('Error!'));
+}
+function createReseller(){
+  const username=document.getElementById('newRUser').value.trim().toLowerCase();
+  const password=document.getElementById('newRPass').value.trim();
+  const credits=parseInt(document.getElementById('newRCredits').value)||0;
+  if(!username||!password){ showSbox('createRStatus','Username & password required!','err'); return; }
+  showSbox('createRStatus','Creating...','ok');
+  fetch(`${API}?action=create_reseller`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({username,password,credits,name:username})})
+  .then(r=>r.json()).then(d=>{
+    showSbox('createRStatus',d.message,d.success?'ok':'err');
+    if(d.success){ document.getElementById('newRUser').value=''; document.getElementById('newRPass').value=''; document.getElementById('newRCredits').value='10'; toast('Reseller created!'); loadResellers(); }
+  }).catch(()=>showSbox('createRStatus','Error!','err'));
+}
+function quickDelReseller(slug){ if(!confirm('Delete reseller: '+slug+'?'))return; fetch(`${API}?action=delete_reseller`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({username:slug})}).then(r=>r.json()).then(d=>{ toast(d.success?'Deleted!':'Failed!'); if(d.success)loadResellers(); }).catch(()=>toast('Error!')); }
+function openCreditModal(slug){ modalTarget=slug; document.getElementById('modalSub').textContent='Reseller: '+slug; document.getElementById('modalAmt').value='10'; document.getElementById('creditModal').classList.add('show'); }
+function closeModal(){ document.getElementById('creditModal').classList.remove('show'); modalTarget=''; }
+function doModalCredits(type){ const amt=parseInt(document.getElementById('modalAmt').value)||0; if(!amt||!modalTarget)return; const action=type==='add'?'add_credits':'remove_credits'; fetch(`${API}?action=${action}`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({username:modalTarget,credits:amt})}).then(r=>r.json()).then(d=>{ closeModal(); toast(d.success?'Credits updated!':'Failed!'); if(d.success)loadResellers(); }).catch(()=>{ closeModal(); toast('Error!'); }); }
+document.getElementById('creditModal').addEventListener('click',function(e){ if(e.target===this)closeModal(); });
+
+// ── Reseller Stats ─────────────────────────
+function loadResellerStats(){
+  document.getElementById('resellerStatsList').innerHTML='<div class="loading-txt">Loading...</div>';
+  fetch(`${API}?action=get_reseller_stats`,{headers:{'x-admin-token':TOKEN}})
+  .then(r=>r.json()).then(d=>{
+    if(!d.success){ document.getElementById('resellerStatsList').innerHTML='<div class="empty">Failed!</div>'; return; }
+    const stats = d.stats;
+    let html = '<div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr; gap:6px; font-size:10px; color:var(--t3); margin-bottom:8px">';
+    html += '<div>Reseller</div><div>Total</div><div>Valid</div><div>Expired</div><div>Locked</div><div>Credits</div></div>';
+    for(const [slug,s] of Object.entries(stats)){
+      html += `<div style="display:grid; grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr; gap:6px; font-size:10px; padding:6px 0; border-bottom:1px solid var(--br)">
+        <div style="color:var(--t1)">${s.name||slug}</div>
+        <div>${s.total_keys}</div>
+        <div style="color:var(--g)">${s.valid}</div>
+        <div style="color:var(--red)">${s.expired}</div>
+        <div style="color:var(--blue)">${s.locked}</div>
+        <div style="color:var(--yellow)">${s.credits}</div>
+      </div>`;
+    }
+    document.getElementById('resellerStatsList').innerHTML = html;
+  }).catch(()=>{ document.getElementById('resellerStatsList').innerHTML='<div class="empty">Error!</div>'; });
+}
+
+// ── Mod Features ──────────────────────────────
+function loadModFeatures(){
+  fetch(`${API}?action=get_mod_features`,{headers:{'x-admin-token':TOKEN}})
+  .then(r=>r.json())
+  .then(d=>{
+    if(d.success && d.mod_features){
+      document.getElementById('featOriginal').value = d.mod_features.original || '';
+      document.getElementById('featNormal').value = d.mod_features.normal || '';
+      document.getElementById('featTree').value = d.mod_features.tree || '';
+      document.getElementById('featFull').value = d.mod_features.full || '';
+      document.getElementById('featModMenu').value = d.mod_features.mod_menu || '';
+    }
+  })
+  .catch(()=>{});
+}
+function saveModFeatures(){
+  const data = {
+    original: document.getElementById('featOriginal').value.trim(),
+    normal: document.getElementById('featNormal').value.trim(),
+    tree: document.getElementById('featTree').value.trim(),
+    full: document.getElementById('featFull').value.trim(),
+    mod_menu: document.getElementById('featModMenu').value.trim()
+  };
+  showSbox('featStatus','Saving...','ok');
+  fetch(`${API}?action=set_mod_features`,{
+    method:'POST',
+    headers:{'Content-Type':'application/json','x-admin-token':TOKEN},
+    body: JSON.stringify({ mod_features: data })
+  })
+  .then(r=>r.json())
+  .then(d=>{
+    if(d.success){
+      showSbox('featStatus','✓ Features saved!','ok');
+      toast('Features updated!');
+    } else {
+      showSbox('featStatus','Failed: '+d.message,'err');
+    }
+  })
+  .catch(()=> showSbox('featStatus','Connection error!','err'));
+}
+
+// ── Tab switch ──────────────────────────────
+function switchTab(el){
+  const name=el.dataset.tab;
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('page-'+name).classList.add('active');
+  el.classList.add('active');
+  if(name==='keys') loadKeys();
+  if(name==='resellers') loadResellers();
+  if(name==='modlocks') loadModLocks();
+  if(name==='modfeatures') loadModFeatures();
+  if(name==='resellerinfo') loadResellerStats();
+}
+
+// ── Helpers ────────────────────────────────
+function fmtDate(d){ return d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}); }
+function fmtRemain(ms){ const s=Math.floor(ms/1000),m=Math.floor(s/60),h=Math.floor(m/60),d=Math.floor(h/24); if(d>0)return `${d}d ${h%24}h`; if(h>0)return `${h}h ${m%60}m`; if(m>0)return `${m}m ${s%60}s`; return `${s}s`; }
+function showSbox(id,msg,type){ const el=document.getElementById(id); el.textContent=msg; el.className='sbox s-'+type; el.style.display='block'; }
+function copyText(t){ navigator.clipboard?.writeText(t).then(()=>toast('Copied!')).catch(()=>{ const ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); toast('Copied!'); }); }
+function toast(msg,dur=2200){ const el=document.getElementById('toast'); el.textContent=msg; el.classList.add('show'); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove('show'),dur); }
+document.addEventListener('keydown',e=>{ if(e.key==='Enter'&&document.getElementById('loginPage').style.display!=='none') doLogin(); });
+</script>
+</body>
+</html>
