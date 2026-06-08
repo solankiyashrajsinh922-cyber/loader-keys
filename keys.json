@@ -1101,5 +1101,16 @@
     "connected_devices": [
       "YashXPrime_InGame"
     ]
+  },
+  "Yash_X_Prime_2Y3EX_B8PUX": {
+    "label": "Tester",
+    "created_at": "2026-06-08T05:03:40.234Z",
+    "expires_at": "2026-06-09T05:03:39.242Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": []
   }
 }
