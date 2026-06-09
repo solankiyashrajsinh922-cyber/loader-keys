@@ -2,9 +2,9 @@
   "soam": {
     "name": "soam",
     "password": "4545",
-    "credits": 9,
+    "credits": 8,
     "created_at": "2026-05-29T10:45:39.124Z",
-    "total_keys_generated": 1,
+    "total_keys_generated": 2,
     "active": true,
     "allow_mod_menu": true
   }
