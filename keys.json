@@ -1402,5 +1402,17 @@
       "WDX-F34A70D06198C8C6"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_ZU27N_AJMCV": {
+    "label": "Test",
+    "created_at": "2026-06-09T12:08:41.961Z",
+    "expires_at": "2026-06-09T12:18:40.715Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
