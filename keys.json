@@ -1148,5 +1148,18 @@
       "WDX-0A815556EB74"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_XGVZ_Y7WZ": {
+    "label": "soam",
+    "created_at": "2026-06-09T04:00:05.611Z",
+    "expires_at": "2026-06-09T04:10:03.710Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "soam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
