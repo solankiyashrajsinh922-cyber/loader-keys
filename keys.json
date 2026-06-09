@@ -1192,5 +1192,17 @@
       "WDX-0A815556EB74"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_KJSSJ_PBVTA": {
+    "label": "No Label",
+    "created_at": "2026-06-09T04:47:46.273Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
