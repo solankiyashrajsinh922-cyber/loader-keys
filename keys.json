@@ -1318,5 +1318,17 @@
       "WDX-EC3F5DD7BB87EE27"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_CHKH6_CGMZT": {
+    "label": "Hack2",
+    "created_at": "2026-06-09T09:09:03.705Z",
+    "expires_at": "2026-06-09T09:19:01.591Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
