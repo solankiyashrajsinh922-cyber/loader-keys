@@ -1169,12 +1169,14 @@
     "created_at": "2026-06-09T04:02:50.982Z",
     "expires_at": "2026-06-09T04:12:49.027Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-0A815556EB74",
+    "locked_at": "2026-06-09T04:03:03.085Z",
     "active": true,
     "reseller": "soam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-0A815556EB74"
+    ],
     "key_type": "mod_menu"
   }
 }
