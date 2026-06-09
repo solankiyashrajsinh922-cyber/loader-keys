@@ -1374,5 +1374,17 @@
       "WDX-F34A70D06198C8C6"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_HL9SG_549SX": {
+    "label": "No Label",
+    "created_at": "2026-06-09T11:45:22.821Z",
+    "expires_at": "2026-06-09T11:55:21.519Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
