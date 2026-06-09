@@ -7,5 +7,14 @@
     "total_keys_generated": 0,
     "active": true,
     "allow_mod_menu": false
+  },
+  "mon424": {
+    "name": "mon424",
+    "password": "Mon424",
+    "credits": 10,
+    "created_at": "2026-06-09T14:22:16.085Z",
+    "total_keys_generated": 0,
+    "active": true,
+    "allow_mod_menu": false
   }
 }
