@@ -1262,5 +1262,17 @@
       "WDX-0A815556EB74"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_JMWYK_8H7RB": {
+    "label": "No Label",
+    "created_at": "2026-06-09T06:59:15.318Z",
+    "expires_at": "2026-06-09T07:09:13.269Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
