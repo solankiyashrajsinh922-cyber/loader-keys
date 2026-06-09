@@ -1248,5 +1248,17 @@
       "WDX-010C777324BD"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_Z5HK3_7VFSQ": {
+    "label": "No Label",
+    "created_at": "2026-06-09T06:49:56.764Z",
+    "expires_at": "2026-06-09T06:59:55.486Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
