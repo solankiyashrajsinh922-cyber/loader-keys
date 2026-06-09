@@ -1346,5 +1346,17 @@
       "WDX-F34A70D06198C8C6"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_6HA7K_L8FK4": {
+    "label": "Hack 3",
+    "created_at": "2026-06-09T09:58:20.110Z",
+    "expires_at": "2026-06-09T10:08:19.106Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
