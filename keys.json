@@ -1380,11 +1380,13 @@
     "created_at": "2026-06-09T11:45:22.821Z",
     "expires_at": "2026-06-09T11:55:21.519Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-F34A70D06198C8C6",
+    "locked_at": "2026-06-09T11:45:28.736Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-F34A70D06198C8C6"
+    ],
     "key_type": "mod_menu"
   }
 }
