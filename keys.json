@@ -1492,5 +1492,18 @@
       "WDX-ECBB5BBB7B93"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_96KQ_3STS": {
+    "label": "RG",
+    "created_at": "2026-06-10T09:40:30.447Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "rgofficial",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
