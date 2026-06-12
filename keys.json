@@ -1477,21 +1477,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_96KQ_3STS": {
-    "label": "RG",
-    "created_at": "2026-06-10T09:40:30.447Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-A17F0180B6430AE0",
-    "locked_at": "2026-06-10T09:40:50.035Z",
-    "active": true,
-    "reseller": "rgofficial",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-A17F0180B6430AE0"
-    ],
-    "key_type": "normal"
-  },
   "Yash_X_Prime_UNLGT_5RZPV": {
     "label": "150",
     "created_at": "2026-06-12T07:44:07.923Z",
