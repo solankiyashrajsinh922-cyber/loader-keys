@@ -1067,19 +1067,6 @@
       "WDX-3B062B441BCC"
     ]
   },
-  "Yash_X_Prime_NU67B_4EPB9": {
-    "label": "150 90226",
-    "created_at": "2026-06-06T06:08:40.913Z",
-    "expires_at": "2026-06-12T06:08:39.705Z",
-    "duration": "",
-    "device_id": "WDX-3E2B55DD8D8D",
-    "locked_at": "2026-06-06T06:15:07.159Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-3E2B55DD8D8D"
-    ]
-  },
   "Yash_X_Prime_XKJJB_LXCX6": {
     "label": "Cute",
     "created_at": "2026-06-06T11:43:25.243Z",
