@@ -1535,12 +1535,14 @@
     "created_at": "2026-06-12T08:56:17.111Z",
     "expires_at": "2026-06-19T08:56:15.647Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-9CCEA43CD8C8692D",
+    "locked_at": "2026-06-12T09:06:02.411Z",
     "active": true,
     "reseller": "molexmode",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-9CCEA43CD8C8692D"
+    ],
     "key_type": "normal"
   }
 }
