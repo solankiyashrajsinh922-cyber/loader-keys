@@ -1485,5 +1485,17 @@
       "WDX-A17F0180B6430AE0"
     ],
     "key_type": "normal"
+  },
+  "Yash_X_Prime_UNLGT_5RZPV": {
+    "label": "150",
+    "created_at": "2026-06-12T07:44:07.923Z",
+    "expires_at": "2026-06-19T07:44:06.674Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
