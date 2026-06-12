@@ -1491,11 +1491,13 @@
     "created_at": "2026-06-12T07:44:07.923Z",
     "expires_at": "2026-06-19T07:44:06.674Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-3E2B55DD8D8D",
+    "locked_at": "2026-06-12T08:06:14.583Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-3E2B55DD8D8D"
+    ],
     "key_type": "normal"
   }
 }
