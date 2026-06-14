@@ -1612,11 +1612,13 @@
     "created_at": "2026-06-14T16:51:15.111Z",
     "expires_at": "2026-06-24T16:51:14.149Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-E94A70634348",
+    "locked_at": "2026-06-14T16:52:51.295Z",
     "active": true,
     "max_devices": 200,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-E94A70634348"
+    ],
     "key_type": "mod_menu"
   }
 }
