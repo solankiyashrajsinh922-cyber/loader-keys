@@ -1681,5 +1681,17 @@
       "WDX-1574E557B1507096"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_FWHZY_NERLN": {
+    "label": "Ronnie",
+    "created_at": "2026-06-15T15:06:36.795Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
