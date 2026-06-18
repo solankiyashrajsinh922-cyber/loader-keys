@@ -1519,5 +1519,17 @@
       "WDX-7EA7434EB631BBA6"
     ],
     "key_type": "normal"
+  },
+  "Yash_X_Prime_UGATF_Y58XQ": {
+    "label": "Yash X Prime",
+    "created_at": "2026-06-18T04:02:07.378Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
