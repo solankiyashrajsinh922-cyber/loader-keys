@@ -1634,5 +1634,18 @@
       "WDX-4F3D1E951009A935"
     ],
     "key_type": "normal"
+  },
+  "Yash_X_Prime_D9DA_DUS8": {
+    "label": "DAKU-YASH-CHIKU-0007",
+    "created_at": "2026-06-18T11:08:20.188Z",
+    "expires_at": "2026-06-25T11:08:18.808Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "rupeshsonekar",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
