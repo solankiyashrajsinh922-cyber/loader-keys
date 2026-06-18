@@ -1541,8 +1541,8 @@
     "created_at": "2026-06-18T08:53:48.949Z",
     "expires_at": "2026-06-19T08:53:46.774Z",
     "duration": "",
-    "device_id": "WDX-89FAA5C80941D561",
-    "locked_at": "2026-06-18T13:34:40.370Z",
+    "device_id": "WDX-A33FA32B80CF8619",
+    "locked_at": "2026-06-18T13:46:28.669Z",
     "active": true,
     "max_devices": 100,
     "connected_devices": [
@@ -1583,7 +1583,8 @@
       "WDX-299A3AF181484926",
       "WDX-74A2CE52455C8CA2",
       "WDX-107CBF4FC5622EDA",
-      "WDX-89FAA5C80941D561"
+      "WDX-89FAA5C80941D561",
+      "WDX-A33FA32B80CF8619"
     ],
     "key_type": "mod_menu"
   },
