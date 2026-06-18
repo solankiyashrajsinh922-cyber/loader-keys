@@ -1727,5 +1727,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_4QSK2_6Q5BE": {
+    "label": "No Label",
+    "created_at": "2026-06-18T03:07:12.211Z",
+    "expires_at": "2026-06-19T03:07:10.974Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
