@@ -1728,5 +1728,17 @@
     "max_devices": 100,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_K7ZC4_ZFD3M": {
+    "label": "Aizen",
+    "created_at": "2026-06-19T07:48:02.649Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
