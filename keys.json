@@ -1809,13 +1809,11 @@
     "created_at": "2026-06-19T07:48:02.649Z",
     "expires_at": null,
     "duration": "",
-    "device_id": "WDX-29FD611DDA1017A1",
-    "locked_at": "2026-06-19T08:02:46.496Z",
+    "device_id": null,
+    "locked_at": null,
     "active": true,
     "max_devices": 1,
-    "connected_devices": [
-      "WDX-29FD611DDA1017A1"
-    ],
+    "connected_devices": [],
     "key_type": "mod_menu"
   },
   "Yash_X_Prime_YR63C_Z28TE": {
