@@ -1817,5 +1817,17 @@
       "WDX-6C1CB82ACBBD8573"
     ],
     "key_type": "normal"
+  },
+  "Yash_X_Prime_Z69BQ_8ABDQ": {
+    "label": "Aizen",
+    "created_at": "2026-06-20T07:55:52.115Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
