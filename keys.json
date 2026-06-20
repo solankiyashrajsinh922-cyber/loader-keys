@@ -1823,13 +1823,11 @@
     "created_at": "2026-06-20T07:55:52.115Z",
     "expires_at": null,
     "duration": "",
-    "device_id": "WDX-05ED51699E04",
-    "locked_at": "2026-06-20T07:59:50.287Z",
+    "device_id": null,
+    "locked_at": null,
     "active": true,
     "max_devices": 1,
-    "connected_devices": [
-      "WDX-05ED51699E04"
-    ],
+    "connected_devices": [],
     "key_type": "mod_menu"
   }
 }
