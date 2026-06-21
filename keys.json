@@ -1833,21 +1833,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_3ANR_XPBG": {
-    "label": "Daku-YASH-daku-daku",
-    "created_at": "2026-06-21T03:59:21.869Z",
-    "expires_at": "2026-06-28T03:59:20.411Z",
-    "duration": "",
-    "device_id": "WDX-85B8C2882E6473D8",
-    "locked_at": "2026-06-21T04:01:07.410Z",
-    "active": true,
-    "reseller": "rupeshsonekar",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-85B8C2882E6473D8"
-    ],
-    "key_type": "normal"
-  },
   "Yash_X_Prime_3FBBF_CMK87": {
     "label": "Daku",
     "created_at": "2026-06-21T04:37:20.534Z",
