@@ -2029,11 +2029,13 @@
     "created_at": "2026-06-26T16:40:09.621Z",
     "expires_at": "2026-07-03T16:40:09.200Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-0FBA59B81C8C6652",
+    "locked_at": "2026-06-26T16:44:54.582Z",
     "active": true,
     "max_devices": 50,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-0FBA59B81C8C6652"
+    ],
     "key_type": "normal"
   },
   "Yash_X_Prime_7RFN4_HECUP": {
