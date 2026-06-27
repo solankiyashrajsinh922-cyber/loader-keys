@@ -2071,11 +2071,13 @@
     "created_at": "2026-06-27T12:12:19.537Z",
     "expires_at": "2026-07-04T12:12:19.115Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-ED6AC697564C43E0",
+    "locked_at": "2026-06-27T12:14:28.833Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-ED6AC697564C43E0"
+    ],
     "key_type": "mod_menu"
   }
 }
