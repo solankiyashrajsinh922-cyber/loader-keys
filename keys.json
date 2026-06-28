@@ -2108,5 +2108,18 @@
       "WDX-E3E762AE0D832975"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_34BA_CJQR": {
+    "label": "Give for trust",
+    "created_at": "2026-06-28T18:15:47.398Z",
+    "expires_at": "2026-06-29T18:15:46.096Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "jerrychauhan",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
