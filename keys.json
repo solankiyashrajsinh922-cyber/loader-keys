@@ -2093,5 +2093,17 @@
       "WDX-8C2F5E778B003984"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_TFTBA_3XYSB": {
+    "label": "Free",
+    "created_at": "2026-06-28T16:17:20.451Z",
+    "expires_at": "2026-07-05T16:17:19.487Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 100,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
