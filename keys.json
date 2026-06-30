@@ -2154,5 +2154,17 @@
       "WDX-43B7DD2599F938AE"
     ],
     "key_type": "normal"
+  },
+  "Yash_X_Prime_3U3CG_D2QV4": {
+    "label": "Daku mod",
+    "created_at": "2026-06-30T11:37:16.998Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
