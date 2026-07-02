@@ -2139,12 +2139,13 @@
     "created_at": "2026-07-02T13:49:02.361Z",
     "expires_at": "2026-08-02T13:49:02.018Z",
     "duration": "",
-    "device_id": "WDX-CFC5635F2BEB5C25",
-    "locked_at": "2026-07-02T13:49:34.830Z",
+    "device_id": "WDX-4D633D367262F8C4",
+    "locked_at": "2026-07-02T13:55:38.602Z",
     "active": true,
     "max_devices": 100,
     "connected_devices": [
-      "WDX-CFC5635F2BEB5C25"
+      "WDX-CFC5635F2BEB5C25",
+      "WDX-4D633D367262F8C4"
     ],
     "key_type": "mod_menu"
   }
