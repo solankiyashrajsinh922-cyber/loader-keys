@@ -2108,20 +2108,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_XU6V8_MF8FZ": {
-    "label": "Soam",
-    "created_at": "2026-06-30T07:16:25.697Z",
-    "expires_at": "2026-07-07T07:16:25.255Z",
-    "duration": "",
-    "device_id": "WDX-43B7DD2599F938AE",
-    "locked_at": "2026-06-30T11:27:43.793Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-43B7DD2599F938AE"
-    ],
-    "key_type": "normal"
-  },
   "Yash_X_Prime_3U3CG_D2QV4": {
     "label": "Daku mod",
     "created_at": "2026-06-30T11:37:16.998Z",
