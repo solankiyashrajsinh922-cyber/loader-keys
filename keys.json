@@ -2108,5 +2108,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_M595M_VPUHZ": {
+    "label": "250",
+    "created_at": "2026-07-03T08:46:04.132Z",
+    "expires_at": "2026-07-10T08:46:03.740Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
