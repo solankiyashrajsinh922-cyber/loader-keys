@@ -1930,20 +1930,6 @@
     "connected_devices": [],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_UYGGF_8Y3X3": {
-    "label": "150 ore",
-    "created_at": "2026-06-26T09:25:55.949Z",
-    "expires_at": "2026-07-03T09:25:54.473Z",
-    "duration": "",
-    "device_id": "WDX-B49A95C1870FA018",
-    "locked_at": "2026-06-27T13:53:51.100Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-B49A95C1870FA018"
-    ],
-    "key_type": "normal"
-  },
   "Yash_X_Prime_ERNX_Z7R5": {
     "label": "Daku-YASH-Chiku-lios",
     "created_at": "2026-06-26T10:54:20.355Z",
