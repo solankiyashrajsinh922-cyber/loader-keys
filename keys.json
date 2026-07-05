@@ -2120,8 +2120,8 @@
     "created_at": "2026-07-05T09:14:27.618Z",
     "expires_at": "2026-07-15T09:14:26.754Z",
     "duration": "",
-    "device_id": "WDX-DF49EDEC965C0B5A",
-    "locked_at": "2026-07-05T13:42:00.989Z",
+    "device_id": "WDX-1A1B5E913426409D",
+    "locked_at": "2026-07-05T13:48:59.295Z",
     "active": true,
     "max_devices": 100,
     "connected_devices": [
@@ -2166,7 +2166,8 @@
       "WDX-424AF8958EE60A7D",
       "WDX-88CA74C81F792163",
       "WDX-5DCE3E359D59260D",
-      "WDX-DF49EDEC965C0B5A"
+      "WDX-DF49EDEC965C0B5A",
+      "WDX-1A1B5E913426409D"
     ],
     "key_type": "mod_menu"
   },
