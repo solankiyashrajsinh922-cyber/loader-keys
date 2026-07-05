@@ -2114,19 +2114,5 @@
       "WDX-6C1CB82ACBBD8573"
     ],
     "key_type": "mod_menu"
-  },
-  "Yash_X_Prime_WTNL6_CV42L": {
-    "label": "No Label",
-    "created_at": "2026-07-05T09:10:01.296Z",
-    "expires_at": "2026-07-05T09:19:59.897Z",
-    "duration": "",
-    "device_id": "WDX-6C1CB82ACBBD8573",
-    "locked_at": "2026-07-05T09:10:12.489Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-6C1CB82ACBBD8573"
-    ],
-    "key_type": "mod_menu"
   }
 }
