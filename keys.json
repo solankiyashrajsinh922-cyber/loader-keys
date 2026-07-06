@@ -2199,11 +2199,13 @@
     "created_at": "2026-07-06T05:18:55.168Z",
     "expires_at": "2026-07-13T05:18:54.566Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-43B7DD2599F938AE",
+    "locked_at": "2026-07-06T05:22:12.479Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-43B7DD2599F938AE"
+    ],
     "key_type": "normal"
   }
 }
