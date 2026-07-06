@@ -2207,5 +2207,17 @@
       "WDX-43B7DD2599F938AE"
     ],
     "key_type": "normal"
+  },
+  "Yash_X_Prime_WRQQV_DSTBK": {
+    "label": "Ronar",
+    "created_at": "2026-07-06T07:22:33.331Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
