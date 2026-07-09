@@ -2332,19 +2332,5 @@
       "H4X-78B2FB337819"
     ],
     "key_type": "mod_menu"
-  },
-  "H4X_MODZ_GBT5N_UYM36": {
-    "label": "No Label",
-    "created_at": "2026-07-09T12:01:42.296Z",
-    "expires_at": "2026-07-19T12:01:42.007Z",
-    "duration": "",
-    "device_id": "H4X-78B2FB337819",
-    "locked_at": "2026-07-09T12:01:46.383Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "H4X-78B2FB337819"
-    ],
-    "key_type": "mod_menu"
   }
 }
