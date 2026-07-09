@@ -2332,5 +2332,17 @@
       "H4X-78B2FB337819"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_TVQM7_T8HJC": {
+    "label": "Test",
+    "created_at": "2026-07-09T11:47:48.765Z",
+    "expires_at": "2026-07-19T11:47:48.280Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
