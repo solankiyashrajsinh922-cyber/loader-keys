@@ -2374,5 +2374,18 @@
       "H4X-1C6EA6F61CC5"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_B7K6_RGF6": {
+    "label": "Ashu",
+    "created_at": "2026-07-10T07:31:29.960Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
