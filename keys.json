@@ -2387,5 +2387,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "Yash_X_Prime_6B78_Y6CM": {
+    "label": "Soam",
+    "created_at": "2026-07-10T07:37:29.965Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
