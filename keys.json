@@ -2522,5 +2522,18 @@
       "WDX-5543F39958076ABF"
     ],
     "key_type": "normal"
+  },
+  "Yash_X_Prime_RTVH_DNGD": {
+    "label": "Ben",
+    "created_at": "2026-07-11T06:40:35.997Z",
+    "expires_at": "2026-07-18T06:40:34.590Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
