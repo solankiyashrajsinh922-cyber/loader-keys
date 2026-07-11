@@ -2505,5 +2505,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "Yash_X_Prime_X3DJ_DVGA": {
+    "label": "Soam",
+    "created_at": "2026-07-11T05:26:05.752Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
