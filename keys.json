@@ -2498,12 +2498,14 @@
     "created_at": "2026-07-11T05:05:21.352Z",
     "expires_at": "2026-07-18T05:05:17.783Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-6635DDF29211",
+    "locked_at": "2026-07-11T05:44:54.581Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-6635DDF29211"
+    ],
     "key_type": "normal"
   },
   "Yash_X_Prime_X3DJ_DVGA": {
