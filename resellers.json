@@ -8,15 +8,6 @@
     "active": true,
     "allow_mod_menu": true
   },
-  "rgofficial": {
-    "name": "rg official",
-    "password": "RG001",
-    "credits": 10,
-    "created_at": "2026-06-13T04:33:13.211Z",
-    "total_keys_generated": 0,
-    "active": true,
-    "allow_mod_menu": false
-  },
   "rupeshsonekar": {
     "name": "rupeshsonekar",
     "password": "Rupesh@2026",
