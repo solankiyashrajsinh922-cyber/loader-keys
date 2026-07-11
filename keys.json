@@ -2486,12 +2486,13 @@
     "created_at": "2026-07-11T04:48:07.462Z",
     "expires_at": "2026-07-17T04:48:06.711Z",
     "duration": "",
-    "device_id": "WDX-C4F167188FE1036E",
-    "locked_at": "2026-07-11T05:13:04.545Z",
+    "device_id": "WDX-6D1F18C4EF6BC383",
+    "locked_at": "2026-07-11T11:57:02.806Z",
     "active": true,
     "max_devices": 10,
     "connected_devices": [
-      "WDX-C4F167188FE1036E"
+      "WDX-C4F167188FE1036E",
+      "WDX-6D1F18C4EF6BC383"
     ],
     "key_type": "normal"
   },
