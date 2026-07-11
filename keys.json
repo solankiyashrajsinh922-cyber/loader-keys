@@ -2624,12 +2624,13 @@
     "created_at": "2026-07-11T17:27:18.314Z",
     "expires_at": "2026-07-14T17:27:18.005Z",
     "duration": "",
-    "device_id": "H4X-88BEA9538815",
-    "locked_at": "2026-07-11T17:35:57.883Z",
+    "device_id": "H4X-A617CD1CA6BC",
+    "locked_at": "2026-07-11T19:53:48.938Z",
     "active": true,
     "max_devices": 2,
     "connected_devices": [
-      "H4X-88BEA9538815"
+      "H4X-88BEA9538815",
+      "H4X-A617CD1CA6BC"
     ],
     "key_type": "mod_menu"
   }
