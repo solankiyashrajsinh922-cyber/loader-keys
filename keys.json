@@ -2488,15 +2488,16 @@
     "created_at": "2026-07-11T04:48:07.462Z",
     "expires_at": "2026-07-17T04:48:06.711Z",
     "duration": "",
-    "device_id": "WDX-F62C5DDA21891C6F",
-    "locked_at": "2026-07-11T15:39:24.585Z",
+    "device_id": "WDX-E89E5D554A4B14F6",
+    "locked_at": "2026-07-11T17:38:12.113Z",
     "active": true,
     "max_devices": 10,
     "connected_devices": [
       "WDX-C4F167188FE1036E",
       "WDX-6D1F18C4EF6BC383",
       "WDX-694DC9D0F4B5E6E4",
-      "WDX-F62C5DDA21891C6F"
+      "WDX-F62C5DDA21891C6F",
+      "WDX-E89E5D554A4B14F6"
     ],
     "key_type": "normal"
   },
