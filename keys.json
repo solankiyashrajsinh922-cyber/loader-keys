@@ -2388,5 +2388,17 @@
       "H4X-A617CD1CA6BC"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_5KZM7_9J38G": {
+    "label": "Yssh",
+    "created_at": "2026-07-12T03:51:27.102Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
