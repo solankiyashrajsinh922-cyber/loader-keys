@@ -2433,20 +2433,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_C7QJP_YKDMQ": {
-    "label": "Yash",
-    "created_at": "2026-07-11T13:31:28.643Z",
-    "expires_at": "2026-07-17T13:31:28.418Z",
-    "duration": "",
-    "device_id": "H4X-78B2FB337819",
-    "locked_at": "2026-07-11T13:31:37.321Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "H4X-78B2FB337819"
-    ],
-    "key_type": "mod_menu"
-  },
   "H4X_MODZ_NA5JB_PQ3RF": {
     "label": "No Label",
     "created_at": "2026-07-11T15:04:11.223Z",
