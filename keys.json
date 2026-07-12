@@ -1481,20 +1481,6 @@
     ],
     "key_type": "normal"
   },
-  "Yash_X_Prime_UGATF_Y58XQ": {
-    "label": "Yash X Prime",
-    "created_at": "2026-06-18T04:02:07.378Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-275BBD669A14",
-    "locked_at": "2026-06-18T07:53:33.369Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-275BBD669A14"
-    ],
-    "key_type": "mod_menu"
-  },
   "Yash_X_Prime_4KXA5_FCP67": {
     "label": "Free",
     "created_at": "2026-06-18T08:53:48.949Z",
