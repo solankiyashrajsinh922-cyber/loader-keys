@@ -2482,11 +2482,13 @@
     "created_at": "2026-07-12T13:09:11.438Z",
     "expires_at": "2026-07-12T17:09:11.157Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-C8FA8460C851",
+    "locked_at": "2026-07-12T13:22:52.402Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-C8FA8460C851"
+    ],
     "key_type": "mod_menu"
   }
 }
