@@ -1467,20 +1467,6 @@
     "connected_devices": [],
     "key_type": "normal"
   },
-  "Yash_X_Prime_FWHZY_NERLN": {
-    "label": "Ronnie",
-    "created_at": "2026-06-15T15:06:36.795Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-6C1CB82ACBBD8573",
-    "locked_at": "2026-06-18T08:49:32.662Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-6C1CB82ACBBD8573"
-    ],
-    "key_type": "mod_menu"
-  },
   "Yash_X_Prime_4QSK2_6Q5BE": {
     "label": "No Label",
     "created_at": "2026-06-18T03:07:12.211Z",
