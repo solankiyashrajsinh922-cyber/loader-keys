@@ -1946,20 +1946,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_3U3CG_D2QV4": {
-    "label": "Daku mod",
-    "created_at": "2026-06-30T11:37:16.998Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-40092B800C0D51F7",
-    "locked_at": "2026-06-30T11:41:51.189Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-40092B800C0D51F7"
-    ],
-    "key_type": "mod_menu"
-  },
   "Yash_X_Prime_EUQTC_P86S5": {
     "label": "Free",
     "created_at": "2026-07-02T13:49:02.361Z",
