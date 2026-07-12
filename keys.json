@@ -1946,22 +1946,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_EUQTC_P86S5": {
-    "label": "Free",
-    "created_at": "2026-07-02T13:49:02.361Z",
-    "expires_at": "2026-08-02T13:49:02.018Z",
-    "duration": "",
-    "device_id": "WDX-8BCD8AB067E4F2A9",
-    "locked_at": "2026-07-02T15:52:21.907Z",
-    "active": true,
-    "max_devices": 100,
-    "connected_devices": [
-      "WDX-CFC5635F2BEB5C25",
-      "WDX-4D633D367262F8C4",
-      "WDX-8BCD8AB067E4F2A9"
-    ],
-    "key_type": "mod_menu"
-  },
   "Yash_X_Prime_BKXT_44TG": {
     "label": "Pvt me",
     "created_at": "2026-07-03T06:43:26.222Z",
