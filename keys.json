@@ -2490,5 +2490,17 @@
       "H4X-C8FA8460C851"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_CNEKM_T28YL": {
+    "label": "No Label",
+    "created_at": "2026-07-12T16:24:15.634Z",
+    "expires_at": "2026-07-12T20:24:15.298Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
