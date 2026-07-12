@@ -1820,20 +1820,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_YMU5U_D8E89": {
-    "label": "Account not deleted",
-    "created_at": "2026-06-22T06:06:17.699Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-36A0096BBC16519B",
-    "locked_at": "2026-06-22T06:53:14.889Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-36A0096BBC16519B"
-    ],
-    "key_type": "mod_menu"
-  },
   "Yash_X_Prime_6VWHV_6EZGM": {
     "label": "No Label",
     "created_at": "2026-06-22T16:44:34.170Z",
