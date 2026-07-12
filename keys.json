@@ -2415,5 +2415,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_S5S5L_LRVJX": {
+    "label": "No Label",
+    "created_at": "2026-07-12T06:46:14.156Z",
+    "expires_at": "2026-07-15T06:46:13.260Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
