@@ -2577,11 +2577,13 @@
     "created_at": "2026-07-14T05:25:51.502Z",
     "expires_at": "2026-07-15T05:25:51.276Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-ECBFDDC0EC14",
+    "locked_at": "2026-07-14T09:13:07.280Z",
     "active": true,
     "max_devices": 100,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-ECBFDDC0EC14"
+    ],
     "key_type": "mod_menu"
   }
 }
