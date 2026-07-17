@@ -2691,5 +2691,17 @@
     "max_devices": 5,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "H4X_MODZ_JV7DH_CT54F": {
+    "label": "No Label",
+    "created_at": "2026-07-17T14:23:48.050Z",
+    "expires_at": "2026-07-20T14:23:47.920Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 2,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
