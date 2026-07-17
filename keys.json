@@ -2656,11 +2656,13 @@
     "created_at": "2026-07-16T17:40:57.227Z",
     "expires_at": "2026-07-23T17:40:57.046Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-B124AEFEB18F",
+    "locked_at": "2026-07-17T13:02:20.086Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-B124AEFEB18F"
+    ],
     "key_type": "mod_menu"
   },
   "Yash_X_Prime_QTK2_VFMB": {
