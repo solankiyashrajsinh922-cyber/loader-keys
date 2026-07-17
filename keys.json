@@ -2682,12 +2682,13 @@
     "created_at": "2026-07-17T14:23:48.050Z",
     "expires_at": "2026-07-20T14:23:47.920Z",
     "duration": "",
-    "device_id": "H4X-A617CD1CA6BC",
-    "locked_at": "2026-07-17T14:26:05.645Z",
+    "device_id": "H4X-88BEA9538815",
+    "locked_at": "2026-07-17T15:01:05.942Z",
     "active": true,
     "max_devices": 2,
     "connected_devices": [
-      "H4X-A617CD1CA6BC"
+      "H4X-A617CD1CA6BC",
+      "H4X-88BEA9538815"
     ],
     "key_type": "mod_menu"
   }
