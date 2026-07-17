@@ -2759,5 +2759,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_Y77S_EEUH": {
+    "label": "Rahul",
+    "created_at": "2026-07-17T17:45:23.762Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
