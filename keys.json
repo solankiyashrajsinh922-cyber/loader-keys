@@ -2743,5 +2743,17 @@
       "H4X-CDD585E5CD7E"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_YUNB5_QC96L": {
+    "label": "No Label",
+    "created_at": "2026-07-17T16:32:27.120Z",
+    "expires_at": "2026-07-19T16:32:26.153Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
