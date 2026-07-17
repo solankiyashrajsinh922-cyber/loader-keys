@@ -2765,12 +2765,14 @@
     "created_at": "2026-07-17T17:45:23.762Z",
     "expires_at": null,
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-B49A95C1870FA018",
+    "locked_at": "2026-07-17T17:58:19.291Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-B49A95C1870FA018"
+    ],
     "key_type": "normal"
   }
 }
