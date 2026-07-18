@@ -2852,5 +2852,18 @@
       "WDX-B76B56169FF2"
     ],
     "key_type": "normal"
+  },
+  "Yash_X_Prime_5YL5_9WZE": {
+    "label": "Aryan",
+    "created_at": "2026-07-18T15:07:23.664Z",
+    "expires_at": "2026-07-25T15:07:22.705Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
