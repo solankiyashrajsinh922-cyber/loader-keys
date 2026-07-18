@@ -2789,5 +2789,17 @@
       "H4X-B35EB70DB3F5"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_F4EQH_4UBMR": {
+    "label": "Yash",
+    "created_at": "2026-07-18T13:01:57.219Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
