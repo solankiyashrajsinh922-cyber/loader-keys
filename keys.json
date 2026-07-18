@@ -2858,12 +2858,14 @@
     "created_at": "2026-07-18T15:07:23.664Z",
     "expires_at": "2026-07-25T15:07:22.705Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-C5996ED19C555AC6",
+    "locked_at": "2026-07-18T15:08:10.129Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-C5996ED19C555AC6"
+    ],
     "key_type": "normal"
   }
 }
