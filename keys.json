@@ -2670,14 +2670,15 @@
     "created_at": "2026-07-17T13:25:42.116Z",
     "expires_at": "2026-07-27T13:25:41.924Z",
     "duration": "",
-    "device_id": "WDX-694DC9D0F4B5E6E4",
-    "locked_at": "2026-07-18T13:57:14.855Z",
+    "device_id": "WDX-6D1F18C4EF6BC383",
+    "locked_at": "2026-07-19T12:01:46.924Z",
     "active": true,
     "max_devices": 5,
     "connected_devices": [
       "WDX-C4F167188FE1036E",
       "WDX-60508D702E15E450",
-      "WDX-694DC9D0F4B5E6E4"
+      "WDX-694DC9D0F4B5E6E4",
+      "WDX-6D1F18C4EF6BC383"
     ],
     "key_type": "normal"
   },
