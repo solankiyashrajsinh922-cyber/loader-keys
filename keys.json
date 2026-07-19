@@ -2873,11 +2873,13 @@
     "created_at": "2026-07-18T15:47:42.214Z",
     "expires_at": "2026-07-25T15:47:41.542Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-6B2ABF9D6B81",
+    "locked_at": "2026-07-19T05:08:46.962Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-6B2ABF9D6B81"
+    ],
     "key_type": "mod_menu"
   }
 }
