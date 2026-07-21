@@ -2994,5 +2994,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "Yash_X_Prime_S9E6_DGSU": {
+    "label": "Vishal",
+    "created_at": "2026-07-21T15:37:47.496Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
