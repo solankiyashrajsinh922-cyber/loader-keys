@@ -3148,5 +3148,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "vortexexclusive_RTTJ_QPFA": {
+    "label": "vortex",
+    "created_at": "2026-07-24T17:37:56.266Z",
+    "expires_at": "2026-07-31T17:37:54.842Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "vortex",
+    "max_devices": 9999,
+    "connected_devices": [],
+    "key_type": "vortex"
   }
 }
