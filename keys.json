@@ -3087,11 +3087,13 @@
     "created_at": "2026-07-24T15:49:33.124Z",
     "expires_at": "2026-07-24T20:49:32.415Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-3B818BCA3B2A",
+    "locked_at": "2026-07-24T15:58:05.189Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-3B818BCA3B2A"
+    ],
     "key_type": "mod_menu"
   }
 }
