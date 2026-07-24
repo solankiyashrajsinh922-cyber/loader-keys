@@ -153,6 +153,7 @@ module.exports = async (req, res) => {
           username:slug,
           name:resellers[slug].name||slug,
           credits:resellers[slug].credits||0,
+          allow_normal: resellers[slug].allow_normal !== false,
           allow_mod_menu: resellers[slug].allow_mod_menu || false,
           allow_vortex: resellers[slug].allow_vortex || false
         }
@@ -173,6 +174,11 @@ module.exports = async (req, res) => {
       }
       if((resellers[slug].credits||0)<=0){
         res.json({success:false,message:"No credits! Contact admin."});return;
+      }
+
+      if(reqKeyType === 'normal' && resellers[slug].allow_normal === false){
+        res.json({success:false,message:"Normal key generation not allowed."});
+        return;
       }
 
       const reqKeyType = key_type || 'normal';
@@ -366,6 +372,7 @@ module.exports = async (req, res) => {
         created_at: new Date().toISOString(),
         total_keys_generated: 0,
         active: true,
+        allow_normal: false,
         allow_mod_menu: false,
         allow_vortex: false
       };
