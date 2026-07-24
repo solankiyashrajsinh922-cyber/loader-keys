@@ -25,6 +25,6 @@
     "total_keys_generated": 2,
     "active": true,
     "allow_mod_menu": true,
-    "allow_vortex": true
+    "allow_vortex": false
   }
 }
