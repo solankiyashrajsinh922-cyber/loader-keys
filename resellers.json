@@ -7,16 +7,5 @@
     "total_keys_generated": 20,
     "active": true,
     "allow_mod_menu": false
-  },
-  "nova": {
-    "name": "nova",
-    "password": "1212",
-    "credits": 8,
-    "created_at": "2026-07-24T16:13:19.020Z",
-    "total_keys_generated": 2,
-    "active": true,
-    "allow_mod_menu": true,
-    "allow_vortex": false,
-    "allow_normal": false
   }
 }
