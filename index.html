@@ -282,6 +282,13 @@ select.inp option{background:var(--s2)}
         <div><div class="r-credits-big" id="rResCredits">—</div><div style="font-size:8px;color:var(--t3);letter-spacing:1px">CREDITS</div></div>
         <div style="flex:1;text-align:right;font-size:9px;color:var(--t3)">1 credit = 1 key</div>
       </div>
+
+      <!-- Normal Key Permission Toggle -->
+      <div style="font-size:9px;color:var(--t3);letter-spacing:2px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--br)">NORMAL KEY PERMISSION</div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+        <span style="font-size:10px;color:var(--t2)" id="rNormalLabel">Normal Key: ON</span>
+        <button class="btn btn-sm btn-g" style="margin:0" onclick="toggleManageNormal()">TOGGLE</button>
+      </div>
       <!-- Mod Menu Permission Toggle -->
       <div style="font-size:9px;color:var(--t3);letter-spacing:2px;margin-bottom:8px;padding-bottom:6px;border-bottom:1px solid var(--br)">MOD MENU KEY PERMISSION</div>
       <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
@@ -383,6 +390,7 @@ let TOKEN = '';
 let currentResellerSlug = '';
 let modalTarget = '';
 let currentResellerModMenu = false;
+let currentResellerNormal = true;
 let currentResellerVortex = false;
 
 // ── Login ──────────────────────────────────
@@ -595,14 +603,16 @@ function searchReseller(){
   fetch(`${API}?action=get_resellers`,{headers:{'x-admin-token':TOKEN}}).then(r=>r.json()).then(d=>{
     if(!d.success){ showSbox('rManageStatus','Failed!','err'); return; }
     const r=d.resellers[slug];
-    if(!r){ document.getElementById('rResult').style.display='none'; showSbox('rManageStatus','Not found!','err'); return; }
+    if(!r){ document.getElementById('rResult').style.display='none'; showSbox('rManageStatus','Not found!','err'); return; 
     currentResellerSlug=slug;
+    currentResellerNormal = r.allow_normal !== false;
     currentResellerModMenu = r.allow_mod_menu || false;
     document.getElementById('rResult').style.display='block';
     document.getElementById('rResultName').textContent='👤 '+(r.name||slug);
     document.getElementById('rResUser').textContent=slug;
     document.getElementById('rResCreated').textContent=fmtDate(new Date(r.created_at));
     document.getElementById('rResCredits').textContent=r.credits||0;
+    document.getElementById('rNormalLabel').textContent = 'Normal Key: '+(currentResellerNormal?'ON':'OFF');
     document.getElementById('rModMenuLabel').textContent = 'Mod Menu: '+(currentResellerModMenu?'ON':'OFF');
     document.getElementById('rManageStatus').style.display='none';
     document.getElementById('rVortexLabel').textContent = 'Vortex: '+(currentResellerVortex?'ON':'OFF');
@@ -616,6 +626,21 @@ function doCredits(type){
   fetch(`${API}?action=${action}`,{method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},body:JSON.stringify({username:currentResellerSlug,credits:amt})})
   .then(r=>r.json()).then(d=>{ showSbox('rManageStatus',d.message,d.success?'ok':'err'); if(d.success){ document.getElementById('rResCredits').textContent=d.credits; toast('Credits updated!'); } }).catch(()=>showSbox('rManageStatus','Error!','err'));
 }
+  function toggleManageNormal(){
+  if(!currentResellerSlug) return;
+  fetch(`${API}?action=toggle_reseller_normal`,{
+    method:'POST',
+    headers:{'Content-Type':'application/json','x-admin-token':TOKEN},
+    body:JSON.stringify({username:currentResellerSlug, allow: !currentResellerNormal})
+  })
+  .then(r=>r.json()).then(d=>{
+    if(d.success){
+      currentResellerNormal = d.allow_normal;
+      document.getElementById('rNormalLabel').textContent = 'Normal Key: '+(currentResellerNormal?'ON':'OFF');
+      toast('Updated!');
+    } else toast('Failed!');
+  }).catch(()=>toast('Error!'));
+  }
 function toggleManageModMenu(){
   if(!currentResellerSlug) return;
   fetch(`${API}?action=toggle_reseller_mod_menu`,{
@@ -677,6 +702,7 @@ function renderResellers(resellers){
   if(!entries.length){ document.getElementById('resellersList').innerHTML='<div class="empty">NO RESELLERS YET</div>'; return; }
   const base=window.location.origin;
   document.getElementById('resellersList').innerHTML=entries.map(([slug,r])=>{
+    const normalAllowed = r.allow_normal !== false;
     const modMenuAllowed = r.allow_mod_menu || false;
     const vortexAllowed = r.allow_vortex || false;
     
@@ -690,9 +716,11 @@ function renderResellers(resellers){
         <div class="ri-field">Username <span>${slug}</span></div>
         <div class="ri-field">Keys <span>${r.total_keys_generated||0}</span></div>
         <div class="ri-field">Created <span>${fmtDate(new Date(r.created_at))}</span></div>
+        <div class="ri-field">Normal Key <span>${normalAllowed?'ON':'OFF'}</span></div>
         <div class="ri-field">Mod Menu <span>${modMenuAllowed?'ON':'OFF'}</span></div>
       </div>
       <div class="ri-actions">
+        <button class="btn btn-sm ${normalAllowed?'btn-g':'btn-s'}" onclick="toggleNormalReseller('${slug}', ${normalAllowed})">${normalAllowed?'🔹 NORMAL':'🔹 NORMAL'}</button>
         <button class="btn btn-g btn-sm" onclick="openCreditModal('${slug}')">CREDITS</button>
         <button class="btn btn-sm ${modMenuAllowed?'btn-y':'btn-s'}" onclick="toggleModMenuReseller('${slug}', ${modMenuAllowed})">${modMenuAllowed?'🔸 MOD':'🔹 MOD'}</button>
         <button class="btn btn-sm ${vortexAllowed?'btn-p':'btn-s'}" onclick="toggleVortexReseller('${slug}', ${vortexAllowed})">${vortexAllowed?'🟣 VORTEX':'⚫ VORTEX'}</button>
@@ -714,6 +742,18 @@ function toggleModMenuReseller(slug, currentState){   // ✅ parameter add kiya
     } else toast('Failed!');
   }).catch(()=>toast('Error!'));
 }
+function toggleNormalReseller(slug, currentState){
+  fetch(`${API}?action=toggle_reseller_normal`,{
+    method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},
+    body:JSON.stringify({username:slug, allow: !currentState})
+  })
+  .then(r=>r.json()).then(d=>{
+    if(d.success){
+      toast('Normal Key '+(d.allow_normal?'enabled':'disabled')+' for '+slug);
+      loadResellers();
+    } else toast('Failed!');
+  }).catch(()=>toast('Error!'));
+  }
 function toggleVortexReseller(slug, currentState){
   fetch(`${API}?action=toggle_reseller_vortex`,{
     method:'POST',headers:{'Content-Type':'application/json','x-admin-token':TOKEN},
