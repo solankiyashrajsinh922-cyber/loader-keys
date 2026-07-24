@@ -1,0 +1,560 @@
+const { Octokit } = require("@octokit/rest");
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+
+const OWNER = "solankiyashrajsinh922-cyber";
+const REPO  = "loader-keys";
+
+async function getFile(path) {
+  const { data } = await octokit.repos.getContent({ owner:OWNER, repo:REPO, path });
+  return { data: JSON.parse(Buffer.from(data.content,'base64').toString('utf8')), sha: data.sha };
+}
+
+async function updateFile(path, data, sha, msg) {
+  await octokit.repos.createOrUpdateFileContents({
+    owner:OWNER, repo:REPO, path,
+    message: msg,
+    content: Buffer.from(JSON.stringify(data,null,2)).toString('base64'),
+    sha
+  });
+}
+
+async function getResellers() {
+  try {
+    return await getFile('resellers.json');
+  } catch(e) {
+    await octokit.repos.createOrUpdateFileContents({
+      owner:OWNER, repo:REPO, path:'resellers.json',
+      message:'Init resellers.json',
+      content: Buffer.from(JSON.stringify({},null,2)).toString('base64'),
+    });
+    return await getFile('resellers.json');
+  }
+}
+
+function rp(){ const c='ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; let s=''; for(let i=0;i<4;i++) s+=c[Math.floor(Math.random()*c.length)]; return s; }
+function makeKey(type = 'normal'){ 
+  if(type === 'mod_menu') {
+    return 'H4X_MODZ_' + rp() + '_' + rp();
+  }
+  if(type === 'vortex') {
+    return 'vortexexclusive_' + rp() + '_' + rp();
+  }
+  return 'Yash_X_Prime_' + rp() + '_' + rp(); 
+}
+
+module.exports = async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin','*');
+  res.setHeader('Access-Control-Allow-Methods','GET,POST,OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers','Content-Type,x-admin-token');
+  if(req.method==='OPTIONS'){res.status(200).end();return;}
+
+  const action = req.query.action || req.body?.action;
+
+  try {
+
+    // ═══════════════════════════════════════════
+    // VALIDATE KEY (App)
+    // ═══════════════════════════════════════════
+    if(action==='validate'){
+      const { key, device_id } = req.body||{};
+      if(!key){res.json({success:false,message:"Key required!"});return;}
+
+      if(!key.startsWith('Yash_X_Prime_') && !key.startsWith('H4X_MODZ_') && !key.startsWith('vortexexclusive_')){
+        res.json({success:false,message:"Invalid key format!"});
+        return;
+      }
+
+      const { data: v } = await getFile('version.json');
+      if(v.maintenance){
+        res.json({success:false,message:v.maintenance_msg||"App under maintenance!"});return;
+      }
+
+      const { data: keys, sha } = await getFile('keys.json');
+      if(!keys[key]){res.json({success:false,message:"Invalid key!"});return;}
+
+      const e = keys[key];
+      if(e.active===false){res.json({success:false,message:"Key disabled!"});return;}
+
+      if(e.expires_at && e.expires_at!=='null'){
+        if(new Date() > new Date(e.expires_at)){
+          res.json({success:false,message:"Key expired!"});return;
+        }
+      }
+
+      const keyType = e.key_type || 'normal';
+      const maxDev = (keyType === 'vortex') ? 9999 : (e.max_devices || 1);
+
+      if(!e.connected_devices) e.connected_devices = [];
+      e.connected_devices = e.connected_devices.filter(d => d && d !== 'null');
+
+      if(keyType !== 'vortex' && e.connected_devices.length >= maxDev && !e.connected_devices.includes(device_id)){
+        res.json({success:false,message:"Max devices reached! ("+maxDev+")"});return;
+      }
+
+      if(device_id && !e.connected_devices.includes(device_id)){
+        e.connected_devices.push(device_id);
+        e.device_id = device_id;
+        e.locked_at = new Date().toISOString();
+        await updateFile('keys.json', keys, sha, "Device locked: "+device_id);
+      }
+
+      let allowedMods = {};
+      let allowedFeatures = {};
+      let allowedLocked = [];
+
+      if (keyType === 'mod_menu' || keyType === 'vortex') {
+        if (v.mods && v.mods.original) allowedMods.original = v.mods.original;
+        if (v.mods && v.mods.mod_menu) allowedMods.mod_menu = v.mods.mod_menu;
+        if (v.mod_features && v.mod_features.original) allowedFeatures.original = v.mod_features.original;
+        if (v.mod_features && v.mod_features.mod_menu) allowedFeatures.mod_menu = v.mod_features.mod_menu;
+        allowedLocked = [];
+      } else {
+        if (v.mods && v.mods.original) allowedMods.original = v.mods.original;
+        if (v.mods && v.mods.normal) allowedMods.normal = v.mods.normal;
+        if (v.mods && v.mods.tree) allowedMods.tree = v.mods.tree;
+        if (v.mods && v.mods.full) allowedMods.full = v.mods.full;
+        if (v.mod_features && v.mod_features.original) allowedFeatures.original = v.mod_features.original;
+        if (v.mod_features && v.mod_features.normal) allowedFeatures.normal = v.mod_features.normal;
+        if (v.mod_features && v.mod_features.tree) allowedFeatures.tree = v.mod_features.tree;
+        if (v.mod_features && v.mod_features.full) allowedFeatures.full = v.mod_features.full;
+        allowedLocked = v.locked_mods || [];
+      }
+
+      res.json({
+        success: true,
+        label: e.label||"User",
+        expires_at: e.expires_at,
+        mods: allowedMods,
+        locked_mods: allowedLocked,
+        mod_features: allowedFeatures,
+        key_type: keyType
+      });
+      return;
+    }
+
+    // ═══════════════════════════════════════════
+    // RESELLER LOGIN
+    // ═══════════════════════════════════════════
+    if(action==='reseller_login'){
+      const { username, password } = req.body||{};
+      if(!username||!password){res.json({success:false,message:"Required!"});return;}
+      const { data: resellers } = await getResellers();
+      const slug = username.toLowerCase();
+      if(!resellers[slug]){res.json({success:false,message:"Reseller not found!"});return;}
+      if(resellers[slug].password!==password){res.json({success:false,message:"Wrong password!"});return;}
+      res.json({
+        success:true,
+        reseller:{
+          username:slug,
+          name:resellers[slug].name||slug,
+          credits:resellers[slug].credits||0,
+          allow_normal: resellers[slug].allow_normal !== false,
+          allow_mod_menu: resellers[slug].allow_mod_menu || false,
+          allow_vortex: resellers[slug].allow_vortex || false
+        }
+      });
+      return;
+    }
+
+    // ═══════════════════════════════════════════
+    // RESELLER GENERATE KEY
+    // ═══════════════════════════════════════════
+    if(action==='reseller_generate_key'){
+      const { username, password, expires_at, label, max_devices, key_type } = req.body||{};
+      if(!username||!password){res.json({success:false,message:"Unauthorized!"});return;}
+      const { data: resellers, sha: rSha } = await getResellers();
+      const slug = username.toLowerCase();
+      if(!resellers[slug]||resellers[slug].password!==password){
+        res.json({success:false,message:"Unauthorized!"});return;
+      }
+      if((resellers[slug].credits||0)<=0){
+        res.json({success:false,message:"No credits! Contact admin."});return;
+      }
+
+      const reqKeyType = key_type || 'normal';
+
+      if(reqKeyType === 'normal' && resellers[slug].allow_normal === false){
+        res.json({success:false,message:"Normal key generation not allowed."});
+        return;
+      }
+      if(reqKeyType === 'mod_menu' && !resellers[slug].allow_mod_menu){
+        res.json({success:false,message:"Mod Menu key generation not allowed."});
+        return;
+      }
+      if(reqKeyType === 'vortex' && !resellers[slug].allow_vortex){
+        res.json({success:false,message:"Vortex key generation not allowed."});
+        return;
+      }
+
+      resellers[slug].credits = (resellers[slug].credits||0)-1;
+      resellers[slug].total_keys_generated = (resellers[slug].total_keys_generated||0)+1;
+      await updateFile('resellers.json',resellers,rSha,"Credit used by: "+slug);
+
+      const { data: keys, sha: kSha } = await getFile('keys.json');
+      const key = makeKey(reqKeyType);
+      keys[key] = {
+        label: label||resellers[slug].name||slug,
+        created_at: new Date().toISOString(),
+        expires_at: expires_at||null,
+        duration: '',
+        device_id: null,
+        locked_at: null,
+        active: true,
+        reseller: slug,
+        max_devices: (reqKeyType === 'vortex') ? 9999 : (parseInt(max_devices)||1),
+        connected_devices: [],
+        key_type: reqKeyType
+      };
+      await updateFile('keys.json',keys,kSha,"Key by reseller: "+slug);
+      res.json({success:true, key, credits_left: resellers[slug].credits});
+      return;
+    }
+
+    // ═══════════════════════════════════════════
+    // RESELLER GET KEYS
+    // ═══════════════════════════════════════════
+    if(action==='reseller_get_keys'){
+      const { username, password } = req.body||{};
+      if(!username||!password){res.json({success:false,message:"Unauthorized!"});return;}
+      const { data: resellers } = await getResellers();
+      const slug = username.toLowerCase();
+      if(!resellers[slug]||resellers[slug].password!==password){
+        res.json({success:false,message:"Unauthorized!"});return;
+      }
+      const { data: keys } = await getFile('keys.json');
+      const myKeys = {};
+      Object.entries(keys).forEach(([k,v])=>{
+        if(v.reseller===slug) myKeys[k]=v;
+      });
+      res.json({success:true, keys: myKeys, credits: resellers[slug].credits||0});
+      return;
+    }
+
+    // ═══════════════════════════════════════════
+    // RESELLER RESET DEVICE (DISABLED)
+    // ═══════════════════════════════════════════
+    if(action==='reseller_reset_device'){
+      res.json({success:false,message:"Device reset has been disabled."});
+      return;
+    }
+
+    // ═══════════════════════════════════════════
+    // RESELLER DELETE KEY
+    // ═══════════════════════════════════════════
+    if(action==='reseller_delete_key'){
+      const { username, password, key } = req.body||{};
+      if(!username||!password||!key){res.json({success:false,message:"Required!"});return;}
+      const { data: resellers } = await getResellers();
+      const slug = username.toLowerCase();
+      if(!resellers[slug]||resellers[slug].password!==password){
+        res.json({success:false,message:"Unauthorized!"});return;
+      }
+      const { data: keys, sha } = await getFile('keys.json');
+      if(!keys[key]){res.json({success:false,message:"Key not found!"});return;}
+      if(keys[key].reseller!==slug){res.json({success:false,message:"Not your key!"});return;}
+      delete keys[key];
+      await updateFile('keys.json',keys,sha,"Key deleted by reseller: "+slug);
+      res.json({success:true,message:"Deleted!"});
+      return;
+    }
+
+    // ═══════════════════════════════════════════
+    // ADMIN AUTH CHECK
+    // ═══════════════════════════════════════════
+    const token = req.headers['x-admin-token'];
+    if(!token || token!==process.env.ADMIN_TOKEN){
+      res.json({success:false,message:"Unauthorized!"});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // GET KEYS
+    // ═══════════════════════════════════════════
+    if(action==='get_keys'){
+      const { data: keys } = await getFile('keys.json');
+      res.json({success:true, keys});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // ADD KEY (Admin)
+    // ═══════════════════════════════════════════
+    if(action==='add_key'){
+      const { key, label, expires_at, max_devices, key_type } = req.body||{};
+      const { data: keys, sha } = await getFile('keys.json');
+      const kType = key_type || 'normal';
+      keys[key] = {
+        label: label||"No Label",
+        created_at: new Date().toISOString(),
+        expires_at: expires_at||null,
+        duration: '',
+        device_id: null,
+        locked_at: null,
+        active: true,
+        max_devices: (kType === 'vortex') ? 9999 : (parseInt(max_devices)||1),
+        connected_devices: [],
+        key_type: kType
+      };
+      await updateFile('keys.json',keys,sha,"Key added: "+key);
+      res.json({success:true,message:"Key added!"});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // DELETE KEY (Admin)
+    // ═══════════════════════════════════════════
+    if(action==='delete_key'){
+      const { key } = req.body||{};
+      const { data: keys, sha } = await getFile('keys.json');
+      if(!keys[key]){res.json({success:false,message:"Not found!"});return;}
+      delete keys[key];
+      await updateFile('keys.json',keys,sha,"Key deleted: "+key);
+      res.json({success:true,message:"Deleted!"});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // RESET DEVICE (Admin)
+    // ═══════════════════════════════════════════
+    if(action==='reset_device'){
+      const { key } = req.body||{};
+      const { data: keys, sha } = await getFile('keys.json');
+      if(!keys[key]){res.json({success:false,message:"Not found!"});return;}
+      keys[key].device_id = null;
+      keys[key].locked_at = null;
+      keys[key].connected_devices = [];
+      await updateFile('keys.json',keys,sha,"Device reset: "+key);
+      res.json({success:true,message:"Reset!"});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // GET MAINTENANCE
+    // ═══════════════════════════════════════════
+    if(action==='get_maintenance'){
+      const { data: v } = await getFile('version.json');
+      res.json({success:true, maintenance: v.maintenance||false});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // SET MAINTENANCE
+    // ═══════════════════════════════════════════
+    if(action==='set_maintenance'){
+      const { maintenance } = req.body||{};
+      const { data: v, sha } = await getFile('version.json');
+      v.maintenance = maintenance;
+      await updateFile('version.json', v, sha, maintenance ? "Maintenance ON" : "Maintenance OFF");
+      res.json({success:true, maintenance});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // GET RESELLERS
+    // ═══════════════════════════════════════════
+    if(action==='get_resellers'){
+      const { data: resellers } = await getResellers();
+      res.json({success:true, resellers});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // CREATE RESELLER
+    // ═══════════════════════════════════════════
+    if(action==='create_reseller'){
+      const { username, password, credits, name } = req.body||{};
+      if(!username||!password){res.json({success:false,message:"Username and password required!"});return;}
+      const slug = username.toLowerCase().replace(/[^a-z0-9]/g,'');
+      if(!slug){res.json({success:false,message:"Invalid username!"});return;}
+      const { data: resellers, sha } = await getResellers();
+      if(resellers[slug]){res.json({success:false,message:"Reseller already exists!"});return;}
+      resellers[slug] = {
+        name: name||username,
+        password,
+        credits: parseInt(credits)||0,
+        created_at: new Date().toISOString(),
+        total_keys_generated: 0,
+        active: true,
+        allow_normal: false,
+        allow_mod_menu: false,
+        allow_vortex: false
+      };
+      await updateFile('resellers.json',resellers,sha,"Reseller created: "+slug);
+      res.json({success:true,message:"Reseller created!",slug});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // DELETE RESELLER
+    // ═══════════════════════════════════════════
+    if(action==='delete_reseller'){
+      const { username } = req.body||{};
+      const slug = (username||'').toLowerCase();
+      const { data: resellers, sha } = await getResellers();
+      if(!resellers[slug]){res.json({success:false,message:"Not found!"});return;}
+      delete resellers[slug];
+      await updateFile('resellers.json',resellers,sha,"Reseller deleted: "+slug);
+      res.json({success:true,message:"Reseller deleted!"});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // ADD CREDITS
+    // ═══════════════════════════════════════════
+    if(action==='add_credits'){
+      const { username, credits } = req.body||{};
+      const slug = (username||'').toLowerCase();
+      const { data: resellers, sha } = await getResellers();
+      if(!resellers[slug]){res.json({success:false,message:"Reseller not found!"});return;}
+      resellers[slug].credits = (resellers[slug].credits||0)+parseInt(credits||0);
+      await updateFile('resellers.json',resellers,sha,"Credits added to: "+slug);
+      res.json({success:true,message:"Credits added!",credits:resellers[slug].credits});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // REMOVE CREDITS
+    // ═══════════════════════════════════════════
+    if(action==='remove_credits'){
+      const { username, credits } = req.body||{};
+      const slug = (username||'').toLowerCase();
+      const { data: resellers, sha } = await getResellers();
+      if(!resellers[slug]){res.json({success:false,message:"Reseller not found!"});return;}
+      resellers[slug].credits = Math.max(0,(resellers[slug].credits||0)-parseInt(credits||0));
+      await updateFile('resellers.json',resellers,sha,"Credits removed from: "+slug);
+      res.json({success:true,message:"Credits removed!",credits:resellers[slug].credits});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // CHANGE RESELLER PASSWORD
+    // ═══════════════════════════════════════════
+    if(action==='change_reseller_password'){
+      const { username, new_password } = req.body||{};
+      const slug = (username||'').toLowerCase();
+      if(!slug||!new_password){res.json({success:false,message:"Required!"});return;}
+      const { data: resellers, sha } = await getResellers();
+      if(!resellers[slug]){res.json({success:false,message:"Reseller not found!"});return;}
+      resellers[slug].password = new_password;
+      await updateFile('resellers.json',resellers,sha,"Password changed for: "+slug);
+      res.json({success:true,message:"Password changed!"});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // TOGGLE RESELLER NORMAL PERMISSION
+    // ═══════════════════════════════════════════
+    if(action==='toggle_reseller_normal'){
+      const { username, allow } = req.body||{};
+      const slug = (username||'').toLowerCase();
+      if(!slug){res.json({success:false,message:"Username required!"});return;}
+      const { data: resellers, sha } = await getResellers();
+      if(!resellers[slug]){res.json({success:false,message:"Reseller not found!"});return;}
+      resellers[slug].allow_normal = allow ? true : false;
+      await updateFile('resellers.json',resellers,sha,"Toggled normal for: "+slug);
+      res.json({success:true, allow_normal: resellers[slug].allow_normal});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // GET MOD LOCKS
+    // ═══════════════════════════════════════════
+    if(action==='get_mod_locks'){
+      const { data: v } = await getFile('version.json');
+      res.json({success:true, locked_mods: v.locked_mods||[]});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // SET MOD LOCK
+    // ═══════════════════════════════════════════
+    if(action==='set_mod_lock'){
+      const { mod_key, locked } = req.body||{};
+      if(!mod_key){res.json({success:false,message:"mod_key required!"});return;}
+      const { data: v, sha } = await getFile('version.json');
+      if(!v.locked_mods) v.locked_mods = [];
+      if(locked && !v.locked_mods.includes(mod_key)){
+        v.locked_mods.push(mod_key);
+      } else if(!locked){
+        v.locked_mods = v.locked_mods.filter(m => m !== mod_key);
+      }
+      await updateFile('version.json', v, sha, "Mod lock updated: "+mod_key);
+      res.json({success:true, locked_mods: v.locked_mods});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // SET MOD FEATURES
+    // ═══════════════════════════════════════════
+    if(action==='set_mod_features'){
+      const { mod_features } = req.body||{};
+      if(!mod_features){ res.json({success:false,message:"mod_features required!"}); return; }
+      const { data: v, sha } = await getFile('version.json');
+      v.mod_features = mod_features;
+      await updateFile('version.json', v, sha, "Mod features updated");
+      res.json({success:true}); return;
+    }
+
+    // ═══════════════════════════════════════════
+    // GET MOD FEATURES
+    // ═══════════════════════════════════════════
+    if(action==='get_mod_features'){
+      const { data: v } = await getFile('version.json');
+      res.json({success:true, mod_features: v.mod_features||{}}); return;
+    }
+
+    // ═══════════════════════════════════════════
+    // TOGGLE RESELLER MOD MENU PERMISSION
+    // ═══════════════════════════════════════════
+    if(action==='toggle_reseller_mod_menu'){
+      const { username, allow } = req.body||{};
+      const slug = (username||'').toLowerCase();
+      if(!slug){res.json({success:false,message:"Username required!"});return;}
+      const { data: resellers, sha } = await getResellers();
+      if(!resellers[slug]){res.json({success:false,message:"Reseller not found!"});return;}
+      resellers[slug].allow_mod_menu = allow ? true : false;
+      await updateFile('resellers.json',resellers,sha,"Toggled mod_menu for: "+slug);
+      res.json({success:true, allow_mod_menu: resellers[slug].allow_mod_menu});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // TOGGLE RESELLER VORTEX PERMISSION
+    // ═══════════════════════════════════════════
+    if(action==='toggle_reseller_vortex'){
+      const { username, allow } = req.body||{};
+      const slug = (username||'').toLowerCase();
+      if(!slug){res.json({success:false,message:"Username required!"});return;}
+      const { data: resellers, sha } = await getResellers();
+      if(!resellers[slug]){res.json({success:false,message:"Reseller not found!"});return;}
+      resellers[slug].allow_vortex = allow ? true : false;
+      await updateFile('resellers.json',resellers,sha,"Toggled vortex for: "+slug);
+      res.json({success:true, allow_vortex: resellers[slug].allow_vortex});return;
+    }
+
+    // ═══════════════════════════════════════════
+    // GET RESELLER STATS (Admin)
+    // ═══════════════════════════════════════════
+    if(action==='get_reseller_stats'){
+      const { data: keys } = await getFile('keys.json');
+      const { data: resellers } = await getResellers();
+      const stats = {};
+      for(const slug in resellers){
+        stats[slug] = {
+          name: resellers[slug].name || slug,
+          credits: resellers[slug].credits || 0,
+          total_generated: resellers[slug].total_keys_generated || 0,
+          total_keys: 0,
+          valid: 0,
+          expired: 0,
+          locked: 0
+        };
+      }
+      const now = new Date();
+      for(const [k, v] of Object.entries(keys)){
+        const reseller = v.reseller || 'admin';
+        if(!stats[reseller]){
+          stats[reseller] = { name: reseller, credits: 0, total_generated: 0, total_keys:0, valid:0, expired:0, locked:0 };
+        }
+        stats[reseller].total_keys++;
+        const exp = v.expires_at ? new Date(v.expires_at) : null;
+        const valid = !exp || now < exp;
+        if(valid) stats[reseller].valid++;
+        else stats[reseller].expired++;
+        if(v.device_id || (v.connected_devices && v.connected_devices.length>0)){
+          stats[reseller].locked++;
+        }
+      }
+      res.json({success:true, stats});
+      return;
+    }
+
+    res.json({success:false,message:"Unknown action!"});
+
+  } catch(err) {
+    res.status(500).json({success:false,message:"Error: "+err.message});
+  }
+};
