@@ -2968,20 +2968,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_ZKH38_GQ9WB": {
-    "label": "No Label",
-    "created_at": "2026-07-21T08:07:17.308Z",
-    "expires_at": "2026-07-24T08:07:15.607Z",
-    "duration": "",
-    "device_id": "H4X-C20C0536C2A7",
-    "locked_at": "2026-07-21T08:10:25.190Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "H4X-C20C0536C2A7"
-    ],
-    "key_type": "mod_menu"
-  },
   "Yash_X_Prime_9BAY_YQSE": {
     "label": "Tribo ☠️",
     "created_at": "2026-07-21T09:36:17.372Z",
