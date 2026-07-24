@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Yash X Prime — Reseller</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#07070a;--s1:#0f0f14;--s2:#16161e;--s3:#1e1e28;
+  --br:#252532;--br2:#32324a;
+  --g:#00e87a;--g2:#00b85f;
+  --red:#ff4757;--yellow:#ffa502;--blue:#4f8ef7;--purple:#a855f7;
+  --t1:#f0f0ff;--t2:#8888aa;--t3:#444466;
+}
+body{background:var(--bg);color:var(--t1);font-family:'JetBrains Mono',monospace;min-height:100vh;padding-bottom:60px}
+body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(168,85,247,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(168,85,247,.03) 1px,transparent 1px);background-size:32px 32px;pointer-events:none;z-index:0}
+.topbar{background:var(--s1);border-bottom:1px solid var(--br);padding:12px 16px;display:flex;align-items:center;gap:10px;position:sticky;top:0;z-index:100}
+.tb-dot{width:8px;height:8px;border-radius:50%;background:var(--purple);animation:pulse 2s infinite;flex-shrink:0}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(168,85,247,.4)}50%{box-shadow:0 0 0 5px rgba(168,85,247,0)}}
+.tb-title{font-size:14px;font-weight:700;letter-spacing:1px}
+.credit-bar{display:flex;align-items:center;justify-content:space-between;background:rgba(168,85,247,.08);border-bottom:1px solid rgba(168,85,247,.2);padding:10px 16px;}
+.credit-label{font-size:11px;font-weight:700;letter-spacing:1px;color:var(--purple)}
+.credit-value{font-size:14px;font-weight:700;color:var(--g)}
+.login-wrap{display:flex;align-items:center;justify-content:center;min-height:85vh;padding:20px;position:relative;z-index:1}
+.login-card{background:var(--s1);border:1px solid var(--br);border-radius:14px;padding:28px;width:100%;max-width:340px}
+.login-title{font-size:20px;font-weight:700;color:var(--purple);margin-bottom:4px}
+.login-sub{font-size:10px;color:var(--t3);margin-bottom:6px}
+.login-slug{font-size:12px;color:var(--blue);background:rgba(79,142,247,.08);border:1px solid rgba(79,142,247,.15);border-radius:6px;padding:6px 10px;margin-bottom:20px;text-align:center}
+.tabs{display:flex;background:var(--s1);border-bottom:1px solid var(--br);overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{padding:12px 16px;font-size:11px;font-weight:700;color:var(--t3);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;letter-spacing:1px;transition:all .2s;flex-shrink:0}
+.tab.active{color:var(--purple);border-bottom-color:var(--purple)}
+.page{display:none;padding:14px;position:relative;z-index:1}
+.page.active{display:block}
+.card{background:var(--s1);border:1px solid var(--br);border-radius:12px;padding:16px;margin-bottom:12px}
+.card-head{font-size:9px;font-weight:700;color:var(--t3);letter-spacing:3px;margin-bottom:14px;display:flex;align-items:center;justify-content:space-between}
+.lbl{font-size:10px;color:var(--t3);letter-spacing:.5px;margin-bottom:4px;margin-top:10px;display:block}
+.lbl:first-child{margin-top:0}
+.inp{width:100%;background:var(--s2);border:1px solid var(--br2);border-radius:8px;color:var(--t1);font-family:'JetBrains Mono',monospace;font-size:13px;padding:10px 12px;outline:none;transition:border .2s}
+.inp:focus{border-color:rgba(168,85,247,.4)}
+.inp::placeholder{color:var(--t3)}
+select.inp option{background:var(--s2)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.btn{width:100%;margin-top:12px;padding:13px;border:none;border-radius:10px;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;letter-spacing:1px;cursor:pointer;transition:all .15s}
+.btn-g{background:var(--g);color:#000}
+.btn-g:active{background:var(--g2);transform:scale(.98)}
+.btn-g:disabled{opacity:.5;cursor:not-allowed}
+.btn-s{background:var(--s2);border:1px solid var(--br2);color:var(--t2)}
+.btn-r{background:rgba(255,71,87,.08);border:1px solid rgba(255,71,87,.2);color:var(--red)}
+.btn-b{background:rgba(79,142,247,.1);border:1px solid rgba(79,142,247,.3);color:#a0c4ff}
+.btn-sm{padding:6px 12px;font-size:10px;border-radius:6px;margin-top:0;width:auto}
+.result-box{background:rgba(168,85,247,.06);border:1px solid rgba(168,85,247,.15);border-radius:10px;padding:14px;margin-top:12px;display:none;text-align:center}
+.result-key{font-size:14px;font-weight:700;color:var(--purple);letter-spacing:2px;word-break:break-all;cursor:pointer}
+.result-meta{font-size:10px;color:var(--t3);margin-top:6px}
+.credits-big{text-align:center;padding:20px;background:rgba(168,85,247,.05);border:1px solid rgba(168,85,247,.15);border-radius:10px;margin-bottom:14px}
+.credits-num{font-size:48px;font-weight:700;color:var(--purple);line-height:1}
+.credits-lbl{font-size:9px;color:var(--t3);letter-spacing:2px;margin-top:6px}
+.credits-sub{font-size:10px;color:var(--t2);margin-top:4px}
+.key-item{background:var(--s2);border:1px solid var(--br);border-radius:10px;padding:12px;margin-bottom:8px}
+.key-item.expired{opacity:.4}
+.ki-header{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.ki-key{font-size:12px;font-weight:700;color:var(--purple);word-break:break-all;cursor:pointer;flex:1}
+.key-item.expired .ki-key{color:var(--t3)}
+.ki-actions{display:flex;gap:6px;flex-shrink:0}
+.ki-btn{background:none;border:none;cursor:pointer;padding:2px 6px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.5px}
+.ki-btn-del{color:var(--red);border:1px solid rgba(255,71,87,.3);background:rgba(255,71,87,.08)}
+.ki-info{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-bottom:6px}
+.ki-field{font-size:9px;color:var(--t3);line-height:1.6}
+.ki-field span{color:var(--t2)}
+.device-section{background:rgba(79,142,247,.06);border:1px solid rgba(79,142,247,.15);border-radius:6px;padding:8px 10px;margin-top:6px}
+.device-label{font-size:8px;color:var(--blue);letter-spacing:1px;font-weight:700;margin-bottom:3px}
+.device-id{font-size:10px;color:#a0c4ff;word-break:break-all}
+.badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.badge{display:inline-flex;align-items:center;padding:2px 8px;border-radius:20px;font-size:8px;font-weight:700;letter-spacing:.5px}
+.b-valid{background:rgba(0,232,122,.1);color:var(--g);border:1px solid rgba(0,232,122,.2)}
+.b-expired{background:rgba(255,71,87,.08);color:var(--red);border:1px solid rgba(255,71,87,.15)}
+.b-locked{background:rgba(79,142,247,.1);color:#a0c4ff;border:1px solid rgba(79,142,247,.2)}
+.b-free{background:rgba(255,165,2,.08);color:var(--yellow);border:1px solid rgba(255,165,2,.15)}
+.b-lifetime{background:rgba(0,232,122,.05);color:var(--g);border:1px solid rgba(0,232,122,.1)}
+.sbox{padding:10px 12px;border-radius:8px;font-size:11px;margin-top:10px;display:none;line-height:1.7;white-space:pre-line}
+.s-ok{background:rgba(0,232,122,.08);border:1px solid rgba(0,232,122,.2);color:var(--g)}
+.s-err{background:rgba(255,71,87,.08);border:1px solid rgba(255,71,87,.2);color:var(--red)}
+.empty{text-align:center;padding:28px;font-size:11px;color:var(--t3);letter-spacing:1px}
+.loading-txt{text-align:center;padding:20px;color:var(--t3);font-size:11px}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--s3);border:1px solid var(--br2);color:var(--t1);font-size:11px;padding:9px 16px;border-radius:8px;opacity:0;transition:opacity .25s;pointer-events:none;white-space:nowrap;z-index:999;font-family:'JetBrains Mono',monospace}
+.toast.show{opacity:1}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="tb-dot"></div>
+  <div class="tb-title">YASH X PRIME — RESELLER</div>
+</div>
+
+<!-- LOGIN -->
+<div id="loginPage">
+  <div class="login-wrap">
+    <div class="login-card">
+      <div class="login-title">Reseller Panel</div>
+      <div class="login-sub">Logging in as</div>
+      <div class="login-slug" id="loginSlug">Loading...</div>
+      <span class="lbl">PASSWORD</span>
+      <input class="inp" id="passInput" type="password" placeholder="Enter password..."/>
+      <button class="btn btn-g" onclick="doLogin()">LOGIN →</button>
+      <div class="sbox" id="loginStatus"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN PANEL -->
+<div id="mainPanel" style="display:none">
+  <div class="credit-bar">
+    <div class="credit-label">RESELLER PANEL</div>
+    <div class="credit-value" id="creditDisplay">0 CREDITS</div>
+  </div>
+  <div class="tabs">
+    <div class="tab active" data-tab="generate" onclick="switchTab(this)">Generate</div>
+    <div class="tab" data-tab="mykeys" onclick="switchTab(this)">My Keys</div>
+    <div class="tab" data-tab="manage" onclick="switchTab(this)">Manage</div>
+  </div>
+
+  <!-- GENERATE TAB -->
+  <div class="page active" id="page-generate">
+    <div class="credits-big">
+      <div class="credits-num" id="creditsNum">—</div>
+      <div class="credits-lbl">CREDITS REMAINING</div>
+      <div class="credits-sub">1 credit = 1 key</div>
+    </div>
+    <div class="card">
+      <div class="card-head">CREATE NEW KEY</div>
+      <span class="lbl">KEY TYPE</span>
+      <select class="inp" id="keyTypeSelect">
+        <option value="normal" selected>🔹 Normal Key</option>
+        <option value="mod_menu" id="optModMenu" disabled style="display:none">🔸 Mod Menu Key</option>
+        <option value="vortex" id="optVortex" disabled style="display:none">🟣 Vortex Key</option>
+      </select>
+      <span class="lbl">DURATION</span>
+      <div class="row2">
+        <input class="inp" id="durVal" type="number" value="7" min="1"/>
+        <select class="inp" id="durUnit">
+          <option value="minutes">Minutes</option>
+          <option value="hours">Hours</option>
+          <option value="days" selected>Days</option>
+          <option value="months">Months</option>
+          <option value="lifetime">Lifetime</option>
+        </select>
+      </div>
+      <span class="lbl">LABEL (optional)</span>
+      <input class="inp" id="keyLabel" type="text" placeholder="e.g. Customer Name"/>
+      <button class="btn btn-g" id="genBtn" onclick="generateKey()">⚡ GENERATE KEY</button>
+      <div class="result-box" id="resultBox">
+        <div class="result-key" id="resultKey" onclick="copyText(this.textContent)"></div>
+        <div class="result-meta" id="resultMeta"></div>
+        <div style="font-size:9px;color:rgba(168,85,247,.4);margin-top:6px">tap to copy</div>
+      </div>
+      <div class="sbox" id="genStatus"></div>
+    </div>
+  </div>
+
+  <!-- MY KEYS TAB -->
+  <div class="page" id="page-mykeys">
+    <div class="card" style="padding:14px">
+      <div class="card-head">MY KEYS<button class="btn btn-s btn-sm" onclick="loadMyKeys()">↻ Refresh</button></div>
+      <div id="myKeysList"><div class="loading-txt">Loading...</div></div>
+    </div>
+  </div>
+
+  <!-- MANAGE TAB -->
+  <div class="page" id="page-manage">
+    <div class="card">
+      <div class="card-head">MANAGE KEY</div>
+      <span class="lbl">ENTER KEY</span>
+      <input class="inp" id="checkInp" type="text" placeholder="XXXXX-XXXXX-XXXXX-XXXXX" style="text-transform:uppercase"/>
+      <div class="row2" style="margin-top:12px">
+        <button class="btn btn-s" style="margin-top:0" onclick="checkKey()">CHECK</button>
+      </div>
+      <button class="btn btn-r" onclick="deleteKey()">DELETE KEY</button>
+      <div class="sbox" id="manageStatus"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const API = 'https://loader-keys.vercel.app/api';
+let SLUG = '';
+let PASS = '';
+
+function getSlug(){
+  const parts = window.location.pathname.split('/').filter(Boolean);
+  return parts[0]||'';
+}
+
+window.onload = function(){
+  SLUG = getSlug();
+  if(!SLUG){ document.getElementById('loginSlug').textContent='Invalid link!'; return; }
+  document.getElementById('loginSlug').textContent='👤 '+SLUG.toUpperCase();
+  document.title = SLUG.toUpperCase()+' — Reseller Panel';
+};
+
+function doLogin(){
+  const pass = document.getElementById('passInput').value.trim();
+  if(!pass){ showSbox('loginStatus','Enter password!','err'); return; }
+  showSbox('loginStatus','Connecting...','ok');
+  fetch(`${API}?action=reseller_login`,{
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({username:SLUG, password:pass})
+  })
+  .then(r=>r.json()).then(d=>{
+    if(d.success){
+      PASS=pass;
+      document.getElementById('loginPage').style.display='none';
+      document.getElementById('mainPanel').style.display='block';
+      document.getElementById('creditsNum').textContent=d.reseller.credits;
+      document.getElementById('creditDisplay').textContent=d.reseller.credits+' CREDITS';
+      document.getElementById('mainPanel').setAttribute('data-allow-mod-menu', d.reseller.allow_mod_menu ? '1' : '0');
+      document.getElementById('mainPanel').setAttribute('data-allow-vortex', d.reseller.allow_vortex ? '1' : '0');
+      updateModMenuOption();
+      updateVortexOption();
+    } else { showSbox('loginStatus',d.message||'Login failed!','err'); }
+  }).catch(()=>showSbox('loginStatus','Connection error!','err'));
+}
+
+function updateModMenuOption(){
+  const allow = document.getElementById('mainPanel').getAttribute('data-allow-mod-menu') === '1';
+  const opt = document.getElementById('optModMenu');
+  if(allow){
+    opt.disabled = false;
+    opt.style.display = 'block';
+  } else {
+    opt.disabled = true;
+    opt.style.display = 'none';
+    document.getElementById('keyTypeSelect').value = 'normal';
+  }
+}
+
+function updateVortexOption(){
+  const allow = document.getElementById('mainPanel').getAttribute('data-allow-vortex') === '1';
+  const opt = document.getElementById('optVortex');
+  if(allow){
+    opt.disabled = false;
+    opt.style.display = 'block';
+  } else {
+    opt.disabled = true;
+    opt.style.display = 'none';
+    if(document.getElementById('keyTypeSelect').value === 'vortex') {
+      document.getElementById('keyTypeSelect').value = 'normal';
+    }
+  }
+}
+
+function switchTab(el){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('page-'+el.dataset.tab).classList.add('active');
+  if(el.dataset.tab==='mykeys') loadMyKeys();
+}
+
+function calcExpiry(v,u){
+  if(u==='lifetime') return null;
+  const d=new Date();
+  if(u==='minutes') d.setMinutes(d.getMinutes()+v);
+  else if(u==='hours') d.setHours(d.getHours()+v);
+  else if(u==='days') d.setDate(d.getDate()+v);
+  else if(u==='months') d.setMonth(d.getMonth()+v);
+  return d.toISOString();
+}
+
+async function generateKey(){
+  const credits=parseInt(document.getElementById('creditsNum').textContent)||0;
+  if(credits<=0){ showSbox('genStatus','No credits! Contact admin.','err'); return; }
+  const val=parseInt(document.getElementById('durVal').value)||7;
+  const unit=document.getElementById('durUnit').value;
+  const label=document.getElementById('keyLabel').value.trim();
+  const exp=calcExpiry(val,unit);
+  const keyType = document.getElementById('keyTypeSelect').value;
+  const btn=document.getElementById('genBtn');
+  btn.disabled=true; btn.textContent='Generating...';
+  document.getElementById('resultBox').style.display='none';
+  showSbox('genStatus','Please wait...','ok');
+  try{
+    const r=await fetch(`${API}?action=reseller_generate_key`,{
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({username:SLUG, password:PASS, expires_at:exp, label:label||SLUG, key_type: keyType})
+    });
+    const d=await r.json();
+    btn.disabled=false; btn.textContent='⚡ GENERATE KEY';
+    if(d.success){
+      document.getElementById('genStatus').style.display='none';
+      document.getElementById('creditsNum').textContent=d.credits_left;
+      document.getElementById('creditDisplay').textContent=d.credits_left+' CREDITS';
+      document.getElementById('resultBox').style.display='block';
+      document.getElementById('resultKey').textContent=d.key;
+      document.getElementById('resultMeta').textContent=`${exp?'Expires: '+fmtDate(new Date(exp)):'Lifetime'}  |  Credits left: ${d.credits_left}`;
+      document.getElementById('keyLabel').value='';
+      toast('Key generated!');
+    } else { showSbox('genStatus',d.message||'Failed!','err'); }
+  }catch(e){ btn.disabled=false; btn.textContent='⚡ GENERATE KEY'; showSbox('genStatus','Connection error!','err'); }
+}
+
+function loadMyKeys(){
+  document.getElementById('myKeysList').innerHTML='<div class="loading-txt">Loading...</div>';
+  fetch(`${API}?action=reseller_get_keys`,{
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({username:SLUG, password:PASS})
+  })
+  .then(r=>r.json()).then(d=>{
+    if(!d.success){ document.getElementById('myKeysList').innerHTML='<div class="empty">Failed!</div>'; return; }
+    renderMyKeys(Object.entries(d.keys));
+  }).catch(()=>{ document.getElementById('myKeysList').innerHTML='<div class="empty">Error!</div>'; });
+}
+
+function renderMyKeys(entries){
+  if(!entries.length){ document.getElementById('myKeysList').innerHTML='<div class="empty">NO KEYS YET</div>'; return; }
+  const now=new Date();
+  entries.sort((a,b)=>new Date(b[1].created_at)-new Date(a[1].created_at));
+  document.getElementById('myKeysList').innerHTML=entries.map(([key,d])=>{
+    const exp=d.expires_at?new Date(d.expires_at):null, isValid=!exp||now<exp;
+    const devId=d.device_id||null;
+    return `<div class="key-item${!isValid?' expired':''}">
+      <div class="ki-header">
+        <div class="ki-key" onclick="copyText('${key}')">${key}</div>
+        <div class="ki-actions">
+          <button class="ki-btn ki-btn-del" onclick="quickDelete('${key}')">DEL</button>
+        </div>
+      </div>
+      <div class="ki-info">
+        <div class="ki-field">Label <span>${d.label||'—'}</span></div>
+        <div class="ki-field">Status <span>${isValid?'Valid':'Expired'}</span></div>
+        <div class="ki-field">Created <span>${fmtDate(new Date(d.created_at))}</span></div>
+        <div class="ki-field">Expires <span>${exp?fmtDate(exp):'Never'}</span></div>
+        <div class="ki-field">Type <span>${d.key_type||'normal'}</span></div>
+      </div>
+      ${devId?`<div class="device-section"><div class="device-label">📱 DEVICE LOCKED</div><div class="device-id">${devId}</div></div>`:''}
+      <div class="badges">
+        <span class="badge ${isValid?'b-valid':'b-expired'}">${isValid?'✓ VALID':'✗ EXPIRED'}</span>
+        ${devId?`<span class="badge b-locked">🔒 LOCKED</span>`:`<span class="badge b-free">🔓 FREE</span>`}
+        ${!exp?`<span class="badge b-lifetime">♾ LIFETIME</span>`:''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function quickDelete(key){ if(!confirm('Delete key:\n'+key))return; fetch(`${API}?action=reseller_delete_key`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:SLUG,password:PASS,key})}).then(r=>r.json()).then(d=>{ toast(d.success?'Deleted!':'Failed!'); if(d.success)loadMyKeys(); }).catch(()=>toast('Error!')); }
+
+function checkKey(){
+  const key=document.getElementById('checkInp').value.trim().toUpperCase();
+  if(!key){ showSbox('manageStatus','Enter key!','err'); return; }
+  fetch(`${API}?action=reseller_get_keys`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:SLUG,password:PASS})})
+  .then(r=>r.json()).then(d=>{
+    if(!d.success){ showSbox('manageStatus','Failed!','err'); return; }
+    const e=d.keys[key];
+    if(!e){ showSbox('manageStatus','Key not found!\n(Only your keys)','err'); return; }
+    const exp=e.expires_at?new Date(e.expires_at):null, isValid=!exp||new Date()<exp;
+    showSbox('manageStatus',`${isValid?'✓ VALID':'✗ EXPIRED'}\nLabel: ${e.label||'—'}\nDevice: ${e.device_id||'None'}\nExpires: ${exp?fmtDate(exp):'Never'}`,isValid?'ok':'err');
+  }).catch(()=>showSbox('manageStatus','Error!','err'));
+}
+function deleteKey(){
+  const key=document.getElementById('checkInp').value.trim().toUpperCase();
+  if(!key){ showSbox('manageStatus','Enter key!','err'); return; }
+  if(!confirm('Delete key:\n'+key))return;
+  fetch(`${API}?action=reseller_delete_key`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:SLUG,password:PASS,key})})
+  .then(r=>r.json()).then(d=>{ showSbox('manageStatus',d.message,d.success?'ok':'err'); if(d.success){ document.getElementById('checkInp').value=''; toast('Deleted!'); } }).catch(()=>showSbox('manageStatus','Error!','err'));
+}
+
+function fmtDate(d){ return d.toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'}); }
+function showSbox(id,msg,type){ const el=document.getElementById(id); el.textContent=msg; el.className='sbox s-'+type; el.style.display='block'; }
+function copyText(t){ navigator.clipboard?.writeText(t).then(()=>toast('Copied!')).catch(()=>{ const ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); toast('Copied!'); }); }
+function toast(msg,dur=2200){ const el=document.getElementById('toast'); el.textContent=msg; el.classList.add('show'); clearTimeout(el._t); el._t=setTimeout(()=>el.classList.remove('show'),dur); }
+document.addEventListener('keydown',e=>{ if(e.key==='Enter'&&document.getElementById('loginPage').style.display!=='none') doLogin(); });
+</script>
+</body>
+</html>
