@@ -3369,12 +3369,14 @@
     "created_at": "2026-07-27T14:02:58.137Z",
     "expires_at": "2026-07-28T14:02:55.590Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-DBCB82E9DB60",
+    "locked_at": "2026-07-27T15:04:15.320Z",
     "active": true,
     "reseller": "risilios",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-DBCB82E9DB60"
+    ],
     "key_type": "mod_menu"
   },
   "H4X_MODZ_YL265_JX2J4": {
