@@ -3322,21 +3322,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_2RMP_4HTJ": {
-    "label": "Daku-YASH-Ravi-lios",
-    "created_at": "2026-07-27T07:38:36.870Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-77C1AAD0A768",
-    "locked_at": "2026-07-27T07:40:02.570Z",
-    "active": true,
-    "reseller": "rupeshsonekar",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-77C1AAD0A768"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_TZJEX_43S5E": {
     "label": "Daku",
     "created_at": "2026-07-27T07:43:25.083Z",
