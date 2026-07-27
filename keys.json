@@ -3327,13 +3327,11 @@
     "created_at": "2026-07-27T07:43:25.083Z",
     "expires_at": null,
     "duration": "",
-    "device_id": "WDX-77C1AAD0A768",
-    "locked_at": "2026-07-27T08:15:13.784Z",
+    "device_id": null,
+    "locked_at": null,
     "active": true,
     "max_devices": 1,
-    "connected_devices": [
-      "WDX-77C1AAD0A768"
-    ],
+    "connected_devices": [],
     "key_type": "mod_menu"
   }
 }
