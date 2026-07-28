@@ -3471,13 +3471,14 @@
     "created_at": "2026-07-28T16:58:47.978Z",
     "expires_at": "2026-07-29T16:58:47.640Z",
     "duration": "",
-    "device_id": "H4X-FF0D018DFFA6",
-    "locked_at": "2026-07-28T17:04:37.067Z",
+    "device_id": "H4X-545077BB54FB",
+    "locked_at": "2026-07-28T17:07:02.936Z",
     "active": true,
     "max_devices": 1000,
     "connected_devices": [
       "H4X-D3316182D39A",
-      "H4X-FF0D018DFFA6"
+      "H4X-FF0D018DFFA6",
+      "H4X-545077BB54FB"
     ],
     "key_type": "mod_menu"
   }
