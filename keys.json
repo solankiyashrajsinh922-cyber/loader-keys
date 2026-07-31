@@ -3843,11 +3843,13 @@
     "created_at": "2026-07-31T14:43:12.633Z",
     "expires_at": "2026-08-07T14:43:12.459Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-8496FA7732F36E6D",
+    "locked_at": "2026-07-31T14:52:15.276Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-8496FA7732F36E6D"
+    ],
     "key_type": "normal"
   }
 }
