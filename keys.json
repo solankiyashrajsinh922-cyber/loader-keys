@@ -3870,5 +3870,18 @@
       "H4X-C494FA35C43F"
     ],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_DKPJ_HALA": {
+    "label": "Lipon",
+    "created_at": "2026-07-31T06:46:04.025Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
