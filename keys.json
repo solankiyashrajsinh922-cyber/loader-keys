@@ -3809,5 +3809,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "Yash_X_Prime_S3BM_BZCS": {
+    "label": "Tiral",
+    "created_at": "2026-07-31T10:39:14.593Z",
+    "expires_at": "2026-08-07T10:39:12.654Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
