@@ -3234,21 +3234,6 @@
     ],
     "key_type": "normal"
   },
-  "H4X_MODZ_W7Q6_Z75L": {
-    "label": "Risi",
-    "created_at": "2026-07-27T05:56:59.354Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "H4X-E200B0BAE2AB",
-    "locked_at": "2026-07-27T06:03:18.177Z",
-    "active": true,
-    "reseller": "risilios",
-    "max_devices": 1,
-    "connected_devices": [
-      "H4X-E200B0BAE2AB"
-    ],
-    "key_type": "mod_menu"
-  },
   "H4X_MODZ_TZJEX_43S5E": {
     "label": "Daku",
     "created_at": "2026-07-27T07:43:25.083Z",
