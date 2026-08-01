@@ -3971,12 +3971,14 @@
     "created_at": "2026-08-01T16:49:20.465Z",
     "expires_at": "2026-08-08T16:49:17.861Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-7A5168427AFA",
+    "locked_at": "2026-08-01T17:25:31.413Z",
     "active": true,
     "reseller": "risilios",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-7A5168427AFA"
+    ],
     "key_type": "mod_menu"
   }
 }
