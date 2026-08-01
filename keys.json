@@ -3936,5 +3936,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "H4X_MODZ_QVZMM_M8Z2M": {
+    "label": "No Label",
+    "created_at": "2026-08-01T11:32:11.570Z",
+    "expires_at": "2026-08-01T16:32:10.872Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
