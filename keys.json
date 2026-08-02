@@ -4374,5 +4374,17 @@
     "max_devices": 2,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_NORMAL_LMRR9": {
+    "label": "No Label",
+    "created_at": "2026-08-02T15:31:14.990Z",
+    "expires_at": "2026-08-02T15:32:15.085Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 2,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
