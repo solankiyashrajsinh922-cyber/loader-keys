@@ -4106,8 +4106,8 @@
     "created_at": "2026-08-02T13:05:01.444Z",
     "expires_at": "2026-08-03T13:05:00.850Z",
     "duration": "",
-    "device_id": "H4X-8A16B8518ABD",
-    "locked_at": "2026-08-02T14:34:39.275Z",
+    "device_id": "H4X-7528C86D7583",
+    "locked_at": "2026-08-02T14:35:38.419Z",
     "active": true,
     "max_devices": 500,
     "connected_devices": [
@@ -4223,7 +4223,8 @@
       "H4X-045AFBAF04F1",
       "H4X-A005C313A0AE",
       "H4X-B8A0F406B80B",
-      "H4X-8A16B8518ABD"
+      "H4X-8A16B8518ABD",
+      "H4X-7528C86D7583"
     ],
     "key_type": "mod_menu"
   },
