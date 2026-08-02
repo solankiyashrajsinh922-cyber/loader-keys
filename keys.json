@@ -3994,5 +3994,17 @@
       "H4X-D3316182D39A"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_DGDSW_Z3F39": {
+    "label": "No Label",
+    "created_at": "2026-08-02T02:38:21.932Z",
+    "expires_at": "2026-08-09T02:38:21.739Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
