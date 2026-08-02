@@ -4469,11 +4469,13 @@
     "created_at": "2026-08-02T16:58:34.449Z",
     "expires_at": "2026-08-02T16:59:33.853Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-B76B56169FF2",
+    "locked_at": "2026-08-02T16:58:45.623Z",
     "active": true,
     "max_devices": 2,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-B76B56169FF2"
+    ],
     "key_type": "mod_menu"
   }
 }
