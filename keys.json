@@ -4627,5 +4627,17 @@
       "WDX-B76B56169FF2"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_LK8PD": {
+    "label": "No Label",
+    "created_at": "2026-08-02T18:21:21.795Z",
+    "expires_at": "2026-08-02T18:26:21.840Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
