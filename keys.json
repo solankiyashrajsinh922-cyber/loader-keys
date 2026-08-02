@@ -4030,5 +4030,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "H4X_MODZ_ADNW8_C69EZ": {
+    "label": "No Label",
+    "created_at": "2026-08-02T05:22:57.343Z",
+    "expires_at": "2026-08-05T05:22:57.249Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
