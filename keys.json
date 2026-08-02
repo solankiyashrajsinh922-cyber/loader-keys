@@ -4259,5 +4259,17 @@
       "WDX-B76B56169FF2"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_BK88X_E95M9": {
+    "label": "No Label",
+    "created_at": "2026-08-02T14:21:49.097Z",
+    "expires_at": "2026-08-02T14:22:48.497Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 2,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
