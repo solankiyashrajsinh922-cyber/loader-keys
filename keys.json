@@ -4782,19 +4782,5 @@
       "WDX-B76B56169FF2"
     ],
     "key_type": "normal"
-  },
-  "H4X_MODZ_VQUXM_FVHYS": {
-    "label": "No Label",
-    "created_at": "2026-08-03T11:38:42.628Z",
-    "expires_at": "2026-08-04T11:38:42.136Z",
-    "duration": "",
-    "device_id": "WDX-B76B56169FF2",
-    "locked_at": "2026-08-03T11:38:49.333Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-B76B56169FF2"
-    ],
-    "key_type": "mod_menu"
   }
 }
