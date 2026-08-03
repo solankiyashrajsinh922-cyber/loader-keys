@@ -4816,19 +4816,5 @@
       "H4X-C5F110EDC55A"
     ],
     "key_type": "mod_menu"
-  },
-  "H4X_MODZ_L3TS7_2DCGR": {
-    "label": "No Label",
-    "created_at": "2026-08-03T17:00:13.937Z",
-    "expires_at": "2026-08-03T17:10:13.765Z",
-    "duration": "",
-    "device_id": "WDX-B76B56169FF2",
-    "locked_at": "2026-08-03T17:00:19.367Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-B76B56169FF2"
-    ],
-    "key_type": "mod_menu"
   }
 }
