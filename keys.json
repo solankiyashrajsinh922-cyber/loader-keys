@@ -4808,11 +4808,13 @@
     "created_at": "2026-08-03T16:42:10.421Z",
     "expires_at": "2026-08-04T16:42:10.544Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-C5F110EDC55A",
+    "locked_at": "2026-08-03T16:42:53.704Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-C5F110EDC55A"
+    ],
     "key_type": "mod_menu"
   }
 }
