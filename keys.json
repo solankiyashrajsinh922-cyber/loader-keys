@@ -4747,5 +4747,18 @@
       "WDX-0F7523C0E30A"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_3TGB": {
+    "label": "Anam",
+    "created_at": "2026-08-03T09:52:57.404Z",
+    "expires_at": "2026-08-10T09:52:55.465Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
