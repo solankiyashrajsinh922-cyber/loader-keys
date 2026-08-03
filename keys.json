@@ -4800,5 +4800,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_JMB2J": {
+    "label": "No Label",
+    "created_at": "2026-08-03T13:26:47.720Z",
+    "expires_at": "2026-08-04T13:26:47.824Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
