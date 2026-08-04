@@ -4818,5 +4818,18 @@
       "H4X-C5F110EDC55A"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_D6GS_NZAN": {
+    "label": "Decor",
+    "created_at": "2026-08-04T07:33:40.821Z",
+    "expires_at": "2026-08-11T07:33:38.457Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "risilios",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
