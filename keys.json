@@ -4946,5 +4946,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_PG3BD": {
+    "label": "No Label",
+    "created_at": "2026-08-04T15:40:57.953Z",
+    "expires_at": "2026-08-04T15:50:58.120Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
