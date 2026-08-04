@@ -4737,11 +4737,13 @@
     "created_at": "2026-08-03T03:45:06.810Z",
     "expires_at": "2026-08-10T03:45:06.902Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-FF0D018DFFA6",
+    "locked_at": "2026-08-04T02:00:20.278Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-FF0D018DFFA6"
+    ],
     "key_type": "mod_menu"
   },
   "H4X_MODZ_NORMAL_Q85F": {
