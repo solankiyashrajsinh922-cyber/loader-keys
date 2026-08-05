@@ -5095,5 +5095,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_2ZMS6_RDUM4": {
+    "label": "No Label",
+    "created_at": "2026-08-05T15:46:20.983Z",
+    "expires_at": "2026-08-06T15:46:21.212Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
