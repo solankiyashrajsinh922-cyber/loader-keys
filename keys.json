@@ -4971,5 +4971,17 @@
       "WDX-B76B56169FF2"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_PBE9W_YAF5X": {
+    "label": "True parson",
+    "created_at": "2026-08-05T02:25:16.472Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
