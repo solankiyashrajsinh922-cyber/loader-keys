@@ -4989,11 +4989,13 @@
     "created_at": "2026-08-05T05:52:36.909Z",
     "expires_at": "2026-08-06T05:52:37.209Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-1703B91D17A8",
+    "locked_at": "2026-08-05T06:02:26.229Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-1703B91D17A8"
+    ],
     "key_type": "mod_menu"
   },
   "H4X_MODZ_2KYFH_NW3W2": {
