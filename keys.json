@@ -5131,12 +5131,14 @@
     "created_at": "2026-08-06T14:25:40.683Z",
     "expires_at": "2026-08-13T14:25:39.198Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-0F7523C0E30A",
+    "locked_at": "2026-08-06T14:26:50.102Z",
     "active": true,
     "reseller": "rupeshsonekar",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-0F7523C0E30A"
+    ],
     "key_type": "normal"
   }
 }
