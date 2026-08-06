@@ -4731,21 +4731,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_NORMAL_Q85F": {
-    "label": "Daku-YASH-Ravi-lios",
-    "created_at": "2026-08-03T06:56:42.017Z",
-    "expires_at": "2026-08-10T06:56:40.806Z",
-    "duration": "",
-    "device_id": "WDX-0F7523C0E30A",
-    "locked_at": "2026-08-03T06:57:22.057Z",
-    "active": true,
-    "reseller": "rupeshsonekar",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-0F7523C0E30A"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_NORMAL_3TGB": {
     "label": "Anam",
     "created_at": "2026-08-03T09:52:57.404Z",
