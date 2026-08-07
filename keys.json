@@ -2085,21 +2085,6 @@
     ],
     "key_type": "normal"
   },
-  "Yash_X_Prime_X3DJ_DVGA": {
-    "label": "Soam",
-    "created_at": "2026-07-11T05:26:05.752Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-5543F39958076ABF",
-    "locked_at": "2026-07-11T05:26:22.096Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-5543F39958076ABF"
-    ],
-    "key_type": "normal"
-  },
   "Yash_X_Prime_D57T_44YY": {
     "label": "Muskan baby",
     "created_at": "2026-07-11T06:46:50.382Z",
