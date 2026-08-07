@@ -4543,21 +4543,6 @@
     ],
     "key_type": "normal"
   },
-  "H4X_MODZ_NORMAL_984UE": {
-    "label": "Rahul",
-    "created_at": "2026-08-07T08:39:48.037Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-8BE7279B5F88",
-    "locked_at": "2026-08-07T08:43:50.122Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-8BE7279B5F88"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_AW6QV_GCXNM": {
     "label": "h4x",
     "created_at": "2026-08-07T09:03:18.485Z",
