@@ -2720,20 +2720,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_K9TWL_TBYS7": {
-    "label": "Yash",
-    "created_at": "2026-07-24T05:48:13.429Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "H4X-78B2FB337819",
-    "locked_at": "2026-07-24T05:48:34.421Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "H4X-78B2FB337819"
-    ],
-    "key_type": "mod_menu"
-  },
   "H4X_MODZ_EZ5EM_MYUZL": {
     "label": "Ayan Rahaman",
     "created_at": "2026-07-24T07:21:07.336Z",
