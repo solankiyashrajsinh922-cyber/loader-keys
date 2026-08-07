@@ -4413,5 +4413,18 @@
       "WDX-9779ACFDD6BE"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_NORMAL_6EV5L": {
+    "label": "Soam",
+    "created_at": "2026-08-07T08:03:13.944Z",
+    "expires_at": "2026-08-14T08:03:12.815Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
