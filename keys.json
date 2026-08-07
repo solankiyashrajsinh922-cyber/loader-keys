@@ -2415,21 +2415,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_QTK2_VFMB": {
-    "label": "Aman",
-    "created_at": "2026-07-17T12:55:41.721Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-6057DA34482A3EB9",
-    "locked_at": "2026-07-17T12:59:55.648Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-6057DA34482A3EB9"
-    ],
-    "key_type": "normal"
-  },
   "Yash_X_Prime_6XN3R_REMAV": {
     "label": "No Label",
     "created_at": "2026-07-17T13:25:42.116Z",
