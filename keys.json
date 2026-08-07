@@ -4640,12 +4640,14 @@
     "created_at": "2026-08-07T09:31:44.331Z",
     "expires_at": null,
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-B1F8EC58DF55",
+    "locked_at": "2026-08-07T09:32:47.190Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-B1F8EC58DF55"
+    ],
     "key_type": "normal"
   }
 }
