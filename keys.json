@@ -924,19 +924,6 @@
     "max_devices": 1000,
     "connected_devices": []
   },
-  "Yash_X_Prime_TXL28_AAG6D": {
-    "label": "Salman",
-    "created_at": "2026-05-29T07:42:55.855Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-0F7523C0E30A",
-    "locked_at": "2026-06-10T04:57:20.738Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-0F7523C0E30A"
-    ]
-  },
   "Yash_X_Prime_BN4KC_QRHP9": {
     "label": "Bunny",
     "created_at": "2026-05-30T03:41:58.811Z",
