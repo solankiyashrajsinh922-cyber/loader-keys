@@ -3436,21 +3436,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_6EKK_UGXL": {
-    "label": "7xsoam",
-    "created_at": "2026-07-30T14:20:25.226Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-8C6794D69103DB7F",
-    "locked_at": "2026-07-30T14:20:52.399Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-8C6794D69103DB7F"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_DY6NM_Y2WBB": {
     "label": "No Label",
     "created_at": "2026-07-30T16:11:20.097Z",
