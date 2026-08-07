@@ -4743,21 +4743,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_NORMAL_99JWU": {
-    "label": "Soam",
-    "created_at": "2026-08-07T16:56:14.770Z",
-    "expires_at": "2026-08-08T16:56:13.806Z",
-    "duration": "",
-    "device_id": "WDX-8E325FC79F99",
-    "locked_at": "2026-08-07T16:56:20.974Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-8E325FC79F99"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_NORMAL_95SLP": {
     "label": "Ashu",
     "created_at": "2026-08-07T16:59:15.348Z",
