@@ -4419,12 +4419,14 @@
     "created_at": "2026-08-07T08:03:13.944Z",
     "expires_at": "2026-08-14T08:03:12.815Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-6DCFF9488909",
+    "locked_at": "2026-08-07T08:03:26.064Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-6DCFF9488909"
+    ],
     "key_type": "normal"
   }
 }
