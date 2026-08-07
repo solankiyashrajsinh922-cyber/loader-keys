@@ -4607,5 +4607,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_75RCJ_Q6JRX": {
+    "label": "REX BHAI RAND ❤️‍🩹",
+    "created_at": "2026-08-07T09:09:12.526Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
