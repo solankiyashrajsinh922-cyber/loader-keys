@@ -4581,5 +4581,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_QQGZD_629NM": {
+    "label": "DYNOX PROMOTER",
+    "created_at": "2026-08-07T09:03:31.616Z",
+    "expires_at": "2026-08-10T09:03:29.525Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
