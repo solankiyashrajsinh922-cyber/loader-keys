@@ -4761,12 +4761,14 @@
     "created_at": "2026-08-07T16:53:32.865Z",
     "expires_at": "2026-08-08T16:53:31.706Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-67F9DA6BE565",
+    "locked_at": "2026-08-07T16:53:58.727Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-67F9DA6BE565"
+    ],
     "key_type": "normal"
   }
 }
