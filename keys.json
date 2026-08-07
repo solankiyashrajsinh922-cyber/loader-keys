@@ -2514,21 +2514,6 @@
     "connected_devices": [],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_Y77S_EEUH": {
-    "label": "Rahul",
-    "created_at": "2026-07-17T17:45:23.762Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-B49A95C1870FA018",
-    "locked_at": "2026-07-17T17:58:19.291Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-B49A95C1870FA018"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_KQDD9_DLGPQ": {
     "label": "No Label",
     "created_at": "2026-07-18T03:15:25.516Z",
