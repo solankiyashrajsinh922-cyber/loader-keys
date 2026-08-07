@@ -4568,5 +4568,18 @@
       "WDX-8BE7279B5F88"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_AW6QV_GCXNM": {
+    "label": "h4x",
+    "created_at": "2026-08-07T09:03:18.485Z",
+    "expires_at": "2026-08-14T09:03:16.515Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
