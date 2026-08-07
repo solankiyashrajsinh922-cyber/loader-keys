@@ -924,19 +924,6 @@
     "max_devices": 1000,
     "connected_devices": []
   },
-  "Yash_X_Prime_BN4KC_QRHP9": {
-    "label": "Bunny",
-    "created_at": "2026-05-30T03:41:58.811Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-EA5CE1774890",
-    "locked_at": "2026-06-09T03:17:41.034Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-EA5CE1774890"
-    ]
-  },
   "Yash_X_Prime_ZJQ2U_7SVH2": {
     "label": "Yash X Prime",
     "created_at": "2026-06-03T09:25:25.172Z",
