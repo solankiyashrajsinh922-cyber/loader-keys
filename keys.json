@@ -4667,20 +4667,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_N7J6F_GGXPQ": {
-    "label": "No Label",
-    "created_at": "2026-08-05T11:44:04.554Z",
-    "expires_at": "2026-08-12T11:44:04.848Z",
-    "duration": "",
-    "device_id": "H4X-040430E204AF",
-    "locked_at": "2026-08-05T11:46:57.436Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "H4X-040430E204AF"
-    ],
-    "key_type": "mod_menu"
-  },
   "H4X_MODZ_2ZMS6_RDUM4": {
     "label": "No Label",
     "created_at": "2026-08-05T15:46:20.983Z",
