@@ -950,19 +950,6 @@
       "WDX-607A3EA7A8B5"
     ]
   },
-  "Yash_X_Prime_PXUZG_LUB2H": {
-    "label": "Account not deleted",
-    "created_at": "2026-06-05T17:31:45.847Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-6F371D62E83C",
-    "locked_at": "2026-06-05T18:01:13.623Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-6F371D62E83C"
-    ]
-  },
   "Yash_X_Prime_3WDLP_J7NEV": {
     "label": "Partner",
     "created_at": "2026-06-08T12:10:01.400Z",
