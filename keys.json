@@ -3433,21 +3433,6 @@
     "connected_devices": [],
     "key_type": "mod_menu"
   },
-  "Yash_X_Prime_S3BM_BZCS": {
-    "label": "Tiral",
-    "created_at": "2026-07-31T10:39:14.593Z",
-    "expires_at": "2026-08-07T10:39:12.654Z",
-    "duration": "",
-    "device_id": "WDX-0E12F0CAB55D",
-    "locked_at": "2026-07-31T10:52:13.925Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-0E12F0CAB55D"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_QVZMM_M8Z2M": {
     "label": "No Label",
     "created_at": "2026-08-01T11:32:11.570Z",
