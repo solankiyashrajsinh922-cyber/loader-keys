@@ -4609,20 +4609,6 @@
     ],
     "key_type": "normal"
   },
-  "H4X_MODZ_PBE9W_YAF5X": {
-    "label": "True parson",
-    "created_at": "2026-08-05T02:25:16.472Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "H4X-505BA85350F0",
-    "locked_at": "2026-08-05T13:11:22.178Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "H4X-505BA85350F0"
-    ],
-    "key_type": "mod_menu"
-  },
   "H4X_MODZ_EW5UY_HEUTK": {
     "label": "No Label",
     "created_at": "2026-08-05T05:52:36.909Z",
