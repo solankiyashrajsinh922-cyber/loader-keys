@@ -4798,5 +4798,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_HB4BX": {
+    "label": "7xsoam",
+    "created_at": "2026-08-07T16:59:21.370Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
