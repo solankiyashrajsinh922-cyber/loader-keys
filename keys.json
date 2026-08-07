@@ -3548,20 +3548,6 @@
     "connected_devices": [],
     "key_type": "normal"
   },
-  "Yash_X_Prime_FBXJK_4VFM6": {
-    "label": "Vortex",
-    "created_at": "2026-08-01T11:31:28.352Z",
-    "expires_at": "2026-08-08T11:31:27.941Z",
-    "duration": "",
-    "device_id": "WDX-822204ED62DEC81F",
-    "locked_at": "2026-08-01T14:11:37.881Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-822204ED62DEC81F"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_QVZMM_M8Z2M": {
     "label": "No Label",
     "created_at": "2026-08-01T11:32:11.570Z",
