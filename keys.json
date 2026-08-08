@@ -4801,5 +4801,18 @@
       "WDX-8399BAF4CAFC"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_MNU67_5W9F5": {
+    "label": "Vishal resseler + promoters",
+    "created_at": "2026-08-08T04:54:26.972Z",
+    "expires_at": "2026-08-15T04:54:25.315Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
