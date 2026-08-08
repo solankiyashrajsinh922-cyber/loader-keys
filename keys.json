@@ -4871,5 +4871,17 @@
       "WDX-2CE412502373"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_Q4TG2_Q9QU9": {
+    "label": "No Label",
+    "created_at": "2026-08-08T13:47:30.374Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 2,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
