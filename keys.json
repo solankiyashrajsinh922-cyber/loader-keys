@@ -4816,5 +4816,18 @@
       "WDX-3A9AA9E2382F"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_NORMAL_YE3L8": {
+    "label": "Trial",
+    "created_at": "2026-08-08T05:15:15.472Z",
+    "expires_at": "2026-08-09T05:15:14.470Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
