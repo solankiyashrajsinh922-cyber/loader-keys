@@ -5066,12 +5066,14 @@
     "created_at": "2026-08-09T18:25:52.325Z",
     "expires_at": "2026-08-10T18:25:51.168Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-25D7F21F34D7",
+    "locked_at": "2026-08-09T18:27:49.025Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-25D7F21F34D7"
+    ],
     "key_type": "normal"
   }
 }
