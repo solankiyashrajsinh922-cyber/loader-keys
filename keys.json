@@ -5001,12 +5001,14 @@
     "created_at": "2026-08-09T17:25:16.515Z",
     "expires_at": null,
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-5EDD02FB1979",
+    "locked_at": "2026-08-09T17:26:18.316Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-5EDD02FB1979"
+    ],
     "key_type": "normal"
   }
 }
