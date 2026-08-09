@@ -4921,5 +4921,18 @@
       "WDX-B5F43BBDE75C"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_NORMAL_VKEMJ": {
+    "label": "MD",
+    "created_at": "2026-08-09T12:21:18.001Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
