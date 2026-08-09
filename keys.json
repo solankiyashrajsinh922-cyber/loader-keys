@@ -4927,12 +4927,14 @@
     "created_at": "2026-08-09T13:08:33.169Z",
     "expires_at": "2026-08-10T13:08:32.204Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-2FA25DD26938",
+    "locked_at": "2026-08-09T14:03:23.383Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-2FA25DD26938"
+    ],
     "key_type": "normal"
   },
   "H4X_MODZ_E2Q43_W5LFN": {
