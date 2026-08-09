@@ -4939,8 +4939,8 @@
     "created_at": "2026-08-09T16:45:42.770Z",
     "expires_at": "2026-08-10T16:45:42.737Z",
     "duration": "",
-    "device_id": "WDX-5176B18B2C60",
-    "locked_at": "2026-08-09T21:01:43.589Z",
+    "device_id": "WDX-51F1278C53A7",
+    "locked_at": "2026-08-09T21:02:05.266Z",
     "active": true,
     "max_devices": 600,
     "connected_devices": [
@@ -5032,7 +5032,8 @@
       "WDX-75E6969E8F27",
       "WDX-5FB6FAE185C8",
       "WDX-A2413EE3BBDE",
-      "WDX-5176B18B2C60"
+      "WDX-5176B18B2C60",
+      "WDX-51F1278C53A7"
     ],
     "key_type": "mod_menu"
   },
