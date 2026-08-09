@@ -5017,5 +5017,18 @@
       "WDX-5EDD02FB1979"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_XN4HL_RP56J": {
+    "label": "KURTANWA PROMOTER",
+    "created_at": "2026-08-09T17:37:40.825Z",
+    "expires_at": "2026-08-16T17:37:39.195Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
