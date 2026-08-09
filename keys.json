@@ -4939,8 +4939,8 @@
     "created_at": "2026-08-09T16:45:42.770Z",
     "expires_at": "2026-08-10T16:45:42.737Z",
     "duration": "",
-    "device_id": "WDX-FC99F299DB22",
-    "locked_at": "2026-08-09T21:20:05.046Z",
+    "device_id": "WDX-172F0D080CC9",
+    "locked_at": "2026-08-09T21:21:34.586Z",
     "active": true,
     "max_devices": 600,
     "connected_devices": [
@@ -5036,7 +5036,8 @@
       "WDX-51F1278C53A7",
       "WDX-55F200DED88D",
       "WDX-7F9A2640DAA4",
-      "WDX-FC99F299DB22"
+      "WDX-FC99F299DB22",
+      "WDX-172F0D080CC9"
     ],
     "key_type": "mod_menu"
   },
