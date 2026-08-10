@@ -5257,11 +5257,13 @@
     "created_at": "2026-08-10T16:48:43.794Z",
     "expires_at": "2026-08-11T16:48:42.597Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-7B0DDFDA8FAE",
+    "locked_at": "2026-08-10T20:03:12.026Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-7B0DDFDA8FAE"
+    ],
     "key_type": "mod_menu"
   },
   "H4X_MODZ_NNZ7G_FQH6S": {
