@@ -5276,5 +5276,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_NORMAL_XGCDY": {
+    "label": "7xsoam",
+    "created_at": "2026-08-10T19:03:46.530Z",
+    "expires_at": "2026-08-11T19:03:45.395Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
