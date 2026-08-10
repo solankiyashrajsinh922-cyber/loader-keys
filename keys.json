@@ -5282,12 +5282,14 @@
     "created_at": "2026-08-10T19:03:46.530Z",
     "expires_at": "2026-08-11T19:03:45.395Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-4173CB4EFD90",
+    "locked_at": "2026-08-10T19:07:01.599Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-4173CB4EFD90"
+    ],
     "key_type": "normal"
   }
 }
