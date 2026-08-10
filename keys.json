@@ -4833,21 +4833,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_JJB3Q_FTBFC": {
-    "label": "CHICKEN MOD RESSEELR",
-    "created_at": "2026-08-08T13:49:21.042Z",
-    "expires_at": "2026-08-15T13:49:19.394Z",
-    "duration": "",
-    "device_id": "WDX-9E4747245739",
-    "locked_at": "2026-08-08T16:31:35.813Z",
-    "active": true,
-    "reseller": "h4x",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-9E4747245739"
-    ],
-    "key_type": "mod_menu"
-  },
   "H4X_MODZ_GZVR8_QJJXF": {
     "label": "MD AYATULLA",
     "created_at": "2026-08-08T14:43:24.489Z",
