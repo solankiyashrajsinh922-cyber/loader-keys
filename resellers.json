@@ -24,7 +24,7 @@
   "h4x": {
     "name": "h4x",
     "password": "H4x@1234",
-    "credits": 0,
+    "credits": 20,
     "created_at": "2026-08-07T08:22:22.911Z",
     "total_keys_generated": 10,
     "active": true,
