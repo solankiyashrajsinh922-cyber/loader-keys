@@ -5434,5 +5434,17 @@
       "WDX-F52B477732F9"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_HC723_B26AT": {
+    "label": "Subinkhan",
+    "created_at": "2026-08-12T13:16:17.218Z",
+    "expires_at": "2026-08-19T13:16:16.138Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
