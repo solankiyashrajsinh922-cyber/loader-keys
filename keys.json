@@ -5383,11 +5383,13 @@
     "created_at": "2026-08-12T05:34:41.266Z",
     "expires_at": "2026-08-12T05:44:40.213Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-9779ACFDD6BE",
+    "locked_at": "2026-08-12T05:34:56.531Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-9779ACFDD6BE"
+    ],
     "key_type": "mod_menu"
   }
 }
