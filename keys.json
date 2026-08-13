@@ -5462,5 +5462,17 @@
       "WDX-BF033A306B99"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_5ZNW4": {
+    "label": "Salman",
+    "created_at": "2026-08-13T04:09:19.657Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
