@@ -5625,12 +5625,14 @@
     "created_at": "2026-08-14T15:29:18.405Z",
     "expires_at": "2026-08-17T15:29:17.412Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-E431DCC03D66",
+    "locked_at": "2026-08-14T15:31:05.303Z",
     "active": true,
     "reseller": "h4x",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-E431DCC03D66"
+    ],
     "key_type": "mod_menu"
   },
   "H4X_MODZ_URZ4A_JYNQS": {
