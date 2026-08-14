@@ -5678,5 +5678,17 @@
       "WDX-B03B96A1D8D6"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_EHPT6_5ZU9Y": {
+    "label": "No Label",
+    "created_at": "2026-08-14T18:13:23.007Z",
+    "expires_at": "2026-08-16T18:13:21.952Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
