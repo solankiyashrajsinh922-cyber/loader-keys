@@ -5619,5 +5619,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_Q4C2A_CZK4C": {
+    "label": "A1 PROMOTER",
+    "created_at": "2026-08-14T15:29:18.405Z",
+    "expires_at": "2026-08-17T15:29:17.412Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
