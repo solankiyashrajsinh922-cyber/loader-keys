@@ -5640,11 +5640,13 @@
     "created_at": "2026-08-14T15:29:46.929Z",
     "expires_at": null,
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-550276E29356",
+    "locked_at": "2026-08-14T15:37:29.033Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-550276E29356"
+    ],
     "key_type": "mod_menu"
   }
 }
