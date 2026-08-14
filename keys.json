@@ -5613,11 +5613,13 @@
     "created_at": "2026-08-14T15:24:06.190Z",
     "expires_at": "2026-08-15T15:24:05.426Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-B0F430FF1F38",
+    "locked_at": "2026-08-14T17:16:53.592Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-B0F430FF1F38"
+    ],
     "key_type": "mod_menu"
   },
   "H4X_MODZ_Q4C2A_CZK4C": {
