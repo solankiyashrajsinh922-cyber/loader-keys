@@ -5584,11 +5584,13 @@
     "created_at": "2026-08-14T14:48:09.818Z",
     "expires_at": "2026-08-15T14:48:09.001Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-78B2FB337819",
+    "locked_at": "2026-08-14T14:48:15.542Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-78B2FB337819"
+    ],
     "key_type": "mod_menu"
   }
 }
