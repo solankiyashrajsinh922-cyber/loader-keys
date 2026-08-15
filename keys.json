@@ -5734,5 +5734,17 @@
       "WDX-C14594D8A0C8"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_C72B4_6Z3DW": {
+    "label": "No Label",
+    "created_at": "2026-08-15T11:03:17.952Z",
+    "expires_at": "2026-08-15T16:03:16.706Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
