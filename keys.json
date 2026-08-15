@@ -5748,5 +5748,18 @@
       "WDX-E28F85D4B5C9"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_JE37D_CXPFZ": {
+    "label": "Usman promoters",
+    "created_at": "2026-08-15T11:28:08.309Z",
+    "expires_at": "2026-08-18T11:28:07.399Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
