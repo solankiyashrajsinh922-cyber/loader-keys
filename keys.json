@@ -5877,12 +5877,14 @@
     "created_at": "2026-08-16T15:07:08.879Z",
     "expires_at": "2026-08-23T15:07:02.008Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-0A689BF429DA",
+    "locked_at": "2026-08-16T15:11:38.248Z",
     "active": true,
     "reseller": "hackervshacker",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-0A689BF429DA"
+    ],
     "key_type": "mod_menu"
   }
 }
