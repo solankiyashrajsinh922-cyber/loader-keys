@@ -5939,12 +5939,14 @@
     "created_at": "2026-08-17T19:24:43.878Z",
     "expires_at": "2026-08-19T19:24:42.119Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-E431DCC03D66",
+    "locked_at": "2026-08-17T19:30:13.809Z",
     "active": true,
     "reseller": "h4x",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-E431DCC03D66"
+    ],
     "key_type": "mod_menu"
   }
 }
