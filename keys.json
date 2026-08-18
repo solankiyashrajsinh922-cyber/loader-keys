@@ -5993,5 +5993,18 @@
       "WDX-BF033A306B99"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_P43MP_DG4HM": {
+    "label": "USMAN PROMOTER",
+    "created_at": "2026-08-18T14:03:32.783Z",
+    "expires_at": "2026-08-21T14:03:31.193Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
