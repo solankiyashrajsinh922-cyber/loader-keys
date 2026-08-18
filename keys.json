@@ -5979,5 +5979,17 @@
       "WDX-9D1FBD03E845"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_RGHQT": {
+    "label": "No Label",
+    "created_at": "2026-08-18T13:05:22.193Z",
+    "expires_at": "2026-08-25T13:05:21.475Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
