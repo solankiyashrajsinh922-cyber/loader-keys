@@ -6042,11 +6042,13 @@
     "created_at": "2026-08-18T16:25:09.125Z",
     "expires_at": "2026-08-25T16:25:08.450Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-8E325FC79F99",
+    "locked_at": "2026-08-18T16:25:39.631Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-8E325FC79F99"
+    ],
     "key_type": "mod_menu"
   }
 }
