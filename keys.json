@@ -5970,12 +5970,14 @@
     "created_at": "2026-08-18T07:38:28.477Z",
     "expires_at": "2026-08-19T07:38:27.240Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-9D1FBD03E845",
+    "locked_at": "2026-08-18T07:41:43.070Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-9D1FBD03E845"
+    ],
     "key_type": "normal"
   }
 }
