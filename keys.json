@@ -6050,5 +6050,18 @@
       "WDX-8E325FC79F99"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_NORMAL_JWB4C": {
+    "label": "7xsoam",
+    "created_at": "2026-08-18T19:51:07.772Z",
+    "expires_at": "2026-08-19T19:51:06.537Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
