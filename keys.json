@@ -5950,20 +5950,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_NORMAL_RGHQT": {
-    "label": "No Label",
-    "created_at": "2026-08-18T13:05:22.193Z",
-    "expires_at": "2026-08-25T13:05:21.475Z",
-    "duration": "",
-    "device_id": "WDX-BF033A306B99",
-    "locked_at": "2026-08-18T13:05:51.464Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-BF033A306B99"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_P43MP_DG4HM": {
     "label": "USMAN PROMOTER",
     "created_at": "2026-08-18T14:03:32.783Z",
