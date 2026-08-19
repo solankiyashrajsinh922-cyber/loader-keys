@@ -6075,5 +6075,18 @@
       "WDX-DDB56D2793F3"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_XAYAU": {
+    "label": "Trial",
+    "created_at": "2026-08-19T17:19:18.540Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
