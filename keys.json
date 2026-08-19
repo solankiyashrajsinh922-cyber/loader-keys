@@ -6090,5 +6090,18 @@
       "WDX-DD93F34DC71F"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_2YH9K": {
+    "label": "Tribo",
+    "created_at": "2026-08-19T21:10:04.419Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
