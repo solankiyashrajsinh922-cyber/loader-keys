@@ -6098,12 +6098,14 @@
     "created_at": "2026-08-20T02:42:27.519Z",
     "expires_at": "2026-08-21T02:42:26.222Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-2F6B7CEC9DDA",
+    "locked_at": "2026-08-20T02:50:29.710Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-2F6B7CEC9DDA"
+    ],
     "key_type": "normal"
   }
 }
