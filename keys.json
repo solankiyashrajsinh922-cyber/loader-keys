@@ -5609,21 +5609,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_NORMAL_TWJHR": {
-    "label": "50 Rs",
-    "created_at": "2026-08-15T17:16:32.473Z",
-    "expires_at": "2026-08-18T17:16:30.841Z",
-    "duration": "",
-    "device_id": "WDX-FAB43565CC89",
-    "locked_at": "2026-08-17T16:09:49.065Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-FAB43565CC89"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_FSSFQ_NDW5P": {
     "label": "No Label",
     "created_at": "2026-08-16T03:01:10.643Z",
