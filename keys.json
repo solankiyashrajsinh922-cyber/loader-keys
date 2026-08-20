@@ -5651,21 +5651,6 @@
     ],
     "key_type": "normal"
   },
-  "H4X_MODZ_NORMAL_JQ6AR": {
-    "label": "Tribo",
-    "created_at": "2026-08-16T14:00:55.175Z",
-    "expires_at": "2026-08-17T14:00:52.858Z",
-    "duration": "",
-    "device_id": "WDX-FAB43565CC89",
-    "locked_at": "2026-08-16T15:22:27.730Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-FAB43565CC89"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_7LLF9_V7PYH": {
     "label": "Ayatollha",
     "created_at": "2026-08-16T15:07:08.879Z",
