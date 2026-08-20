@@ -5739,21 +5739,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_NORMAL_REJTE": {
-    "label": "Trial",
-    "created_at": "2026-08-18T06:10:24.873Z",
-    "expires_at": "2026-08-19T06:10:23.544Z",
-    "duration": "",
-    "device_id": "WDX-532143B22FB4",
-    "locked_at": "2026-08-18T06:36:42.232Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-532143B22FB4"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_FG9V9_CH7MC": {
     "label": "No Label",
     "created_at": "2026-08-18T06:33:30.501Z",
