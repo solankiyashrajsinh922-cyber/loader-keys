@@ -5129,19 +5129,6 @@
     ],
     "key_type": "normal"
   },
-  "H4X_MODZ_NORMAL_N3HNA": {
-    "label": "Zoya trial",
-    "created_at": "2026-08-11T15:05:24.476Z",
-    "expires_at": "2026-08-12T15:05:23.085Z",
-    "duration": "",
-    "device_id": null,
-    "locked_at": null,
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [],
-    "key_type": "normal"
-  },
   "H4X_MODZ_BEBE9_GFG7H": {
     "label": "KURAEAT PROMOTER",
     "created_at": "2026-08-11T15:30:55.355Z",
