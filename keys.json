@@ -5420,11 +5420,13 @@
     "created_at": "2026-08-14T15:44:23.074Z",
     "expires_at": "2026-08-21T15:44:21.776Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-97579DBE45CE",
+    "locked_at": "2026-08-21T02:05:42.970Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-97579DBE45CE"
+    ],
     "key_type": "mod_menu"
   },
   "H4X_MODZ_E8SLA_LQDU8": {
