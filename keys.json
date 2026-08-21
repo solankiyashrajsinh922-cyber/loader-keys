@@ -5869,5 +5869,18 @@
       "WDX-E28F85D4B5C9"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_ZQ7RR_CT39D": {
+    "label": "USMAN PROMOTER",
+    "created_at": "2026-08-21T14:18:26.160Z",
+    "expires_at": "2026-08-28T14:18:24.237Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
