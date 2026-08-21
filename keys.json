@@ -5840,5 +5840,18 @@
       "WDX-BF3D94DD8A8B"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_NORMAL_FF5EZ": {
+    "label": "Hate",
+    "created_at": "2026-08-21T09:51:42.287Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
