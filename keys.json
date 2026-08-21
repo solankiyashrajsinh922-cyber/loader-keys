@@ -5846,12 +5846,14 @@
     "created_at": "2026-08-21T09:51:42.287Z",
     "expires_at": null,
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-9FDB7D9DE307",
+    "locked_at": "2026-08-21T09:52:03.671Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-9FDB7D9DE307"
+    ],
     "key_type": "normal"
   }
 }
