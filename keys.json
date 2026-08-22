@@ -5929,12 +5929,14 @@
     "created_at": "2026-08-22T04:58:57.619Z",
     "expires_at": "2026-08-24T04:58:55.815Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-3E253AD806F2",
+    "locked_at": "2026-08-22T04:59:57.702Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-3E253AD806F2"
+    ],
     "key_type": "normal"
   }
 }
