@@ -6003,5 +6003,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_MWHTM": {
+    "label": "Datta",
+    "created_at": "2026-08-22T18:15:31.679Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
