@@ -13,9 +13,9 @@
   "7xsoam": {
     "name": "7xsoam",
     "password": "Soam@1234",
-    "credits": 19,
+    "credits": 18,
     "created_at": "2026-08-07T07:44:30.322Z",
-    "total_keys_generated": 54,
+    "total_keys_generated": 55,
     "active": true,
     "allow_normal": true,
     "allow_mod_menu": false,
