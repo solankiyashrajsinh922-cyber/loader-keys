@@ -6106,5 +6106,17 @@
       "WDX-9779ACFDD6BE"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_KTU4F_HFTMX": {
+    "label": "No Label",
+    "created_at": "2026-08-24T12:56:44.326Z",
+    "expires_at": "2026-08-31T12:56:43.851Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 2,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
