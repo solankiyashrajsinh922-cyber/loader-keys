@@ -6161,5 +6161,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_W4K6E_YDZ3Q": {
+    "label": "No Label",
+    "created_at": "2026-08-25T12:24:36.821Z",
+    "expires_at": "2026-08-27T12:24:36.337Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
