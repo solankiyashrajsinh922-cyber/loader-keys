@@ -6135,5 +6135,18 @@
       "WDX-F52B477732F9"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_JN4YZ_FGJW2": {
+    "label": "A1 PROMOTER",
+    "created_at": "2026-08-25T11:38:34.026Z",
+    "expires_at": "2026-08-28T11:38:33.032Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
