@@ -6198,11 +6198,13 @@
     "created_at": "2026-08-26T05:37:58.313Z",
     "expires_at": "2026-08-27T05:37:57.846Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-84851AFDB96F",
+    "locked_at": "2026-08-26T06:08:37.259Z",
     "active": true,
     "max_devices": 250,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-84851AFDB96F"
+    ],
     "key_type": "mod_menu"
   }
 }
