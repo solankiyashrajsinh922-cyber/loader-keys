@@ -6175,5 +6175,18 @@
       "H4X-C5F110EDC55A"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_XUYN9_WUAK5": {
+    "label": "BL",
+    "created_at": "2026-08-26T03:54:49.465Z",
+    "expires_at": "2026-08-29T03:54:48.567Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
