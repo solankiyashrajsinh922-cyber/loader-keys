@@ -5818,13 +5818,11 @@
     "created_at": "2026-08-21T08:22:46.171Z",
     "expires_at": "2026-08-28T08:22:45.594Z",
     "duration": "",
-    "device_id": "WDX-BF3D94DD8A8B",
-    "locked_at": "2026-08-21T08:30:16.312Z",
+    "device_id": null,
+    "locked_at": null,
     "active": true,
     "max_devices": 1,
-    "connected_devices": [
-      "WDX-BF3D94DD8A8B"
-    ],
+    "connected_devices": [],
     "key_type": "mod_menu"
   },
   "H4X_MODZ_NORMAL_FF5EZ": {
