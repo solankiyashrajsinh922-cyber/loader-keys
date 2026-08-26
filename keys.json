@@ -6227,5 +6227,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "H4X_MODZ_6C7L7_VCRHS": {
+    "label": "Id change",
+    "created_at": "2026-08-26T06:40:57.078Z",
+    "expires_at": "2026-08-28T06:40:56.153Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
