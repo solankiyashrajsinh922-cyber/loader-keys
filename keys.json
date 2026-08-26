@@ -6213,5 +6213,17 @@
       "WDX-1CA0AE761200"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_NORMAL_3ERXG": {
+    "label": "No Label",
+    "created_at": "2026-08-26T06:28:56.139Z",
+    "expires_at": "2026-08-30T06:28:55.412Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
