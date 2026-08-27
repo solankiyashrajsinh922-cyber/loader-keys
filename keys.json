@@ -6320,5 +6320,18 @@
       "WDX-6D8CE48222F0"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_CY3U6_75KRM": {
+    "label": "Resseler",
+    "created_at": "2026-08-27T15:51:27.872Z",
+    "expires_at": "2026-08-28T21:51:26.028Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "h4x",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
