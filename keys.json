@@ -6362,19 +6362,5 @@
       "WDX-9779ACFDD6BE"
     ],
     "key_type": "normal"
-  },
-  "H4X_MODZ_NORMAL_SPWJ3": {
-    "label": "No Label",
-    "created_at": "2026-08-28T04:46:32.323Z",
-    "expires_at": "2026-08-28T05:46:31.578Z",
-    "duration": "",
-    "device_id": "WDX-EEF3420C9ED7",
-    "locked_at": "2026-08-28T04:48:10.535Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-EEF3420C9ED7"
-    ],
-    "key_type": "normal"
   }
 }
