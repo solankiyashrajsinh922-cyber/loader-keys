@@ -6374,5 +6374,18 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_HLC7Z": {
+    "label": "7xsoam",
+    "created_at": "2026-08-29T04:35:42.556Z",
+    "expires_at": "2026-09-01T04:35:40.585Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
