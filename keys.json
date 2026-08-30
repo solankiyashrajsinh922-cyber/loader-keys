@@ -6476,19 +6476,5 @@
       "H4X-78B2FB337819"
     ],
     "key_type": "mod_menu"
-  },
-  "H4X_MODZ_NORMAL_FJN8C": {
-    "label": "Salman 3",
-    "created_at": "2026-08-29T14:34:45.896Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-DDB56D2793F3",
-    "locked_at": "2026-08-29T14:43:13.134Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-DDB56D2793F3"
-    ],
-    "key_type": "normal"
   }
 }
