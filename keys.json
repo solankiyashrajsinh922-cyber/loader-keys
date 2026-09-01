@@ -6363,20 +6363,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_WZWSF_DBD7Y": {
-    "label": "No Label",
-    "created_at": "2026-08-31T03:16:51.335Z",
-    "expires_at": "2026-09-10T03:16:50.857Z",
-    "duration": "",
-    "device_id": "H4X-78B2FB337819",
-    "locked_at": "2026-08-31T03:17:02.547Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "H4X-78B2FB337819"
-    ],
-    "key_type": "mod_menu"
-  },
   "H4X_MODZ_NORMAL_7H3QC": {
     "label": "Salman 3",
     "created_at": "2026-08-31T13:19:12.719Z",
