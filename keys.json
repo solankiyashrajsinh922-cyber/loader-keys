@@ -5285,21 +5285,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_7TEBT_2LBMQ": {
-    "label": "DECOR",
-    "created_at": "2026-08-14T15:17:38.565Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-9DB1928E4033",
-    "locked_at": "2026-08-14T15:23:45.662Z",
-    "active": true,
-    "reseller": "h4x",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-9DB1928E4033"
-    ],
-    "key_type": "mod_menu"
-  },
   "H4X_MODZ_NUKMM_LTP96": {
     "label": "No Label",
     "created_at": "2026-08-14T15:24:06.190Z",
