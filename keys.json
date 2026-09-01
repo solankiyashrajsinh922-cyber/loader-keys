@@ -4262,20 +4262,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_ZBDRA_6X8W6": {
-    "label": "True parson",
-    "created_at": "2026-08-07T08:08:04.678Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-C93E99DB6016",
-    "locked_at": "2026-08-07T08:25:50.631Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-C93E99DB6016"
-    ],
-    "key_type": "mod_menu"
-  },
   "H4X_MODZ_QWPNY_GT4K4": {
     "label": "No Label",
     "created_at": "2026-08-07T08:09:53.203Z",
