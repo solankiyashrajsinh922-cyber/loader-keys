@@ -4566,21 +4566,6 @@
     ],
     "key_type": "normal"
   },
-  "H4X_MODZ_PS48Q_NDR6X": {
-    "label": "DEEP MALIK",
-    "created_at": "2026-08-08T13:48:26.990Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-ADE365253759",
-    "locked_at": "2026-08-08T14:02:59.278Z",
-    "active": true,
-    "max_devices": 2,
-    "connected_devices": [
-      "WDX-B0EC87EBDF47",
-      "WDX-ADE365253759"
-    ],
-    "key_type": "mod_menu"
-  },
   "H4X_MODZ_GZVR8_QJJXF": {
     "label": "MD AYATULLA",
     "created_at": "2026-08-08T14:43:24.489Z",
