@@ -6347,5 +6347,17 @@
       "WDX-DDB56D2793F3"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_8H3KZ_GGJHU": {
+    "label": "No Label",
+    "created_at": "2026-09-01T17:29:54.057Z",
+    "expires_at": "2026-09-01T17:39:53.638Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
