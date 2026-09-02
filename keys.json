@@ -6411,5 +6411,17 @@
       "H4X-78B2FB337819"
     ],
     "key_type": "mod_menu"
+  },
+  "AURA_YVEMP_3MW5Y": {
+    "label": "Decor",
+    "created_at": "2026-09-02T03:21:19.632Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
