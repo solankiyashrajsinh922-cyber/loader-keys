@@ -6545,5 +6545,17 @@
       "WDX-C78BD197899A"
     ],
     "key_type": "normal"
+  },
+  "AURA_2675K_AGKNP": {
+    "label": "No Label",
+    "created_at": "2026-09-03T15:30:15.210Z",
+    "expires_at": "2026-09-13T15:30:14.862Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
