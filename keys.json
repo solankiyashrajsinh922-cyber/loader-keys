@@ -6629,12 +6629,14 @@
     "created_at": "2026-09-04T09:08:58.931Z",
     "expires_at": "2026-09-05T09:08:55.906Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-F77665B93469",
+    "locked_at": "2026-09-04T09:11:18.280Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-F77665B93469"
+    ],
     "key_type": "normal"
   },
   "H4X_MODZ_NORMAL_A8XRN": {
