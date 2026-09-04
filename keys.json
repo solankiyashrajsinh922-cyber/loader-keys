@@ -6644,12 +6644,14 @@
     "created_at": "2026-09-04T09:10:02.668Z",
     "expires_at": "2026-09-05T09:10:00.212Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-0A1B9E94CB87",
+    "locked_at": "2026-09-04T09:20:00.729Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-0A1B9E94CB87"
+    ],
     "key_type": "normal"
   },
   "H4X_MODZ_NORMAL_VXDZA": {
