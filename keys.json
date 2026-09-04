@@ -6683,5 +6683,18 @@
       "WDX-B621AD122061"
     ],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_K5F5W": {
+    "label": "7xsoam",
+    "created_at": "2026-09-04T09:35:42.073Z",
+    "expires_at": "2026-09-05T09:35:39.836Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
