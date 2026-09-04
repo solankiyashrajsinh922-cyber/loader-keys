@@ -6573,11 +6573,13 @@
     "created_at": "2026-09-04T04:50:39.383Z",
     "expires_at": "2026-09-14T04:50:39.016Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-9779ACFDD6BE",
+    "locked_at": "2026-09-04T04:50:58.125Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-9779ACFDD6BE"
+    ],
     "key_type": "normal"
   }
 }
