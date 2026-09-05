@@ -6942,5 +6942,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "H4X_MODZ_NORMAL_WFWCQ": {
+    "label": "No Label",
+    "created_at": "2026-09-05T11:25:12.709Z",
+    "expires_at": "2026-09-06T11:25:11.790Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
