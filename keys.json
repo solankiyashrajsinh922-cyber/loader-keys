@@ -6907,18 +6907,6 @@
     "connected_devices": [],
     "key_type": "normal"
   },
-  "H4X_MODZ_NORMAL_KB2M3": {
-    "label": "No Label",
-    "created_at": "2026-09-05T11:25:11.058Z",
-    "expires_at": "2026-09-06T11:25:10.693Z",
-    "duration": "",
-    "device_id": null,
-    "locked_at": null,
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [],
-    "key_type": "normal"
-  },
   "H4X_MODZ_NORMAL_RYQLC": {
     "label": "Free",
     "created_at": "2026-09-05T11:27:02.612Z",
