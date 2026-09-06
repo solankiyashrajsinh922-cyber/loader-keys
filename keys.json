@@ -6806,12 +6806,14 @@
     "created_at": "2026-09-06T18:59:57.335Z",
     "expires_at": null,
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-F6F706FDE792",
+    "locked_at": "2026-09-06T19:47:31.922Z",
     "active": true,
     "reseller": "7xsoam",
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-F6F706FDE792"
+    ],
     "key_type": "normal"
   }
 }
