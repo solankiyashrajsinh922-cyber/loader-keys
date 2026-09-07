@@ -6829,5 +6829,17 @@
       "H4X-470FA2FA47A4"
     ],
     "key_type": "mod_menu"
+  },
+  "AURA_HQC9Q_694JY": {
+    "label": "No Label",
+    "created_at": "2026-09-07T12:56:33.340Z",
+    "expires_at": "2026-09-14T12:56:32.036Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
