@@ -6923,5 +6923,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "mod_menu"
+  },
+  "AURA_FLEW8_MC6PK": {
+    "label": "Baki",
+    "created_at": "2026-09-08T17:48:40.410Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
