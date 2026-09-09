@@ -6980,5 +6980,18 @@
       "H4X-78B2FB337819"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_NORMAL_FFQLZ": {
+    "label": "Ravi",
+    "created_at": "2026-09-09T15:41:45.387Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "reseller": "7xsoam",
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
