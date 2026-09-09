@@ -6931,11 +6931,13 @@
     "created_at": "2026-09-08T17:48:40.410Z",
     "expires_at": null,
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-2062938820C9",
+    "locked_at": "2026-09-09T06:03:01.066Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-2062938820C9"
+    ],
     "key_type": "mod_menu"
   }
 }
