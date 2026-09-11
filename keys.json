@@ -5550,21 +5550,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_NORMAL_FF5EZ": {
-    "label": "Hate",
-    "created_at": "2026-08-21T09:51:42.287Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-9FDB7D9DE307",
-    "locked_at": "2026-08-21T09:52:03.671Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-9FDB7D9DE307"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_NORMAL_6F989": {
     "label": "No Label",
     "created_at": "2026-08-21T13:00:22.073Z",
