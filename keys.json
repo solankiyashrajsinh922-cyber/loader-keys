@@ -6741,5 +6741,17 @@
       "H4X-4C37C1E24C9C"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_NORMAL_JGT8R": {
+    "label": "No Label",
+    "created_at": "2026-09-11T08:53:28.344Z",
+    "expires_at": "2026-09-11T11:53:28.539Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
