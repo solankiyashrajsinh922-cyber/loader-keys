@@ -6783,5 +6783,17 @@
       "H4X-42EA77F84241"
     ],
     "key_type": "mod_menu"
+  },
+  "H4X_MODZ_NORMAL_CW4LS": {
+    "label": "Nagato",
+    "created_at": "2026-09-11T15:43:38.195Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "normal"
   }
 }
