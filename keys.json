@@ -6576,21 +6576,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_NORMAL_Q6SZK": {
-    "label": "Trial",
-    "created_at": "2026-09-07T07:38:46.767Z",
-    "expires_at": "2026-09-12T07:38:45.227Z",
-    "duration": "",
-    "device_id": "WDX-2B6E788B0547",
-    "locked_at": "2026-09-07T07:44:35.159Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-2B6E788B0547"
-    ],
-    "key_type": "normal"
-  },
   "AURA_5M4WR_XXBNY": {
     "label": "No Label",
     "created_at": "2026-09-07T11:15:06.035Z",
