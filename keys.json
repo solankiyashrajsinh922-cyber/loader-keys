@@ -6728,21 +6728,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_NORMAL_95BE7": {
-    "label": "Zoya",
-    "created_at": "2026-09-10T16:37:06.521Z",
-    "expires_at": "2026-09-11T16:37:05.028Z",
-    "duration": "",
-    "device_id": "WDX-A35A67416AA1",
-    "locked_at": "2026-09-10T16:52:45.240Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-A35A67416AA1"
-    ],
-    "key_type": "normal"
-  },
   "AURA_HVG5M_V9UK7": {
     "label": "No Label",
     "created_at": "2026-09-10T16:58:28.357Z",
