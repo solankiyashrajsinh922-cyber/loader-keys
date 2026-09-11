@@ -4403,21 +4403,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_NORMAL_EWWDH": {
-    "label": "Ashu",
-    "created_at": "2026-08-07T16:59:27.064Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-284ACF16746C",
-    "locked_at": "2026-08-07T20:20:16.336Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-284ACF16746C"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_NORMAL_MJWJ2": {
     "label": "No Label",
     "created_at": "2026-08-08T03:23:27.590Z",
