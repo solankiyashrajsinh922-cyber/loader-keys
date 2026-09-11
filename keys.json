@@ -4331,21 +4331,6 @@
     "connected_devices": [],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_NORMAL_FJFYF": {
-    "label": "Tejas",
-    "created_at": "2026-08-07T09:31:44.331Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-B1F8EC58DF55",
-    "locked_at": "2026-08-07T09:32:47.190Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-B1F8EC58DF55"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_NORMAL_3DXPF": {
     "label": "Vishal",
     "created_at": "2026-08-07T09:48:34.904Z",
