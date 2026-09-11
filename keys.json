@@ -6576,21 +6576,6 @@
     ],
     "key_type": "mod_menu"
   },
-  "H4X_MODZ_NORMAL_2YDJ8": {
-    "label": "Baki",
-    "created_at": "2026-09-06T18:59:57.335Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-F6F706FDE792",
-    "locked_at": "2026-09-06T19:47:31.922Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-F6F706FDE792"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_NORMAL_Q6SZK": {
     "label": "Trial",
     "created_at": "2026-09-07T07:38:46.767Z",
