@@ -4276,21 +4276,6 @@
     ],
     "key_type": "normal"
   },
-  "H4X_MODZ_NORMAL_K5YF7": {
-    "label": "Aman",
-    "created_at": "2026-08-07T08:37:30.705Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-3B0F85B17506",
-    "locked_at": "2026-08-07T09:36:25.600Z",
-    "active": true,
-    "reseller": "7xsoam",
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-3B0F85B17506"
-    ],
-    "key_type": "normal"
-  },
   "H4X_MODZ_AW6QV_GCXNM": {
     "label": "h4x",
     "created_at": "2026-08-07T09:03:18.485Z",
