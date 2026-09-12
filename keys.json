@@ -6879,5 +6879,17 @@
       "WDX-4AEDE71D8444"
     ],
     "key_type": "normal"
+  },
+  "AURA_MS566_W3Z4V": {
+    "label": "No Label",
+    "created_at": "2026-09-12T14:01:05.769Z",
+    "expires_at": "2026-09-12T16:01:05.866Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
