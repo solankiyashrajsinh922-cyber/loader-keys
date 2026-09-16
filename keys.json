@@ -6925,11 +6925,13 @@
     "created_at": "2026-09-15T15:58:21.112Z",
     "expires_at": "2026-09-20T15:58:21.526Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-DF2D9EFADF86",
+    "locked_at": "2026-09-16T04:32:21.755Z",
     "active": true,
     "max_devices": 2,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-DF2D9EFADF86"
+    ],
     "key_type": "mod_menu"
   }
 }
