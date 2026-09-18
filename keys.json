@@ -7091,11 +7091,13 @@
     "created_at": "2026-09-18T06:17:32.934Z",
     "expires_at": "2026-09-25T06:17:32.346Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-42EA77F84241",
+    "locked_at": "2026-09-18T06:23:40.904Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-42EA77F84241"
+    ],
     "key_type": "mod_menu"
   }
 }
