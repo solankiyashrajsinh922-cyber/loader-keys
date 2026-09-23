@@ -7110,11 +7110,13 @@
     "created_at": "2026-09-20T16:12:53.265Z",
     "expires_at": "2026-09-23T16:12:52.817Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-6B7255F79AA9",
+    "locked_at": "2026-09-23T14:25:09.662Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-6B7255F79AA9"
+    ],
     "key_type": "normal"
   },
   "AURA_VRLXA_6QBKA": {
