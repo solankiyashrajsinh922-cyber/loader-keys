@@ -7609,5 +7609,17 @@
       "WDX-6D37CCCF0489"
     ],
     "key_type": "normal"
+  },
+  "AURA_HY4C6_XSTMN": {
+    "label": "No Label",
+    "created_at": "2026-10-05T13:39:16.840Z",
+    "expires_at": "2026-10-05T18:39:16.104Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
