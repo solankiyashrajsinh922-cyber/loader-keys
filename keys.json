@@ -7615,11 +7615,13 @@
     "created_at": "2026-10-05T13:39:16.840Z",
     "expires_at": "2026-10-05T18:39:16.104Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-78B2FB337819",
+    "locked_at": "2026-10-05T13:39:26.531Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-78B2FB337819"
+    ],
     "key_type": "mod_menu"
   }
 }
