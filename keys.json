@@ -7747,5 +7747,17 @@
       "H4X-55246C48558F"
     ],
     "key_type": "mod_menu"
+  },
+  "AURA_JSHWM_299PE": {
+    "label": "No Label",
+    "created_at": "2026-10-18T04:08:12.957Z",
+    "expires_at": "2026-10-18T04:18:11.792Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
