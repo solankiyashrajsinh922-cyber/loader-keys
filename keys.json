@@ -7582,20 +7582,6 @@
     ],
     "key_type": "normal"
   },
-  "H4X_MODZ_NORMAL_M6A58": {
-    "label": "Datta",
-    "created_at": "2026-10-04T13:40:18.864Z",
-    "expires_at": null,
-    "duration": "",
-    "device_id": "WDX-6D37CCCF0489",
-    "locked_at": "2026-10-04T13:44:38.947Z",
-    "active": true,
-    "max_devices": 1,
-    "connected_devices": [
-      "WDX-6D37CCCF0489"
-    ],
-    "key_type": "normal"
-  },
   "AURA_HY4C6_XSTMN": {
     "label": "No Label",
     "created_at": "2026-10-05T13:39:16.840Z",
