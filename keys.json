@@ -7795,5 +7795,17 @@
     "max_devices": 1,
     "connected_devices": [],
     "key_type": "normal"
+  },
+  "AURA_LTM34_JSJFA": {
+    "label": "No Label",
+    "created_at": "2026-10-21T04:25:49.645Z",
+    "expires_at": "2026-10-21T04:35:48.120Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
