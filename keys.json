@@ -7813,11 +7813,13 @@
     "created_at": "2026-10-21T04:31:51.365Z",
     "expires_at": "2026-10-21T04:41:49.999Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "WDX-01744C19A3B7",
+    "locked_at": "2026-10-21T04:32:01.561Z",
     "active": true,
     "max_devices": 1,
-    "connected_devices": [],
+    "connected_devices": [
+      "WDX-01744C19A3B7"
+    ],
     "key_type": "normal"
   }
 }
