@@ -7867,11 +7867,13 @@
     "created_at": "2026-10-30T16:27:20.597Z",
     "expires_at": "2026-10-31T16:27:19.516Z",
     "duration": "",
-    "device_id": null,
-    "locked_at": null,
+    "device_id": "H4X-009A54880031",
+    "locked_at": "2026-10-30T16:33:51.205Z",
     "active": true,
     "max_devices": 10,
-    "connected_devices": [],
+    "connected_devices": [
+      "H4X-009A54880031"
+    ],
     "key_type": "mod_menu"
   }
 }
