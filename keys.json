@@ -7847,5 +7847,17 @@
       "H4X-040430E204AF"
     ],
     "key_type": "mod_menu"
+  },
+  "AURA_G66RJ_6WZTU": {
+    "label": "Kaushik",
+    "created_at": "2026-10-30T16:25:41.353Z",
+    "expires_at": "2026-10-31T16:25:40.857Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 1,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
