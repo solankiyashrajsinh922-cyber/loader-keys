@@ -7943,5 +7943,17 @@
       "H4X-4C37C1E24C9C"
     ],
     "key_type": "mod_menu"
+  },
+  "AURA_7PBCK_66H5Q": {
+    "label": "F1",
+    "created_at": "2026-10-31T10:56:58.713Z",
+    "expires_at": "2026-10-31T15:56:57.885Z",
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 100,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
