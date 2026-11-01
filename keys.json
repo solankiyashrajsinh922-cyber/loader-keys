@@ -8019,5 +8019,17 @@
       "H4X-1357BA2E13FC"
     ],
     "key_type": "mod_menu"
+  },
+  "AURA_7WSDP_6EPUP": {
+    "label": "F2",
+    "created_at": "2026-11-01T18:20:34.513Z",
+    "expires_at": null,
+    "duration": "",
+    "device_id": null,
+    "locked_at": null,
+    "active": true,
+    "max_devices": 30,
+    "connected_devices": [],
+    "key_type": "mod_menu"
   }
 }
